@@ -14,7 +14,7 @@ window.DOCS_TRANSLATIONS = {
       navLabel: "Primary navigation",
       languageLabel: "Choose language",
       defaultSideTitle: "Simple to use",
-      defaultSideText: "Every important feature has its own page, clear explanation, and direct link.",
+      defaultSideText: "Every important feature has its own page, clear explanation, and direct link .",
       footerTitle: "Promoter Documentation",
       footerNote: "This site explains the product clearly for end users. Actual moderation, limits, and access still depend on the bot owner and current Telegram-side permissions.",
       languages: {
