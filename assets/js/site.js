@@ -6,6 +6,7 @@
     { key: "promoJoin", file: "promo-join.html", desktop: true, mobile: true },
     { key: "picBroad", file: "pic-broad.html", desktop: false, mobile: true },
     { key: "referral", file: "referral.html", desktop: false, mobile: true },
+    { key: "contest", file: "contest.html", desktop: true, mobile: true },
     { key: "forceJoin", file: "force-join.html", desktop: false, mobile: true },
     { key: "premium", file: "premium.html", desktop: true, mobile: true },
     { key: "help", file: "help.html", desktop: true, mobile: true },
@@ -17,6 +18,8 @@
   const translations = window.DOCS_TRANSLATIONS || {};
   const availableLanguages = ["en", "ru", "uk", "hi"];
   let currentLang = getLanguage();
+  let closeNavRef = null;
+  let keydownBound = false;
 
   function getLanguage() {
     const url = new URL(window.location.href);
@@ -37,7 +40,15 @@
   }
 
   function hrefFor(file) {
+    if (/^(https?:)?\/\//.test(file) || file.startsWith("tg://")) return file;
     return `${file}?lang=${currentLang}`;
+  }
+
+  function linkAttrs(href) {
+    if (/^(https?:)?\/\//.test(href) || href.startsWith("tg://")) {
+      return ' target="_blank" rel="noreferrer"';
+    }
+    return "";
   }
 
   function renderHeader(common) {
@@ -104,7 +115,10 @@
 
   function renderHero(hero, common) {
     const actions = (hero.actions || [])
-      .map((action) => `<a class="button ${action.primary ? "button-primary" : "button-secondary"}" href="${hrefFor(action.href)}">${action.label}</a>`)
+      .map((action) => {
+        const href = hrefFor(action.href);
+        return `<a class="button ${action.primary ? "button-primary" : "button-secondary"}" href="${href}"${linkAttrs(href)}>${action.label}</a>`;
+      })
       .join("");
 
     const pills = (hero.pills || []).map((pill) => `<span class="pill">${pill}</span>`).join("");
@@ -222,11 +236,19 @@
   }
 
   function renderCallout(section) {
+    const actions = (section.actions || [])
+      .map((action) => {
+        const href = hrefFor(action.href);
+        return `<a class="button ${action.primary ? "button-primary" : "button-secondary"}" href="${href}"${linkAttrs(href)}>${action.label}</a>`;
+      })
+      .join("");
+
     return `
       <section class="section">
         <div class="callout fade-up">
           <h3>${section.title}</h3>
           <p>${section.text}</p>
+          ${actions ? `<div class="hero-actions">${actions}</div>` : ""}
         </div>
       </section>
     `;
@@ -315,6 +337,8 @@
       toggle.textContent = "×";
     }
 
+    closeNavRef = closeNav;
+
     if (toggle && mobileNav) {
       toggle.addEventListener("click", () => {
         if (mobileNav.classList.contains("open")) {
@@ -334,9 +358,12 @@
       });
     }
 
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") closeNav();
-    });
+    if (!keydownBound) {
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && closeNavRef) closeNavRef();
+      });
+      keydownBound = true;
+    }
 
     if (langSelect) {
       langSelect.addEventListener("change", (event) => {
@@ -349,6 +376,13 @@
     document.title = `${page.metaTitle} | ${common.siteName}`;
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute("content", page.metaDescription);
+    let keywords = document.querySelector('meta[name="keywords"]');
+    if (!keywords) {
+      keywords = document.createElement("meta");
+      keywords.setAttribute("name", "keywords");
+      document.head.appendChild(keywords);
+    }
+    keywords.setAttribute("content", page.metaKeywords || common.metaKeywords || "");
   }
 
   function render() {

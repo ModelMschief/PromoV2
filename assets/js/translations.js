@@ -1,9 +1,9 @@
 window.DOCS_TRANSLATIONS = {
   en: {
     common: {
-      siteName: "Promoter Docs",
-      siteTagline: "Clear guides for every promotion mode",
-      logoAlt: "Promoter logo",
+      siteName: "Promoter Bot Docs",
+      siteTagline: "Clear guides for every promotion workflow",
+      logoAlt: "Promoter Bot logo",
       menuLabel: "Open navigation",
       closeLabel: "Close navigation",
       mobileMenuTitle: "Navigate",
@@ -13,10 +13,11 @@ window.DOCS_TRANSLATIONS = {
       },
       navLabel: "Primary navigation",
       languageLabel: "Choose language",
-      defaultSideTitle: "Simple to use",
-      defaultSideText: "Every important feature has its own page, clear explanation, and direct link .",
-      footerTitle: "Promoter Documentation",
-      footerNote: "This site explains the product clearly for end users. Actual moderation, limits, and access still depend on the bot owner and current Telegram-side permissions.",
+      defaultSideTitle: "Made for real users",
+      defaultSideText: "Each important feature has its own page so users can open the exact explanation they need.",
+      footerTitle: "Promoter Bot Documentation",
+      footerNote: "This site explains the current Promoter Bot and Promotion Bot feature flow for end users. Actual availability, moderation, and access can still depend on the bot owner and Telegram-side permissions.",
+      metaKeywords: "Promoter Bot, Promotion Bot, Telegram promotion bot, Telegram promoter bot",
       languages: {
         en: "English",
         ru: "Русский",
@@ -30,6 +31,7 @@ window.DOCS_TRANSLATIONS = {
         promoJoin: "Promo Join",
         picBroad: "Pic Broad",
         referral: "Referral",
+        contest: "Contest",
         forceJoin: "Force Join",
         premium: "Premium",
         help: "Help",
@@ -40,177 +42,185 @@ window.DOCS_TRANSLATIONS = {
     pages: {
       home: {
         metaTitle: "Overview",
-        metaDescription: "Professional multilingual guide for the Promoter bot.",
+        metaDescription: "Official multilingual documentation for the Promoter Bot and Promotion Bot.",
         hero: {
-          eyebrow: "Promoter Guide",
-          title: "A polished guide for every growth workflow.",
-          lead: "Learn how standard promotion, group promotion, Promo Join, referrals, premium tools, and admin-side features work without digging through raw bot commands.",
-          pills: ["4 languages", "Separate links", "Fast help pages"],
+          eyebrow: "Official Guide",
+          title: "One site for every promotion mode.",
+          lead: "This documentation matches the live bot flow more closely: standard user promotion, group promotion, Promo Join, referrals, contest rewards, premium tools, and admin controls.",
+          pills: ["4 languages", "Bot-matched text", "Fast help pages"],
           actions: [
             { href: "user-promotion.html", label: "Start With User Promotion", primary: true },
-            { href: "help.html", label: "Open Help", primary: false }
+            { href: "contest.html", label: "See Contest", primary: false }
           ],
           sidePanels: [
-            { title: "For users", text: "Understand how to save a message, promote it, gain more reach, and use premium features properly." },
-            { title: "For admins", text: "See how Force Join and group-side tools fit into moderation and audience growth." }
+            { title: "For promoters", text: "Understand daily limits, saved content, premium upgrades, gems, and campaign-style tools before you start." },
+            { title: "For admins", text: "See how Force Join and add-bot gem rewards fit into moderation, channel growth, and group promotion." }
           ]
         },
         sections: [
           {
             type: "stats",
             title: "At a glance",
-            intro: "The bot combines easy daily promotion with stronger advanced tools for users who need more reach.",
+            intro: "The bot mixes simple daily promotion with gems, premium upgrades, and referral-driven growth.",
             items: [
-              { value: "5+", title: "Daily standard promos", text: "Base user promotion starts free and grows with referral bonuses." },
-              { value: "15 / 35", title: "Group targets", text: "Standard group promotion aims up to 15 groups, premium up to 35." },
-              { value: "350", title: "Pic Broad reach", text: "Premium image broadcast can send a visual promo to a much larger audience." }
+              { value: "5", title: "Base daily user promos", text: "Standard private promotion starts with 5 daily uses and can grow through referrals." },
+              { value: "2 / 10", title: "Daily group promo runs", text: "Standard users get 2 group-promo runs per day, while premium users get 10." },
+              { value: "+65 / -70", title: "Add-bot gem swing", text: "Eligible group owners can earn 65 gems for adding the bot, but later removal triggers a 70 gem penalty." }
             ]
           },
           {
             type: "cards",
             title: "Main sections",
-            intro: "Each topic has its own page so you can open or share exactly what you need.",
-            columns: 2,
+            intro: "Each major workflow has its own page so you can share the right explanation without sending people through raw commands.",
             items: [
-              { kicker: "Core", title: "User Promotion", text: "How private saved content is sent to users inside the network." },
-              { kicker: "Reach", title: "Group Promotion", text: "How the bot posts your saved message into available groups." },
-              { kicker: "Gems", title: "Promo Join", text: "Advanced campaigns built around gems and join verification." },
-              { kicker: "Media", title: "Pic Broad", text: "Premium-only image promotion with higher daily reach." },
-              { kicker: "Growth", title: "Referral", text: "How invite links increase your daily standard promotion power." },
-              { kicker: "Admin", title: "Force Join", text: "How group admins can require users to join channels before chatting." }
+              { kicker: "Core", title: "User Promotion", text: "How saved links or text are sent to up to 15 users inside the network." },
+              { kicker: "Reach", title: "Group Promotion", text: "How saved content is pushed into active groups with standard or premium limits." },
+              { kicker: "Gems", title: "Promo Join", text: "Advanced promotion where gems buy join-and-verify campaigns." },
+              { kicker: "Media", title: "Pic Broad", text: "Premium image broadcast with one photo, one caption, and up to 350 sends per day." },
+              { kicker: "Growth", title: "Referral", text: "How personal invite links add more standard promotions to your daily limit." },
+              { kicker: "Event", title: "Contest", text: "How special referral contests award gems and track leaderboard results." },
+              { kicker: "Admin", title: "Force Join", text: "How groups can require channel joins before users continue chatting." }
             ]
           },
           {
             type: "callout",
-            title: "Built to reduce confusion.",
-            text: "When users understand the feature flow before they start, support gets easier and promotion results get cleaner."
+            title: "Better docs reduce support noise.",
+            text: "When the public site reflects the real bot behavior, users ask fewer repetitive questions and feature expectations stay cleaner."
           }
         ]
       },
       userPromotion: {
         metaTitle: "User Promotion",
-        metaDescription: "How user-to-user promotion works in Promoter.",
+        metaDescription: "How standard user-to-user promotion works in the Promoter Bot and Promotion Bot.",
         hero: {
-          eyebrow: "User to User",
-          title: "How standard promotion works.",
-          lead: "User Promotion is the quickest way to push a saved message or link to people inside the bot network.",
-          pills: ["Private chat workflow", "Free daily access", "Referral boosts"],
+          eyebrow: "Private Reach",
+          title: "How standard promotion really works.",
+          lead: "User Promotion is the base mode for sending your saved link or message to random users who are available in the network.",
+          pills: ["5 daily base promos", "Up to 15 users per run", "Referral boosts"],
           actions: [
             { href: "referral.html", label: "See Referral Bonuses", primary: true },
-            { href: "help.html", label: "Need Help?", primary: false }
+            { href: "help.html", label: "Open Help", primary: false }
           ],
           sidePanels: [
-            { title: "Best for", text: "Simple daily promotion when you want fast delivery without running a full campaign." }
+            { title: "Best for", text: "Simple link pushes, short updates, usernames, and light daily promotion without spending gems." }
           ]
         },
         sections: [
           {
             type: "steps",
             title: "Basic workflow",
-            intro: "Most users only need three steps.",
+            intro: "The command path is short, but the bot still checks saved content and content type before sending.",
             items: [
-              { kicker: "Step 1", title: "Send content in private chat", text: "Your message should contain a link, username, or clear destination." },
-              { kicker: "Step 2", title: "Confirm the content type", text: "If the bot asks about NSFW or normal content, answer correctly so delivery stays aligned with user settings." },
-              { kicker: "Step 3", title: "Run /promote", text: "The bot sends your saved content and updates your remaining daily count." }
+              { kicker: "Step 1", title: "Save content in private chat", text: "Send a valid link, username, or message so the bot has something to promote." },
+              { kicker: "Step 2", title: "Answer the NSFW check if asked", text: "Some saved content stays pending until you classify it correctly as normal or NSFW." },
+              { kicker: "Step 3", title: "Run /promote", text: "The bot sends your saved content to up to 15 users and then updates your remaining daily count." }
             ]
           },
           {
             type: "cards",
-            title: "Why users choose it",
-            intro: "It is the simplest promotion mode in the product.",
+            title: "What matters most",
+            intro: "This mode is easy to start, but the real limits are more specific than the old site copy suggested.",
             items: [
-              { kicker: "Fast", title: "No extra setup", text: "You do not need campaign tiers, target chats, or gem spending to use it." },
-              { kicker: "Flexible", title: "Good for quick offers", text: "It works well for invite links, small updates, limited offers, and short calls to action." },
-              { kicker: "Expandable", title: "Gets stronger over time", text: "Referrals can raise your daily promo allowance without changing the workflow." }
+              { kicker: "Base", title: "5 daily uses by default", text: "The standard daily limit starts at 5 promotions before any referral bonuses are added." },
+              { kicker: "Bonus", title: "Referrals increase the cap", text: "Every 3 referrals add 3 more standard promotions to your daily total." },
+              { kicker: "Match", title: "Saved content is reused", text: "You do not build a separate campaign. The bot uses the content you already saved in private chat." }
             ]
           }
         ]
       },
       groupPromotion: {
         metaTitle: "Group Promotion",
-        metaDescription: "How group promotion works in Promoter.",
+        metaDescription: "How group promotion works in the Promoter Bot and Promotion Bot.",
         hero: {
           eyebrow: "Group Reach",
-          title: "Promote your content into groups.",
-          lead: "Group Promotion takes your saved message and posts it to groups where promotion is currently enabled.",
-          pills: ["15 groups standard", "35 groups premium", "Daily group limits"],
+          title: "Promote saved content into groups.",
+          lead: "Group Promotion sends your saved message into groups where promotion is active and available at the time of the run.",
+          pills: ["2 runs standard", "10 runs premium", "15 or 35 group target"],
           actions: [
             { href: "premium.html", label: "Compare Premium", primary: true },
-            { href: "help.html", label: "Open Help", primary: false }
+            { href: "help.html", label: "Need Help?", primary: false }
           ]
         },
         sections: [
           {
             type: "steps",
             title: "How a run happens",
-            intro: "The user flow is short, but the bot checks availability and limits in the background.",
+            intro: "The bot checks more than just the command. It also checks bans, daily usage, saved content, and whether promotable groups are available.",
             items: [
-              { kicker: "Step 1", title: "Save content first", text: "The bot cannot run group promotion if your current message is empty." },
-              { kicker: "Step 2", title: "Run /chatpromo", text: "The bot checks your access, ban status, daily usage, and group availability." },
-              { kicker: "Step 3", title: "Wait for the summary", text: "After delivery, the bot reports how many groups received the message." }
+              { kicker: "Step 1", title: "Keep saved content ready", text: "If you do not have saved content, group promotion cannot start." },
+              { kicker: "Step 2", title: "Run /chatpromo", text: "The bot checks your status and begins a background send into available groups." },
+              { kicker: "Step 3", title: "Read the summary", text: "When the run finishes, the bot reports how many groups actually received the promotion." }
             ]
           },
           {
             type: "cards",
-            title: "Why this mode matters",
-            intro: "This is the broader public-facing promotion mode.",
+            title: "Real limits",
+            intro: "There are two different limits here: how many runs you get per day and how many groups each run tries to reach.",
             items: [
-              { kicker: "Visibility", title: "Reach communities", text: "Your message can appear where multiple people may notice it at once." },
-              { kicker: "Reuse", title: "Uses saved content", text: "You do not need a separate editor just to start the group run." },
-              { kicker: "Scale", title: "Premium goes further", text: "Premium raises both the number of runs and the target group count." }
+              { kicker: "Standard", title: "2 runs per day", text: "Standard users can trigger group promotion twice per day, targeting up to 15 successful group sends per run." },
+              { kicker: "Premium", title: "10 runs per day", text: "Premium users get 10 daily group-promo runs and each run can reach up to 35 successful group sends." },
+              { kicker: "Result", title: "Availability still matters", text: "If no active promotable groups are available, the command will stop even if your daily usage has not been exhausted." }
             ]
           }
         ]
       },
       promoJoin: {
         metaTitle: "Promo Join",
-        metaDescription: "How Promo Join campaigns work in Promoter.",
+        metaDescription: "How Promo Join campaigns work in the Promoter Bot and Promotion Bot.",
         hero: {
           eyebrow: "Gem Campaigns",
-          title: "Drive verified joins with Promo Join.",
-          lead: "Promo Join is the advanced mode where you spend gems to attract real joins and move a campaign forward through verification.",
-          pills: ["Gem based", "Verification driven", "Premium tier discounts"],
+          title: "Buy verified joins with gems.",
+          lead: "Promo Join is the advanced mode where you spend gems to send a target chat to users and reward them when they join and verify successfully.",
+          pills: ["Starts with gems", "Verifier rewards", "Premium discount tiers"],
           actions: [
-            { href: "premium.html", label: "See Premium Savings", primary: true },
-            { href: "help.html", label: "FAQ", primary: false }
+            { href: "https://t.me/DealmanyBot?start=buygems", label: "Buy Gems", primary: true },
+            { href: "premium.html", label: "See Premium Benefits", primary: false }
           ]
         },
         sections: [
           {
             type: "cards",
-            title: "How it works",
-            intro: "Promo Join is built for users who care about real channel or group joins, not only message views.",
+            title: "How the system works",
+            intro: "This is more than a view-based promo. It is a join-and-verify flow with gem balances and active campaign tracking.",
             items: [
-              { kicker: "Setup", title: "Target chat required", text: "You first set a target channel or group so the bot knows where users should join." },
-              { kicker: "Cost", title: "Campaigns use gems", text: "Each tier has a gem price, and premium users usually get a lower cost." },
-              { kicker: "Progress", title: "Verification completes the run", text: "A campaign moves toward completion as users join and verify successfully." }
+              { kicker: "Balance", title: "Users start with gems", text: "A Promo Join user profile is created with a gem balance, and that balance is used to launch campaigns." },
+              { kicker: "Setup", title: "Target chat must be set first", text: "Use /promojoin to set the channel or group that should receive joins before using /advance." },
+              { kicker: "Reward", title: "Verifiers earn 1 gem", text: "Users who join and verify successfully receive 1 gem for completing the task." }
             ]
           },
           {
             type: "steps",
             title: "Campaign flow",
-            intro: "The setup is still straightforward once you know the sequence.",
+            intro: "The menu is simple, but the lifecycle has a few important rules users should know.",
             items: [
-              { kicker: "Step 1", title: "Use /promojoin", text: "Set the destination chat before opening the advanced menu." },
-              { kicker: "Step 2", title: "Open /advance", text: "Choose a tier based on budget, campaign size, and desired verification count." },
-              { kicker: "Step 3", title: "Watch verification progress", text: "Users join, verify, and your campaign completes when the goal is reached." }
+              { kicker: "Step 1", title: "Set the destination with /promojoin", text: "The bot must also be an admin in that target chat so it can verify membership correctly." },
+              { kicker: "Step 2", title: "Use /advance and choose a tier", text: "Different tiers trade gem cost against verification goals and send volume, with lower gem cost for premium users." },
+              { kicker: "Step 3", title: "Wait for verify progress", text: "The bot notifies the promoter as verifications come in and closes the campaign once the goal is reached." }
             ]
           },
           {
             type: "callout",
-            title: "Best for serious promotion.",
-            text: "Promo Join works best when the destination channel or group is worth joining and has a clear reason for people to stay."
+            title: "Need more gems?",
+            text: "If your balance is low, buy gems first and then launch the next Promo Join campaign without delay.",
+            actions: [
+              { href: "https://t.me/DealmanyBot?start=buygems", label: "Buy Gems", primary: true }
+            ]
+          },
+          {
+            type: "callout",
+            title: "Staying joined matters.",
+            text: "If a verifier leaves too early, the bot can warn them to rejoin and later deduct 2 gems if they stay out beyond the recovery window."
           }
         ]
       },
       picBroad: {
         metaTitle: "Pic Broad",
-        metaDescription: "How the premium image broadcast works.",
+        metaDescription: "How Pic Broad works in the Promoter Bot and Promotion Bot.",
         hero: {
           eyebrow: "Premium Media",
-          title: "Send a visual broadcast with Pic Broad.",
-          lead: "Pic Broad is a premium-only feature for sending one image with a caption to a larger user audience.",
-          pills: ["Premium only", "One run per day", "Visual promotion"],
+          title: "Run a premium image broadcast.",
+          lead: "Pic Broad is a premium-only feature for sending one photo with a caption to a much larger set of users.",
+          pills: ["Premium only", "1 run per day", "Up to 350 sends"],
           actions: [
             { href: "premium.html", label: "View Premium Plans", primary: true },
             { href: "help.html", label: "Need Help?", primary: false }
@@ -220,35 +230,35 @@ window.DOCS_TRANSLATIONS = {
           {
             type: "steps",
             title: "How to use it",
-            intro: "The feature is simple, but the input format matters.",
+            intro: "The format is simple, but the broadcast only starts after the bot has the exact media it needs.",
             items: [
-              { kicker: "Step 1", title: "Start /picbroad", text: "The bot checks whether your account has premium access and whether the daily slot is free." },
-              { kicker: "Step 2", title: "Send a photo with caption", text: "Your caption becomes the message text for the broadcast." },
-              { kicker: "Step 3", title: "Wait for the result", text: "The bot reports how many sends were successful and how many failed." }
+              { kicker: "Step 1", title: "Start with /picbroad", text: "The bot first checks whether your account has premium access and whether you already used today’s slot." },
+              { kicker: "Step 2", title: "Send the photo with a caption", text: "The caption becomes the broadcast text that travels with the image." },
+              { kicker: "Step 3", title: "Wait for completion", text: "The bot processes the broadcast in the background and then reports sent and failed counts." }
             ]
           },
           {
             type: "cards",
-            title: "When it performs best",
-            intro: "This mode is for promotions where visuals do more work than plain text.",
+            title: "Actual limits",
+            intro: "This feature is stronger than normal user promotion, but it is still intentionally capped.",
             items: [
-              { kicker: "Launches", title: "Use for posters and branded visuals", text: "Strong images often land better for launches, invitations, events, and polished offers." },
-              { kicker: "Reach", title: "Higher daily capacity", text: "The feature is designed for broader delivery than normal private message promotion." },
-              { kicker: "Control", title: "Premium keeps it exclusive", text: "That helps protect the network from unlimited image spam." }
+              { kicker: "Capacity", title: "Up to 350 users", text: "Premium users can broadcast to as many as 350 users in a single day." },
+              { kicker: "Frequency", title: "Once per day", text: "A non-admin premium user can only run Pic Broad once each day." },
+              { kicker: "Use case", title: "Best for strong visuals", text: "Launch cards, posters, event banners, and polished offers usually perform better here than plain text." }
             ]
           }
         ]
       },
       referral: {
         metaTitle: "Referral",
-        metaDescription: "How referrals increase daily promotion power.",
+        metaDescription: "How the referral system increases daily promotion power in the Promoter Bot and Promotion Bot.",
         hero: {
           eyebrow: "Referral Growth",
-          title: "Turn invites into extra promotions.",
-          lead: "Referral lets you share a personal bot link and turn successful signups into extra daily promotion capacity.",
-          pills: ["Personal invite link", "Bonus promos", "Progress shown in account"],
+          title: "Turn invites into more daily promos.",
+          lead: "Referral gives each user a personal bot link and turns successful signups into extra standard promotion capacity.",
+          pills: ["Personal invite link", "3-for-3 bonus", "Contest entry path"],
           actions: [
-            { href: "user-promotion.html", label: "Back to User Promotion", primary: true },
+            { href: "contest.html", label: "See Contest Rules", primary: true },
             { href: "help.html", label: "Open Help", primary: false }
           ]
         },
@@ -256,28 +266,69 @@ window.DOCS_TRANSLATIONS = {
           {
             type: "cards",
             title: "How referrals help",
-            intro: "Referral rewards active users with more daily standard reach.",
+            intro: "The normal referral system and the contest system are related, but they are not the same thing.",
             items: [
-              { kicker: "Link", title: "You get a personal referral URL", text: "The bot gives you a shareable link that already includes your user ID." },
-              { kicker: "Bonus", title: "Referrals increase daily promos", text: "Every successful group of referrals adds extra standard promotions to your daily limit." },
-              { kicker: "Tracking", title: "Progress stays visible", text: "Your account page shows referral count and how close you are to the next bonus." }
+              { kicker: "Link", title: "Each user gets a personal URL", text: "The normal referral link uses your user ID so new signups can be tied back to your account." },
+              { kicker: "Bonus", title: "Every 3 referrals add 3 promos", text: "For standard daily promotion, each block of 3 successful referrals adds 3 extra daily promotions." },
+              { kicker: "Tracking", title: "Progress is visible in account", text: "Your account page shows total referrals, bonus promotions, and how many more referrals are needed for the next bonus." }
             ]
           },
           {
             type: "callout",
-            title: "Share value, not only the link.",
-            text: "Referral performs best when people understand what the bot does for them before they click your invite."
+            title: "Referral and contest are separate layers.",
+            text: "Normal referrals grow your daily standard limit. Contest referrals use a special contest link and focus on gem rewards plus leaderboard ranking."
+          }
+        ]
+      },
+      contest: {
+        metaTitle: "Contest",
+        metaDescription: "How the referral contest works in the Promoter Bot and Promotion Bot.",
+        hero: {
+          eyebrow: "Referral Contest",
+          title: "Compete for gems and leaderboard rank.",
+          lead: "When the contest is active, users can share a special contest referral link, earn gems for joins, and chase top-referrer rewards.",
+          pills: ["Top 3 rewards", "7 day contest window", "Premium referrals can count double"],
+          actions: [
+            { href: "referral.html", label: "Back to Referral", primary: true },
+            { href: "help.html", label: "Open Help", primary: false }
+          ]
+        },
+        sections: [
+          {
+            type: "steps",
+            title: "How contest mode works",
+            intro: "This feature only matters while the contest is active. It is started and stopped by the bot owner/admin side.",
+            items: [
+              { kicker: "Step 1", title: "Wait for an active contest", text: "The contest page and special contest button appear when a 7-day contest is active." },
+              { kicker: "Step 2", title: "Share your contest referral link", text: "The contest uses a dedicated start parameter, separate from your normal referral link." },
+              { kicker: "Step 3", title: "Track leaderboard and rules", text: "Users can open the leaderboard and contest rules directly from the contest menu while the event is running." }
+            ]
+          },
+          {
+            type: "cards",
+            title: "Important rules",
+            intro: "These are the public-facing rules reflected in the current bot logic and contest messages.",
+            items: [
+              { kicker: "Rewards", title: "Joins earn gems", text: "A valid contest referral awards gems to the inviter, and Telegram Premium referred users can award double gems." },
+              { kicker: "Eligibility", title: "50 referrals for top-reward eligibility", text: "The bot states that top-3 referrers must reach at least 50 eligible referrals to qualify for contest rewards." },
+              { kicker: "Timing", title: "Contest lasts 7 days", text: "The contest start flow sets a 7-day window, and reward distribution messaging says counts are handled within 7 days after the contest ends." }
+            ]
+          },
+          {
+            type: "callout",
+            title: "The normal referral link still matters.",
+            text: "If the contest is inactive, users should still share their normal referral link for daily-promotion bonuses. Contest rewards only apply during active contest periods."
           }
         ]
       },
       forceJoin: {
         metaTitle: "Force Join",
-        metaDescription: "How Force Join works for group admins.",
+        metaDescription: "How Force Join works for group admins in the Promoter Bot and Promotion Bot.",
         hero: {
           eyebrow: "Admin Control",
-          title: "Require users to join before they chat.",
-          lead: "Force Join is for group admins who want members to join selected channels before they continue messaging inside the group.",
-          pills: ["Admin-only setup", "Channel checks", "Useful for linked communities"],
+          title: "Require joins before users chat.",
+          lead: "Force Join lets group admins block ordinary messages until users join one or more required channels first.",
+          pills: ["Group-only setup", "Channel membership checks", "Messages can be deleted"],
           actions: [
             { href: "help.html", label: "Admin Help", primary: true },
             { href: "group-promotion.html", label: "See Group Promotion", primary: false }
@@ -287,69 +338,70 @@ window.DOCS_TRANSLATIONS = {
           {
             type: "steps",
             title: "Setup flow",
-            intro: "The commands are short, but the bot needs correct permissions.",
+            intro: "The commands are short, but both the group and the target channel need the right bot permissions.",
             items: [
-              { kicker: "Step 1", title: "Add the bot to the group", text: "The bot needs to be present where the message checks will happen." },
-              { kicker: "Step 2", title: "Run /set", text: "Use a channel username or channel ID to add the destination to the force-join list." },
-              { kicker: "Step 3", title: "Use /unset when needed", text: "Admins can remove a requirement later if the rule changes." }
+              { kicker: "Step 1", title: "Add the bot to the group", text: "The bot must be present in the group where user messages will be checked." },
+              { kicker: "Step 2", title: "Run /set in the group", text: "Use a channel ID or @username to add the required join destination for that group." },
+              { kicker: "Step 3", title: "Use /unset to remove it", text: "Admins can later remove a required channel from the group’s force-join list." }
             ]
           },
           {
             type: "cards",
-            title: "Why admins use it",
-            intro: "It combines moderation and audience growth in one feature.",
+            title: "What the bot actually does",
+            intro: "The current logic is stricter than a passive reminder. It can actively block message flow for non-members.",
             items: [
-              { kicker: "Control", title: "Stops non-members from chatting freely", text: "The bot can remove messages until the required joins are complete." },
-              { kicker: "Flexibility", title: "More than one destination can be required", text: "One group can enforce several join points if needed." },
-              { kicker: "Value", title: "Works best with useful channels", text: "Users accept the rule more easily when the required channel gives real updates or benefits." }
+              { kicker: "Check", title: "Membership is checked live", text: "For every non-admin message, the bot checks whether the user joined each required channel." },
+              { kicker: "Action", title: "Messages can be deleted", text: "If the user is missing a required join, the bot can delete the message and send join buttons back into the group." },
+              { kicker: "Requirement", title: "Bot must access the target channel", text: "The bot needs channel access, and in many cases admin rights there, to verify membership properly." }
             ]
           }
         ]
       },
       premium: {
         metaTitle: "Premium",
-        metaDescription: "Premium features, plans, and upgraded access.",
+        metaDescription: "Premium plans and feature access for the Promoter Bot and Promotion Bot.",
         hero: {
           eyebrow: "Upgrade Access",
-          title: "What premium unlocks.",
-          lead: "Premium expands your reach, unlocks richer promotion tools, and makes advanced campaigns more efficient.",
-          pills: ["Pic Broad access", "Stronger group promotion", "Promo Join discounts"],
+          title: "Premium gives your promotions priority.",
+          lead: "Premium helps your tasks move faster, gives your campaigns stronger visibility, unlocks bigger promo tools, and reduces gem cost inside Promo Join tiers.",
+          pills: ["Priority task placement", "10 group runs per day", "Lower Promo Join costs"],
           actions: [
-            { href: "pic-broad.html", label: "See Pic Broad", primary: true },
-            { href: "help.html", label: "Open Help", primary: false }
+            { href: "https://t.me/DealmanyBot?start=buypremium", label: "Get Premium", primary: true },
+            { href: "promo-join.html", label: "See Promo Join", primary: false }
           ]
         },
         sections: [
           {
             type: "cards",
             title: "Main benefits",
-            intro: "Premium is most valuable for active promoters.",
+            intro: "Premium is about stronger placement, faster handling, and access to the bot’s bigger promotion tools.",
             items: [
-              { kicker: "Media", title: "Pic Broad access", text: "Send a visual promotion with image and caption to a larger audience." },
-              { kicker: "Groups", title: "More group power", text: "Premium raises both daily usage and target group count for group promotion." },
-              { kicker: "Campaigns", title: "Lower gem costs", text: "Promo Join tiers are more efficient for premium users." }
+              { kicker: "Broadcast", title: "Pic Broad access", text: "Premium unlocks image + caption broadcasting to up to 350 users per day." },
+              { kicker: "Groups", title: "10 group-promo runs daily", text: "Premium raises group promotion from 2 runs per day to 10 runs per day." },
+              { kicker: "Priority", title: "Tasks are shown first", text: "Premium tasks are placed ahead of standard ones so users see them earlier when matching campaigns are available." },
+              { kicker: "Speed", title: "Faster actions and processing", text: "The premium flow is designed for quicker handling and higher priority across supported promo actions." },
+              { kicker: "Support", title: "Priority support", text: "Premium users get faster support attention when they need help." },
+              { kicker: "Gems", title: "Lower Promo Join tier cost", text: "Promo Join tiers charge fewer gems for premium users than for standard users." }
             ]
           },
           {
-            type: "cards",
-            title: "Current plans",
-            intro: "These are the plan shapes currently reflected in the product messaging.",
-            items: [
-              { kicker: "1 Week", title: "₹30 or 15 Stars", text: "Good for short-term access and testing premium features." },
-              { kicker: "3 Weeks", title: "₹75 or 38 Stars", text: "Balanced option for users who need longer access without jumping to full monthly use." },
-              { kicker: "1 Month", title: "₹89 or 45 Stars", text: "Best fit for regular promotion usage and repeated campaigns." }
+            type: "callout",
+            title: "Use premium when visibility matters most.",
+            text: "If you want your tasks shown first, faster promo handling, and access to stronger campaign tools, open premium directly in Telegram.",
+            actions: [
+              { href: "https://t.me/DealmanyBot?start=buypremium", label: "Get Premium", primary: true }
             ]
           }
         ]
       },
       help: {
         metaTitle: "Help",
-        metaDescription: "Frequently asked questions and quick help.",
+        metaDescription: "Quick answers for users of the Promoter Bot and Promotion Bot.",
         hero: {
           eyebrow: "Help Center",
-          title: "Quick answers without the confusion.",
-          lead: "This page covers the most common questions users and admins ask about content saving, limits, campaigns, and premium access.",
-          pills: ["Predefined answers", "User and admin topics", "Fast troubleshooting"],
+          title: "Quick answers for the most common issues.",
+          lead: "This page focuses on the questions users actually hit while saving content, promoting, earning gems, joining contests, and managing premium access.",
+          pills: ["User questions", "Admin questions", "Contest included"],
           actions: [
             { href: "terms.html", label: "Terms", primary: true },
             { href: "privacy.html", label: "Privacy", primary: false }
@@ -359,25 +411,26 @@ window.DOCS_TRANSLATIONS = {
           {
             type: "faq",
             title: "Frequently asked questions",
-            intro: "Share this page when someone needs a quick answer before contacting support.",
+            intro: "Use this page when a user needs a fast answer before contacting support.",
             items: [
-              { q: "Why does the bot say I do not have a saved message?", a: "Because your promotion source is empty. Send a valid message in private chat first." },
-              { q: "Why is NSFW classification important?", a: "It helps the bot deliver content only to the audience that agreed to receive it." },
-              { q: "Why did my standard promotion stop for today?", a: "Standard promotion uses a daily limit system. Referral bonuses can increase that allowance." },
-              { q: "Why is Pic Broad unavailable?", a: "Pic Broad is premium-only and also follows a daily usage rule." },
-              { q: "Why did Promo Join verification fail?", a: "Usually because the user did not fully join, the bot could not verify membership, or the campaign already expired." },
-              { q: "Why is Force Join not working in my group?", a: "The bot may be missing required permissions in the protected group or the target channel." }
+              { q: "Why does the bot say I do not have saved content?", a: "Because your active saved content is empty. Send a valid message, link, or username in private chat first." },
+              { q: "How many standard promotions do I get per day?", a: "The base limit is 5 daily standard promotions, and every 3 referrals add 3 more." },
+              { q: "How many group promotions do I get?", a: "Standard users get 2 group-promo runs per day. Premium users get 10." },
+              { q: "Why is Pic Broad unavailable?", a: "Pic Broad is premium-only and non-admin premium users can only use it once per day." },
+              { q: "Why did Promo Join verification fail?", a: "Usually because the user did not fully join, the bot could not verify membership, or the campaign was already closed." },
+              { q: "How does the contest differ from normal referral?", a: "Normal referral raises your daily standard-promo limit. Contest referral uses a special event link and awards gems while the contest is active." },
+              { q: "Why is Force Join not working?", a: "The bot may be missing permissions in the group, access in the required channel, or the setup may not have been completed by a group admin." }
             ]
           }
         ]
       },
       terms: {
         metaTitle: "Terms",
-        metaDescription: "Terms and conditions for the Promoter bot.",
+        metaDescription: "Terms and conditions for the Promoter Bot and Promotion Bot.",
         hero: {
           eyebrow: "Legal",
           title: "Terms and conditions.",
-          lead: "These terms explain the basic rules for using the bot, premium access, and promotion tools.",
+          lead: "These short terms explain the basic rules for using promotion tools, premium access, gem-based features, and moderation-related systems.",
           pills: ["Readable terms", "User responsibility", "Access rules"],
           actions: [
             { href: "privacy.html", label: "Read Privacy", primary: true },
@@ -388,23 +441,23 @@ window.DOCS_TRANSLATIONS = {
           {
             type: "legal",
             title: "Main rules",
-            intro: "This page is intentionally short and readable.",
+            intro: "This page stays intentionally short and readable.",
             items: [
               { title: "1. Content responsibility", text: "You are responsible for the material you submit or promote through the service." },
               { title: "2. Fair use", text: "Illegal, deceptive, harmful, or abusive use can lead to restrictions, suspension, or permanent removal." },
               { title: "3. Premium access", text: "Premium unlocks extra tools, but it does not guarantee identical results for every user or campaign." },
-              { title: "4. Changes", text: "Features, limits, and moderation rules may change over time as the service evolves." }
+              { title: "4. Changes", text: "Features, limits, contest rules, and moderation policies may change over time." }
             ]
           }
         ]
       },
       privacy: {
         metaTitle: "Privacy",
-        metaDescription: "Privacy policy for the Promoter bot.",
+        metaDescription: "Privacy policy for the Promoter Bot and Promotion Bot.",
         hero: {
           eyebrow: "Legal",
           title: "Privacy policy.",
-          lead: "This policy explains what operating data may be stored so the bot can deliver promotions, handle rewards, and manage account access.",
+          lead: "This policy explains the operating data that may be stored so the bot can deliver promotions, track limits, manage rewards, and maintain account state.",
           pills: ["Operational data", "Account records", "Promotion history"],
           actions: [
             { href: "terms.html", label: "Read Terms", primary: true },
@@ -415,12 +468,12 @@ window.DOCS_TRANSLATIONS = {
           {
             type: "legal",
             title: "What may be stored",
-            intro: "Only the data needed to operate the service and its promotion features should be kept.",
+            intro: "Only the data needed to operate the service and its promotion features should be retained.",
             items: [
-              { title: "1. Account data", text: "User ID, username, name, timestamps, and status markers may be stored for normal operation." },
-              { title: "2. Promotion data", text: "Saved messages, links, content type, campaign targets, and result-related information may be recorded." },
-              { title: "3. Usage data", text: "Daily limits, referral totals, gem balances, and campaign progress can be tracked to keep the features working correctly." },
-              { title: "4. Purpose", text: "The stored data supports delivery, anti-abuse logic, rewards, premium access, and moderation." }
+              { title: "1. Account data", text: "User ID, username, name, timestamps, and service-status markers may be stored for normal operation." },
+              { title: "2. Promotion data", text: "Saved links, text, content classification, targets, and campaign-state records may be stored to make features work." },
+              { title: "3. Usage data", text: "Daily limits, referral totals, gem balances, group rewards, and campaign progress may be tracked." },
+              { title: "4. Purpose", text: "The stored data supports delivery, anti-abuse checks, rewards, premium access, contest tracking, and moderation." }
             ]
           }
         ]
@@ -429,22 +482,23 @@ window.DOCS_TRANSLATIONS = {
   },
   ru: {
     common: {
-      siteName: "Promoter Docs",
-      siteTagline: "Понятные инструкции по режимам продвижения",
-      logoAlt: "Логотип Promoter",
-      menuLabel: "Открыть меню",
-      closeLabel: "Закрыть меню",
+      siteName: "Документация Promoter Bot",
+      siteTagline: "Понятные гайды по всем сценариям продвижения",
+      logoAlt: "Логотип Promoter Bot",
+      menuLabel: "Открыть навигацию",
+      closeLabel: "Закрыть навигацию",
       mobileMenuTitle: "Навигация",
       mobileSections: {
         guide: "Разделы",
-        legal: "Правила"
+        legal: "Правовая информация"
       },
       navLabel: "Основная навигация",
       languageLabel: "Выберите язык",
-      defaultSideTitle: "Понятно и быстро",
-      defaultSideText: "Каждая важная функция имеет собственную страницу и отдельную ссылку.",
-      footerTitle: "Документация Promoter",
-      footerNote: "Этот сайт объясняет функции продукта простым языком. Реальные лимиты и доступ зависят от владельца бота и текущих настроек Telegram.",
+      defaultSideTitle: "Для реальных пользователей",
+      defaultSideText: "У каждой важной функции есть своя страница, чтобы можно было быстро открыть нужное объяснение.",
+      footerTitle: "Документация Promoter Bot",
+      footerNote: "Этот сайт объясняет текущую логику Promoter Bot и Promotion Bot для конечных пользователей. Реальные лимиты и доступ всё равно зависят от владельца бота и прав Telegram.",
+      metaKeywords: "Promoter Bot, Promotion Bot, Telegram promotion bot, Telegram promoter bot",
       languages: {
         en: "English",
         ru: "Русский",
@@ -458,6 +512,7 @@ window.DOCS_TRANSLATIONS = {
         promoJoin: "Promo Join",
         picBroad: "Pic Broad",
         referral: "Рефералы",
+        contest: "Конкурс",
         forceJoin: "Force Join",
         premium: "Premium",
         help: "Помощь",
@@ -468,176 +523,187 @@ window.DOCS_TRANSLATIONS = {
     pages: {
       home: {
         metaTitle: "Обзор",
-        metaDescription: "Многоязычный гид по боту Promoter.",
+        metaDescription: "Официальная многоязычная документация по Promoter Bot и Promotion Bot.",
         hero: {
-          eyebrow: "Гид Promoter",
-          title: "Один аккуратный сайт для всех сценариев роста.",
-          lead: "Здесь собраны понятные объяснения по обычному промо, групповому промо, Promo Join, рефералам, premium-инструментам и функциям для администраторов.",
-          pills: ["4 языка", "Отдельные ссылки", "Быстрая помощь"],
+          eyebrow: "Официальный гид",
+          title: "Один сайт для всех режимов продвижения.",
+          lead: "Этот сайт лучше совпадает с реальным ботом: обычное промо, групповое промо, Promo Join, рефералы, конкурс, premium-инструменты и админские функции.",
+          pills: ["4 языка", "Текст по реальному боту", "Быстрые help-страницы"],
           actions: [
-            { href: "user-promotion.html", label: "Открыть базовое промо", primary: true },
-            { href: "help.html", label: "Открыть помощь", primary: false }
+            { href: "user-promotion.html", label: "Открыть User Promotion", primary: true },
+            { href: "contest.html", label: "Смотреть конкурс", primary: false }
           ],
           sidePanels: [
-            { title: "Для пользователей", text: "Поймите, как сохранить сообщение, запускать промо и использовать premium или gems." },
-            { title: "Для админов", text: "Быстро разберитесь, как работают Force Join и связанные групповые функции." }
+            { title: "Для промо-пользователей", text: "Разберитесь с дневными лимитами, сохранённым контентом, premium, gems и продвинутыми кампаниями ещё до старта." },
+            { title: "Для админов", text: "Посмотрите, как Force Join и награды за добавление бота связаны с ростом канала и модерированием." }
           ]
         },
         sections: [
           {
             type: "stats",
             title: "Коротко о главном",
-            intro: "Бот сочетает простое ежедневное продвижение и более сильные инструменты для тех, кому нужен больший охват.",
+            intro: "Бот сочетает простое ежедневное продвижение, premium-апгрейд, gems и реферальный рост.",
             items: [
-              { value: "5+", title: "Ежедневные обычные промо", text: "Базовый лимит можно увеличивать через реферальные бонусы." },
-              { value: "15 / 35", title: "Цель по группам", text: "Обычный режим стремится до 15 групп, premium — до 35." },
-              { value: "350", title: "Охват Pic Broad", text: "Premium-рассылка с изображением может охватывать намного больше пользователей." }
+              { value: "5", title: "Базовых промо в день", text: "Обычное приватное промо стартует с 5 использований в день и может расти через рефералов." },
+              { value: "2 / 10", title: "Групповых запусков в день", text: "Обычный пользователь получает 2 group-promo запуска в день, premium — 10." },
+              { value: "+65 / -70", title: "Баланс за add-bot", text: "За подходящую группу можно получить 65 gems, но удаление бота потом даёт штраф 70 gems." }
             ]
           },
           {
             type: "cards",
-            title: "Главные разделы",
-            intro: "Каждая тема вынесена на отдельную страницу.",
-            columns: 2,
+            title: "Основные разделы",
+            intro: "У каждого важного сценария есть отдельная страница, чтобы не отправлять людей в сырые команды бота.",
             items: [
-              { kicker: "База", title: "Промо пользователям", text: "Как личное сохраненное сообщение доставляется другим пользователям." },
-              { kicker: "Охват", title: "Промо в группы", text: "Как бот размещает ваш текст в доступных группах." },
-              { kicker: "Gems", title: "Promo Join", text: "Продвинутые кампании с gems и подтвержденными вступлениями." },
-              { kicker: "Медиа", title: "Pic Broad", text: "Premium-режим для продвижения через изображение и подпись." },
-              { kicker: "Рост", title: "Рефералы", text: "Как личная ссылка увеличивает дневной лимит обычного промо." },
-              { kicker: "Админ", title: "Force Join", text: "Как заставить вступить в канал перед общением в группе." }
+              { kicker: "Core", title: "User Promotion", text: "Как сохранённая ссылка или текст уходит до 15 пользователям внутри сети." },
+              { kicker: "Reach", title: "Group Promotion", text: "Как сохранённый контент уходит в активные группы по стандартным или premium-лимитам." },
+              { kicker: "Gems", title: "Promo Join", text: "Продвинутый режим, где gems тратятся на join-and-verify кампании." },
+              { kicker: "Media", title: "Pic Broad", text: "Premium-рассылка: одна картинка, одна подпись и до 350 отправок в день." },
+              { kicker: "Growth", title: "Referral", text: "Как личная ссылка добавляет больше обычных промо в ваш дневной лимит." },
+              { kicker: "Event", title: "Contest", text: "Как специальный конкурс по рефералам выдаёт gems и ведёт таблицу лидеров." },
+              { kicker: "Admin", title: "Force Join", text: "Как заставить пользователей вступить в канал до продолжения общения." }
             ]
           },
           {
             type: "callout",
-            title: "Понятная документация снижает хаос.",
-            text: "Когда пользователь заранее понимает продукт, у вас меньше повторяющихся вопросов и чище сам сценарий использования."
+            title: "Точные тексты уменьшают хаос.",
+            text: "Когда публичная документация совпадает с реальным поведением бота, у пользователей меньше ложных ожиданий и повторяющихся вопросов."
           }
         ]
       },
       userPromotion: {
         metaTitle: "Промо пользователям",
-        metaDescription: "Как работает стандартное продвижение между пользователями.",
+        metaDescription: "Как работает стандартное продвижение между пользователями в Promoter Bot и Promotion Bot.",
         hero: {
-          eyebrow: "Пользователь → пользователь",
-          title: "Как работает стандартное промо.",
-          lead: "Это самый быстрый способ продвинуть сообщение или ссылку внутри сети бота.",
-          pills: ["Личный чат", "Бесплатный дневной доступ", "Бонусы за рефералов"],
+          eyebrow: "Приватный охват",
+          title: "Как реально работает стандартное промо.",
+          lead: "User Promotion — базовый режим, где ваша сохранённая ссылка или текст отправляется случайным доступным пользователям в сети.",
+          pills: ["5 базовых промо", "До 15 пользователей за запуск", "Реферальные бонусы"],
           actions: [
-            { href: "referral.html", label: "Смотреть рефералы", primary: true },
-            { href: "help.html", label: "Нужна помощь?", primary: false }
+            { href: "referral.html", label: "Смотреть реферальные бонусы", primary: true },
+            { href: "help.html", label: "Открыть помощь", primary: false }
+          ],
+          sidePanels: [
+            { title: "Лучше всего подходит для", text: "Быстрых ссылок, коротких обновлений, username и лёгкого ежедневного продвижения без траты gems." }
           ]
         },
         sections: [
           {
             type: "steps",
             title: "Базовый сценарий",
-            intro: "Большинству пользователей достаточно трех шагов.",
+            intro: "Командный путь короткий, но бот всё равно проверяет сохранённый контент и тип контента перед отправкой.",
             items: [
-              { kicker: "Шаг 1", title: "Отправьте сообщение в личный чат", text: "Сообщение должно содержать ссылку, username или понятный путь перехода." },
-              { kicker: "Шаг 2", title: "Подтвердите тип контента", text: "Если бот спрашивает про NSFW или normal, отвечайте правильно." },
-              { kicker: "Шаг 3", title: "Запустите /promote", text: "После этого бот отправляет сохраненный контент и обновляет дневной остаток." }
+              { kicker: "Шаг 1", title: "Сохраните контент в личном чате", text: "Отправьте валидную ссылку, username или текст, чтобы у бота было что продвигать." },
+              { kicker: "Шаг 2", title: "Ответьте на NSFW-вопрос, если он появился", text: "Некоторый сохранённый контент остаётся в ожидании, пока вы не укажете правильно normal или NSFW." },
+              { kicker: "Шаг 3", title: "Запустите /promote", text: "Бот отправит сохранённый контент максимум 15 пользователям и обновит дневной остаток." }
             ]
           },
           {
             type: "cards",
-            title: "Почему это удобно",
-            intro: "Это самый простой режим продвижения внутри продукта.",
+            title: "Что важно знать",
+            intro: "Этот режим простой, но реальные лимиты конкретнее, чем было написано раньше.",
             items: [
-              { kicker: "Быстро", title: "Без сложной настройки", text: "Не нужны gems, tier-кампании или отдельные цели для запуска." },
-              { kicker: "Гибко", title: "Подходит для коротких офферов", text: "Хорошо работает для invite-ссылок, обновлений и простых call to action." },
-              { kicker: "Рост", title: "Становится сильнее со временем", text: "Рефералы могут расширять ежедневный лимит без смены сценария." }
+              { kicker: "Base", title: "5 использований в день по умолчанию", text: "Стандартный дневной лимит начинается с 5 промо, пока не добавятся реферальные бонусы." },
+              { kicker: "Bonus", title: "Рефералы расширяют лимит", text: "Каждые 3 реферала добавляют ещё 3 обычных промо в день." },
+              { kicker: "Reuse", title: "Используется уже сохранённый контент", text: "Не нужно собирать отдельную кампанию: бот берёт то, что вы уже сохранили в private chat." }
             ]
           }
         ]
       },
       groupPromotion: {
         metaTitle: "Промо в группы",
-        metaDescription: "Как работает продвижение через группы.",
+        metaDescription: "Как работает групповое продвижение в Promoter Bot и Promotion Bot.",
         hero: {
           eyebrow: "Охват через сообщества",
-          title: "Продвигайте контент в группах.",
-          lead: "Групповое промо берет ваш сохраненный текст и размещает его там, где групповой режим сейчас доступен.",
-          pills: ["15 групп standard", "35 групп premium", "Дневные лимиты"],
+          title: "Продвигайте сохранённый контент в группах.",
+          lead: "Group Promotion отправляет ваше сохранённое сообщение в группы, где продвижение сейчас активно и доступно.",
+          pills: ["2 запуска standard", "10 запусков premium", "Цель 15 или 35 групп"],
           actions: [
-            { href: "premium.html", label: "Сравнить premium", primary: true },
-            { href: "help.html", label: "Открыть помощь", primary: false }
+            { href: "premium.html", label: "Сравнить Premium", primary: true },
+            { href: "help.html", label: "Нужна помощь?", primary: false }
           ]
         },
         sections: [
           {
             type: "steps",
             title: "Как проходит запуск",
-            intro: "Пользовательский путь короткий, а проверки бот делает сам.",
+            intro: "Бот проверяет не только команду, но и бан-статус, дневной usage, saved content и наличие доступных групп.",
             items: [
-              { kicker: "Шаг 1", title: "Сначала сохраните контент", text: "Если активного сообщения нет, бот не сможет начать продвижение." },
-              { kicker: "Шаг 2", title: "Запустите /chatpromo", text: "Бот проверит доступ, бан-статус, дневной лимит и наличие групп." },
-              { kicker: "Шаг 3", title: "Дождитесь итогов", text: "После отправки бот покажет, сколько групп получили сообщение." }
+              { kicker: "Шаг 1", title: "Держите saved content готовым", text: "Если сохранённого контента нет, групповое промо не сможет стартовать." },
+              { kicker: "Шаг 2", title: "Запустите /chatpromo", text: "Бот проверяет статус и начинает фоновую отправку в доступные группы." },
+              { kicker: "Шаг 3", title: "Прочитайте итог", text: "Когда run завершается, бот показывает, сколько групп реально получили промо." }
             ]
           },
           {
             type: "cards",
-            title: "Почему этот режим важен",
-            intro: "Он дает более публичный охват, чем обычное личное промо.",
+            title: "Реальные лимиты",
+            intro: "Здесь есть два лимита: сколько запусков в день и сколько групп пытается достичь один запуск.",
             items: [
-              { kicker: "Видимость", title: "Сообщение попадает в сообщества", text: "Оно может быть замечено сразу несколькими людьми внутри обсуждений." },
-              { kicker: "Удобство", title: "Использует уже сохраненный текст", text: "Не нужен отдельный интерфейс, чтобы начать групповой запуск." },
-              { kicker: "Масштаб", title: "Premium идет дальше", text: "Premium дает и больше запусков, и большую цель по группам." }
+              { kicker: "Standard", title: "2 запуска в день", text: "Обычный пользователь может запустить group promotion дважды в день, и каждый запуск старается дойти до 15 успешных отправок." },
+              { kicker: "Premium", title: "10 запусков в день", text: "Premium даёт 10 запусков в день, а каждая сессия может дойти до 35 успешных group sends." },
+              { kicker: "Availability", title: "Наличие групп всё равно решает", text: "Если активных promotable groups нет, команда остановится, даже если дневной usage ещё не закончился." }
             ]
           }
         ]
       },
       promoJoin: {
         metaTitle: "Promo Join",
-        metaDescription: "Как работают кампании Promo Join.",
+        metaDescription: "Как работают кампании Promo Join в Promoter Bot и Promotion Bot.",
         hero: {
           eyebrow: "Кампании за gems",
-          title: "Получайте подтвержденные вступления через Promo Join.",
-          lead: "Promo Join — продвинутый режим, где вы тратите gems ради реальных join + verify результатов.",
-          pills: ["Gem-based", "Verify flow", "Скидки для premium"],
+          title: "Покупайте подтверждённые вступления за gems.",
+          lead: "Promo Join — продвинутый режим, где вы тратите gems, чтобы отправить целевой чат пользователям и наградить их после успешного join + verify.",
+          pills: ["Старт с gems", "Награда verifier", "Скидка по tier для premium"],
           actions: [
-            { href: "premium.html", label: "Посмотреть premium", primary: true },
-            { href: "help.html", label: "FAQ", primary: false }
+            { href: "https://t.me/DealmanyBot?start=buygems", label: "Купить gems", primary: true },
+            { href: "premium.html", label: "Смотреть преимущества premium", primary: false }
           ]
         },
         sections: [
           {
             type: "cards",
-            title: "Как это работает",
-            intro: "Promo Join нужен тем, кто хочет не просто просмотры, а реальные вступления.",
+            title: "Как устроена система",
+            intro: "Это не режим на просмотры. Здесь есть gem-баланс, активные кампании и схема join-and-verify.",
             items: [
-              { kicker: "Setup", title: "Нужен целевой чат", text: "Сначала вы задаете канал или группу, куда бот должен вести пользователей." },
-              { kicker: "Cost", title: "Кампании стоят gems", text: "Каждый tier имеет свою цену, а premium может платить меньше." },
-              { kicker: "Progress", title: "Verify завершает кампанию", text: "Кампания движется к цели только через успешные вступления и подтверждения." }
+              { kicker: "Balance", title: "Пользователь получает gem-профиль", text: "Для Promo Join создаётся отдельный профиль с балансом gems, и именно он тратится на кампании." },
+              { kicker: "Setup", title: "Сначала нужно задать target chat", text: "Используйте /promojoin, чтобы установить канал или группу, а уже потом открывайте /advance." },
+              { kicker: "Reward", title: "Verifier получает 1 gem", text: "Пользователь, который вступил и успешно подтвердился, получает 1 gem за задачу." }
             ]
           },
           {
             type: "steps",
-            title: "Поток кампании",
-            intro: "После первого знакомства сценарий остается достаточно понятным.",
+            title: "Путь кампании",
+            intro: "Меню простое, но есть несколько важных правил, о которых пользователю лучше знать заранее.",
             items: [
-              { kicker: "Шаг 1", title: "Используйте /promojoin", text: "Назначьте целевой чат перед открытием advanced-меню." },
-              { kicker: "Шаг 2", title: "Откройте /advance", text: "Выберите tier по бюджету, размеру кампании и цели verify." },
-              { kicker: "Шаг 3", title: "Следите за verify", text: "Пользователи вступают, подтверждают участие и двигают вашу кампанию к завершению." }
+              { kicker: "Шаг 1", title: "Настройте назначение через /promojoin", text: "Бот тоже должен быть админом в этом target chat, чтобы membership-check работал правильно." },
+              { kicker: "Шаг 2", title: "Откройте /advance и выберите tier", text: "Разные tiers меняют цену в gems, цель по verify и объём отправки; premium платит меньше." },
+              { kicker: "Шаг 3", title: "Ждите verify-прогресс", text: "Бот уведомляет промоутера по мере прихода verify и закрывает кампанию после достижения цели." }
             ]
           },
           {
             type: "callout",
-            title: "Лучше всего работает для серьезного продвижения.",
-            text: "Если сам канал или группа не дают ценности после вступления, эффективность Promo Join быстро падает."
+            title: "Нужно больше gems?",
+            text: "Если баланс заканчивается, сначала пополните gems, а потом запускайте следующую Promo Join кампанию без паузы.",
+            actions: [
+              { href: "https://t.me/DealmanyBot?start=buygems", label: "Купить gems", primary: true }
+            ]
+          },
+          {
+            type: "callout",
+            title: "Оставаться в чате тоже важно.",
+            text: "Если verifier вышел слишком рано, бот может попросить вернуться и позже списать 2 gems, если пользователь не вернётся в recovery window."
           }
         ]
       },
       picBroad: {
         metaTitle: "Pic Broad",
-        metaDescription: "Как работает premium-рассылка с изображением.",
+        metaDescription: "Как работает Pic Broad в Promoter Bot и Promotion Bot.",
         hero: {
-          eyebrow: "Premium media",
-          title: "Отправляйте визуальную рассылку через Pic Broad.",
-          lead: "Pic Broad — premium-функция для отправки одного изображения с подписью по более широкой аудитории.",
-          pills: ["Только premium", "1 запуск в день", "Визуальное промо"],
+          eyebrow: "Premium Media",
+          title: "Запускайте premium image broadcast.",
+          lead: "Pic Broad — premium-only функция для отправки одной фотографии с подписью на гораздо большую пользовательскую аудиторию.",
+          pills: ["Только premium", "1 запуск в день", "До 350 отправок"],
           actions: [
-            { href: "premium.html", label: "Открыть premium", primary: true },
+            { href: "premium.html", label: "Смотреть Premium", primary: true },
             { href: "help.html", label: "Нужна помощь?", primary: false }
           ]
         },
@@ -645,35 +711,35 @@ window.DOCS_TRANSLATIONS = {
           {
             type: "steps",
             title: "Как использовать",
-            intro: "Функция простая, но формат важен.",
+            intro: "Формат очень простой, но broadcast стартует только после получения нужного медиа.",
             items: [
-              { kicker: "Шаг 1", title: "Запустите /picbroad", text: "Бот проверит premium-доступ и свободен ли дневной слот." },
-              { kicker: "Шаг 2", title: "Отправьте фото с подписью", text: "Подпись становится текстом всей рассылки." },
-              { kicker: "Шаг 3", title: "Получите итог", text: "После завершения бот покажет число успешных и неуспешных отправок." }
+              { kicker: "Шаг 1", title: "Стартуйте с /picbroad", text: "Сначала бот проверяет premium-доступ и свободен ли сегодняшний слот." },
+              { kicker: "Шаг 2", title: "Отправьте фото с подписью", text: "Подпись становится текстом broadcast-сообщения, которое уходит вместе с изображением." },
+              { kicker: "Шаг 3", title: "Дождитесь завершения", text: "Бот обрабатывает рассылку в фоне и потом показывает sent/failed статистику." }
             ]
           },
           {
             type: "cards",
-            title: "Когда режим особенно полезен",
-            intro: "Он нужен там, где изображение продает идею быстрее, чем простой текст.",
+            title: "Фактические лимиты",
+            intro: "Функция сильнее обычного user promotion, но она всё равно жёстко ограничена.",
             items: [
-              { kicker: "Визуал", title: "Подходит для постеров и креативов", text: "Особенно полезно для запусков, афиш, баннеров и брендированных промо." },
-              { kicker: "Охват", title: "Больше дневная емкость", text: "Режим создан для более широкой доставки, чем обычное сообщение." },
-              { kicker: "Контроль", title: "Premium ограничивает спам", text: "Эксклюзивность помогает удерживать качество сетевой доставки." }
+              { kicker: "Capacity", title: "До 350 пользователей", text: "Premium-пользователь может отправить Pic Broad максимум 350 пользователям за день." },
+              { kicker: "Frequency", title: "Один раз в день", text: "Обычный premium-пользователь, не админ, может запускать Pic Broad только один раз в день." },
+              { kicker: "Use case", title: "Лучше всего работает с сильным визуалом", text: "Карточки запуска, постеры, ивенты и polished offers обычно чувствуют себя здесь лучше plain text." }
             ]
           }
         ]
       },
       referral: {
         metaTitle: "Рефералы",
-        metaDescription: "Как реферальная система увеличивает дневной лимит промо.",
+        metaDescription: "Как реферальная система повышает дневную промо-мощность в Promoter Bot и Promotion Bot.",
         hero: {
           eyebrow: "Реферальный рост",
-          title: "Превращайте приглашения в дополнительные промо.",
-          lead: "Реферальная система дает персональную ссылку бота и превращает успешные приглашения в большее количество ежедневных стандартных промо.",
-          pills: ["Личная invite-link", "Bonus promos", "Виден прогресс"],
+          title: "Превращайте приглашения в большее число дневных промо.",
+          lead: "Referral выдаёт пользователю личную ссылку на бота и превращает успешные регистрации в дополнительную стандартную промо-ёмкость.",
+          pills: ["Личная invite-ссылка", "Бонус 3-за-3", "Связь с contest"],
           actions: [
-            { href: "user-promotion.html", label: "Вернуться к user promo", primary: true },
+            { href: "contest.html", label: "Смотреть правила конкурса", primary: true },
             { href: "help.html", label: "Открыть помощь", primary: false }
           ]
         },
@@ -681,171 +747,214 @@ window.DOCS_TRANSLATIONS = {
           {
             type: "cards",
             title: "Как помогают рефералы",
-            intro: "Рефералы — один из самых простых способов расширить дневной reach без покупки premium.",
+            intro: "Обычная реферальная система и contest-система связаны, но это не одно и то же.",
             items: [
-              { kicker: "Link", title: "У вас есть личный URL", text: "Бот выдает ссылку, в которой уже зашит ваш user ID." },
-              { kicker: "Bonus", title: "Рефералы дают реальные промо", text: "Группы успешных приглашений добавляют extra standard promotions." },
-              { kicker: "Tracking", title: "Прогресс виден в аккаунте", text: "Вы всегда можете увидеть текущий счет и путь к следующему бонусу." }
+              { kicker: "Link", title: "У каждого пользователя есть личный URL", text: "Обычная referral-ссылка использует ваш user ID, чтобы бот мог привязать новый signup к вашему аккаунту." },
+              { kicker: "Bonus", title: "Каждые 3 реферала дают 3 промо", text: "Для standard daily promotion каждая тройка успешных referrals добавляет ещё 3 промо в день." },
+              { kicker: "Tracking", title: "Прогресс виден в account", text: "На странице аккаунта видны total referrals, bonus promotions и сколько ещё рефералов нужно до следующего бонуса." }
             ]
           },
           {
             type: "callout",
-            title: "Сначала объясняйте пользу, а потом кидайте ссылку.",
-            text: "Чем понятнее человеку ценность бота, тем лучше работает реферальная ссылка."
+            title: "Referral и contest — это разные слои.",
+            text: "Обычный referral увеличивает daily standard limit. Contest referral использует особую event-link и фокусируется на gems и leaderboard."
+          }
+        ]
+      },
+      contest: {
+        metaTitle: "Конкурс",
+        metaDescription: "Как работает реферальный конкурс в Promoter Bot и Promotion Bot.",
+        hero: {
+          eyebrow: "Реферальный конкурс",
+          title: "Соревнуйтесь за gems и место в лидерах.",
+          lead: "Когда contest активен, пользователи делятся специальной contest-ссылкой, получают gems за joins и борются за top-referrer rewards.",
+          pills: ["Награды top 3", "Окно 7 дней", "Premium referrals могут давать double reward"],
+          actions: [
+            { href: "referral.html", label: "Назад к Referral", primary: true },
+            { href: "help.html", label: "Открыть помощь", primary: false }
+          ]
+        },
+        sections: [
+          {
+            type: "steps",
+            title: "Как работает contest mode",
+            intro: "Эта функция важна только когда contest active. Его включает и выключает owner/admin сторона.",
+            items: [
+              { kicker: "Шаг 1", title: "Дождитесь активного contest", text: "Страница contest и специальная кнопка появляются, когда идёт активный 7-дневный contest." },
+              { kicker: "Шаг 2", title: "Поделитесь своей contest referral link", text: "Для конкурса используется отдельный start-параметр, а не обычная реферальная ссылка." },
+              { kicker: "Шаг 3", title: "Следите за leaderboard и rules", text: "Пользователь может открыть leaderboard и contest rules прямо из contest menu, пока event идёт." }
+            ]
+          },
+          {
+            type: "cards",
+            title: "Главные правила",
+            intro: "Это публичные правила, которые сейчас отражены в сообщениях бота и contest-логике.",
+            items: [
+              { kicker: "Rewards", title: "Вступления дают gems", text: "Валидный contest referral приносит inviter-у gems, а приглашённые Telegram Premium users могут давать двойную награду." },
+              { kicker: "Eligibility", title: "50 referrals для top-reward eligibility", text: "Бот прямо пишет, что для призов top 3 нужно иметь минимум 50 eligible referrals." },
+              { kicker: "Timing", title: "Contest длится 7 дней", text: "Contest start-поток устанавливает 7-дневное окно, а выдача rewards по сообщению распределяется в течение 7 дней после окончания." }
+            ]
+          },
+          {
+            type: "callout",
+            title: "Обычная referral-ссылка всё равно полезна.",
+            text: "Если contest inactive, пользователю всё равно стоит делиться обычной referral-ссылкой ради bonus promos. Contest rewards работают только во время активного event."
           }
         ]
       },
       forceJoin: {
         metaTitle: "Force Join",
-        metaDescription: "Как работает Force Join для администраторов групп.",
+        metaDescription: "Как Force Join работает для администраторов групп в Promoter Bot и Promotion Bot.",
         hero: {
-          eyebrow: "Admin control",
-          title: "Требуйте вступление перед общением.",
-          lead: "Force Join помогает администраторам делать вступление в канал обязательным до продолжения общения в группе.",
-          pills: ["Только для админов", "Проверка membership", "Полезно для экосистем"],
+          eyebrow: "Admin Control",
+          title: "Требуйте вступления до переписки.",
+          lead: "Force Join позволяет админам группы блокировать обычные сообщения, пока пользователь не вступит в один или несколько обязательных каналов.",
+          pills: ["Настройка только в группе", "Проверка membership", "Сообщения могут удаляться"],
           actions: [
             { href: "help.html", label: "Помощь для админов", primary: true },
-            { href: "group-promotion.html", label: "Смотреть group promo", primary: false }
+            { href: "group-promotion.html", label: "Смотреть Group Promotion", primary: false }
           ]
         },
         sections: [
           {
             type: "steps",
             title: "Порядок настройки",
-            intro: "Команды короткие, но у бота должны быть нужные права.",
+            intro: "Команды короткие, но и у группы, и у target channel должны быть корректные права для бота.",
             items: [
-              { kicker: "Шаг 1", title: "Добавьте бота в группу", text: "Бот должен находиться там, где будут проверяться сообщения пользователей." },
-              { kicker: "Шаг 2", title: "Используйте /set", text: "Добавьте канал или ID канала в force-join список текущей группы." },
-              { kicker: "Шаг 3", title: "Если нужно, используйте /unset", text: "Администратор всегда может убрать требование позже." }
+              { kicker: "Шаг 1", title: "Добавьте бота в группу", text: "Бот должен быть в группе, где будут проверяться обычные пользовательские сообщения." },
+              { kicker: "Шаг 2", title: "Используйте /set прямо в группе", text: "Передайте channel ID или @username, чтобы добавить обязательную точку вступления для этой группы." },
+              { kicker: "Шаг 3", title: "Используйте /unset для удаления", text: "Позже админы могут убрать нужный канал из force-join списка группы." }
             ]
           },
           {
             type: "cards",
-            title: "Почему это используют",
-            intro: "Функция совмещает модерацию и рост аудитории.",
+            title: "Что бот реально делает",
+            intro: "Текущая логика строже, чем простой reminder: она реально может блокировать message flow для non-members.",
             items: [
-              { kicker: "Control", title: "Ограничивает не вступивших", text: "Бот может удалять сообщения, пока required join не будет выполнен." },
-              { kicker: "Flexibility", title: "Можно требовать несколько каналов", text: "При необходимости одна группа может иметь несколько обязательных join-points." },
-              { kicker: "Value", title: "Лучше всего работает с полезными каналами", text: "Пользователи легче принимают правило, если required channel действительно нужен." }
+              { kicker: "Check", title: "Membership проверяется вживую", text: "Для каждого сообщения от не-админа бот проверяет, вступил ли пользователь во все required channels." },
+              { kicker: "Action", title: "Сообщения могут удаляться", text: "Если пользователь не выполнил required join, бот может удалить сообщение и отправить join-кнопки обратно в группу." },
+              { kicker: "Requirement", title: "Боту нужен доступ к target channel", text: "Бот должен видеть целевой канал и часто иметь там admin-доступ, чтобы membership-check был корректным." }
             ]
           }
         ]
       },
       premium: {
         metaTitle: "Premium",
-        metaDescription: "Premium-доступ, планы и усиленные возможности.",
+        metaDescription: "Premium-планы и доступ к функциям для Promoter Bot и Promotion Bot.",
         hero: {
-          eyebrow: "Upgrade access",
-          title: "Что открывает premium.",
-          lead: "Premium расширяет охват, открывает более мощные инструменты и делает advanced-кампании эффективнее.",
-          pills: ["Pic Broad", "Сильнее group promo", "Скидки на Promo Join"],
+          eyebrow: "Upgrade Access",
+          title: "Premium даёт приоритет вашим промо.",
+          lead: "Premium помогает задачам проходить быстрее, усиливает видимость кампаний, открывает более мощные инструменты продвижения и снижает gem cost внутри Promo Join tiers.",
+          pills: ["Приоритет задач", "10 group runs в день", "Дешевле tiers в Promo Join"],
           actions: [
-            { href: "pic-broad.html", label: "Открыть Pic Broad", primary: true },
-            { href: "help.html", label: "Помощь", primary: false }
+            { href: "https://t.me/DealmanyBot?start=buypremium", label: "Get Premium", primary: true },
+            { href: "promo-join.html", label: "Смотреть Promo Join", primary: false }
           ]
         },
         sections: [
           {
             type: "cards",
             title: "Главные преимущества",
-            intro: "Premium особенно ценен для активных пользователей.",
+            intro: "Premium нужен для более сильного размещения, более быстрой обработки и доступа к самым мощным promo-инструментам бота.",
             items: [
-              { kicker: "Media", title: "Доступ к Pic Broad", text: "Позволяет продвигаться через изображение и подпись с большей емкостью." },
-              { kicker: "Groups", title: "Больше силы в group promo", text: "Premium увеличивает и дневной usage, и целевое число групп." },
-              { kicker: "Campaigns", title: "Ниже стоимость по gems", text: "Promo Join tiers становятся экономичнее для premium-аккаунта." }
+              { kicker: "Broadcast", title: "Доступ к Pic Broad", text: "Premium открывает image + caption broadcast до 350 пользователей в день." },
+              { kicker: "Groups", title: "10 group-promo запусков в день", text: "Premium поднимает group promotion с 2 запусков в день до 10 запусков в день." },
+              { kicker: "Priority", title: "Задачи показываются первыми", text: "Premium-задачи ставятся впереди стандартных, поэтому пользователи видят их раньше, когда доступна подходящая кампания." },
+              { kicker: "Speed", title: "Быстрее действия и обработка", text: "Premium-режим рассчитан на более быструю обработку и повышенный приоритет в поддерживаемых promo-действиях." },
+              { kicker: "Support", title: "Приоритетная поддержка", text: "Premium-пользователи получают более быстрое внимание поддержки, когда нужна помощь." },
+              { kicker: "Gems", title: "Меньшая цена tier в Promo Join", text: "Для premium-пользователя Promo Join tiers стоят меньше gems, чем для standard user." }
             ]
           },
           {
-            type: "cards",
-            title: "Текущие планы",
-            intro: "Это форматы планов, отраженные в текущем продукте.",
-            items: [
-              { kicker: "1 Week", title: "₹30 или 15 Stars", text: "Подходит для короткого доступа и теста premium-функций." },
-              { kicker: "3 Weeks", title: "₹75 или 38 Stars", text: "Сбалансированный вариант для более длительного использования." },
-              { kicker: "1 Month", title: "₹89 или 45 Stars", text: "Лучше всего подходит для регулярного промо и частых запусков." }
+            type: "callout",
+            title: "Выбирайте premium, когда важна максимальная видимость.",
+            text: "Если вам нужно, чтобы задачи показывались первыми, promo обрабатывалось быстрее, а крупные инструменты были открыты, откройте premium прямо в Telegram.",
+            actions: [
+              { href: "https://t.me/DealmanyBot?start=buypremium", label: "Get Premium", primary: true }
             ]
           }
         ]
       },
       help: {
         metaTitle: "Помощь",
-        metaDescription: "Частые вопросы и быстрые ответы по боту Promoter.",
+        metaDescription: "Быстрые ответы для пользователей Promoter Bot и Promotion Bot.",
         hero: {
-          eyebrow: "Help center",
-          title: "Быстрые ответы без путаницы.",
-          lead: "Эта страница покрывает самые частые вопросы по сохранению контента, лимитам, кампаниям и premium-доступу.",
-          pills: ["Готовые ответы", "Темы для users и admins", "Быстрая диагностика"],
+          eyebrow: "Help Center",
+          title: "Короткие ответы на самые частые проблемы.",
+          lead: "Эта страница покрывает вопросы, которые реально возникают при сохранении контента, запуске промо, получении gems, участии в contest и работе с premium.",
+          pills: ["Вопросы пользователей", "Вопросы админов", "Contest тоже включён"],
           actions: [
             { href: "terms.html", label: "Условия", primary: true },
-            { href: "privacy.html", label: "Privacy", primary: false }
+            { href: "privacy.html", label: "Конфиденциальность", primary: false }
           ]
         },
         sections: [
           {
             type: "faq",
             title: "Частые вопросы",
-            intro: "Хорошая страница для отправки пользователю до обращения в поддержку.",
+            intro: "Эту страницу удобно отправлять пользователю ещё до обращения в поддержку.",
             items: [
-              { q: "Почему бот пишет, что нет сохраненного сообщения?", a: "Потому что активный источник промо пуст. Сначала отправьте валидное сообщение в личный чат." },
-              { q: "Почему важна NSFW-классификация?", a: "Она помогает доставлять контент только той аудитории, которая согласилась его получать." },
-              { q: "Почему обычное промо закончилось на сегодня?", a: "Стандартное продвижение работает по дневным лимитам. Реферальные бонусы могут увеличивать этот лимит." },
-              { q: "Почему Pic Broad недоступен?", a: "Pic Broad доступен только premium-пользователям и имеет дневное ограничение." },
-              { q: "Почему verify в Promo Join не прошел?", a: "Обычно из-за неполного вступления, ошибки проверки membership или истечения кампании." },
-              { q: "Почему Force Join не сработал?", a: "Частая причина — нехватка прав у бота в группе или целевом канале." }
+              { q: "Почему бот пишет, что нет сохранённого контента?", a: "Потому что active saved content пуст. Сначала отправьте валидное сообщение, ссылку или username в личный чат." },
+              { q: "Сколько стандартных промо у меня в день?", a: "Базовый лимит — 5 обычных промо в день, а каждые 3 реферала добавляют ещё 3." },
+              { q: "Сколько у меня group-promo запусков?", a: "Обычный пользователь получает 2 group-promo run в день. Premium-пользователь получает 10." },
+              { q: "Почему Pic Broad недоступен?", a: "Pic Broad — premium-only функция, и для non-admin premium пользователя её можно использовать только один раз в день." },
+              { q: "Почему verify в Promo Join не прошёл?", a: "Обычно из-за того, что пользователь не завершил join, бот не смог проверить membership, или campaign уже закрылась." },
+              { q: "Чем contest отличается от обычного referral?", a: "Обычный referral повышает daily standard limit. Contest referral использует специальную event-link и выдаёт gems только во время активного конкурса." },
+              { q: "Почему Force Join не работает?", a: "У бота может не хватать прав в группе, доступа в required channel или настройку мог не завершить group admin." }
             ]
           }
         ]
       },
       terms: {
         metaTitle: "Условия",
-        metaDescription: "Условия использования бота Promoter.",
+        metaDescription: "Условия использования Promoter Bot и Promotion Bot.",
         hero: {
           eyebrow: "Legal",
           title: "Условия использования.",
-          lead: "Эта страница объясняет базовые правила по использованию бота, premium-доступа и инструментов продвижения.",
-          pills: ["Понятный формат", "Ответственность пользователя", "Правила доступа"],
+          lead: "Эти короткие условия объясняют базовые правила использования promotion tools, premium access, gem-based функций и moderation-сценариев.",
+          pills: ["Читаемые правила", "Ответственность пользователя", "Правила доступа"],
           actions: [
             { href: "privacy.html", label: "Открыть privacy", primary: true },
-            { href: "help.html", label: "Назад к помощи", primary: false }
+            { href: "help.html", label: "Назад к help", primary: false }
           ]
         },
         sections: [
           {
             type: "legal",
             title: "Основные правила",
-            intro: "Страница сделана короткой и читаемой.",
+            intro: "Страница специально сделана короткой и понятной.",
             items: [
-              { title: "1. Ответственность за контент", text: "Вы сами отвечаете за материалы, которые отправляете или продвигаете через сервис." },
-              { title: "2. Честное использование", text: "Незаконное, вредное, обманное или агрессивное использование может привести к ограничениям и удалению доступа." },
-              { title: "3. Premium-доступ", text: "Premium открывает дополнительные возможности, но не гарантирует одинаковый результат для всех пользователей." },
-              { title: "4. Изменения", text: "Функции, лимиты и moderation rules могут меняться со временем." }
+              { title: "1. Ответственность за контент", text: "Вы несёте ответственность за материалы, которые отправляете или продвигаете через сервис." },
+              { title: "2. Честное использование", text: "Незаконное, вредное, обманное или агрессивное использование может привести к ограничениям, блокировке или удалению доступа." },
+              { title: "3. Premium-доступ", text: "Premium открывает дополнительные инструменты, но не гарантирует одинаковый результат для каждого пользователя или кампании." },
+              { title: "4. Изменения", text: "Функции, лимиты, contest-правила и moderation-политики могут меняться со временем." }
             ]
           }
         ]
       },
       privacy: {
         metaTitle: "Конфиденциальность",
-        metaDescription: "Политика конфиденциальности для бота Promoter.",
+        metaDescription: "Политика конфиденциальности для Promoter Bot и Promotion Bot.",
         hero: {
           eyebrow: "Legal",
           title: "Политика конфиденциальности.",
-          lead: "Здесь объясняется, какие рабочие данные могут храниться для доставки промо, наград и управления доступом.",
+          lead: "Эта политика объясняет, какие рабочие данные могут храниться, чтобы бот мог доставлять промо, отслеживать лимиты, управлять rewards и держать account state.",
           pills: ["Операционные данные", "Данные аккаунта", "История промо"],
           actions: [
-            { href: "terms.html", label: "Открыть условия", primary: true },
-            { href: "help.html", label: "Назад к помощи", primary: false }
+            { href: "terms.html", label: "Открыть terms", primary: true },
+            { href: "help.html", label: "Назад к help", primary: false }
           ]
         },
         sections: [
           {
             type: "legal",
             title: "Какие данные могут храниться",
-            intro: "Храниться должна только та информация, которая нужна для работы сервиса.",
+            intro: "Сохраняться должны только данные, которые реально нужны для работы сервиса и его promotion-функций.",
             items: [
-              { title: "1. Данные аккаунта", text: "Могут сохраняться user ID, username, имя, временные метки и служебные статусы." },
-              { title: "2. Данные промо", text: "Могут храниться saved message, link, тип контента, цели кампаний и related result data." },
-              { title: "3. Данные использования", text: "Могут учитываться daily limits, referrals, gem balances и progress campaign features." },
-              { title: "4. Назначение", text: "Эти данные поддерживают delivery, anti-abuse, rewards, premium access и moderation logic." }
+              { title: "1. Данные аккаунта", text: "Для обычной работы могут храниться user ID, username, имя, timestamps и service-status markers." },
+              { title: "2. Данные промо", text: "Сохранённые links, text, content classification, targets и campaign-state записи могут храниться для работы функций." },
+              { title: "3. Данные использования", text: "Могут отслеживаться daily limits, referral totals, gem balances, group rewards и progress campaigns." },
+              { title: "4. Назначение", text: "Эти данные поддерживают delivery, anti-abuse checks, rewards, premium access, contest tracking и moderation." }
             ]
           }
         ]
@@ -854,22 +963,23 @@ window.DOCS_TRANSLATIONS = {
   },
   uk: {
     common: {
-      siteName: "Promoter Docs",
-      siteTagline: "Зрозумілі інструкції по режимах просування",
-      logoAlt: "Логотип Promoter",
-      menuLabel: "Відкрити меню",
-      closeLabel: "Закрити меню",
+      siteName: "Документація Promoter Bot",
+      siteTagline: "Зрозумілі гайди по всіх сценаріях просування",
+      logoAlt: "Логотип Promoter Bot",
+      menuLabel: "Відкрити навігацію",
+      closeLabel: "Закрити навігацію",
       mobileMenuTitle: "Навігація",
       mobileSections: {
         guide: "Розділи",
-        legal: "Правила"
+        legal: "Правова інформація"
       },
       navLabel: "Основна навігація",
       languageLabel: "Оберіть мову",
-      defaultSideTitle: "Швидко і зрозуміло",
-      defaultSideText: "Кожна важлива функція має власну сторінку та окреме посилання.",
-      footerTitle: "Документація Promoter",
-      footerNote: "Цей сайт пояснює продукт простою мовою. Реальні ліміти та доступ залежать від власника бота і поточних налаштувань Telegram.",
+      defaultSideTitle: "Для реальних користувачів",
+      defaultSideText: "Кожна важлива функція має окрему сторінку, щоб можна було швидко відкрити потрібне пояснення.",
+      footerTitle: "Документація Promoter Bot",
+      footerNote: "Цей сайт пояснює поточну логіку Promoter Bot і Promotion Bot для кінцевих користувачів. Реальні ліміти та доступ усе одно залежать від власника бота і прав Telegram.",
+      metaKeywords: "Promoter Bot, Promotion Bot, Telegram promotion bot, Telegram promoter bot",
       languages: {
         en: "English",
         ru: "Русский",
@@ -883,6 +993,7 @@ window.DOCS_TRANSLATIONS = {
         promoJoin: "Promo Join",
         picBroad: "Pic Broad",
         referral: "Реферали",
+        contest: "Конкурс",
         forceJoin: "Force Join",
         premium: "Premium",
         help: "Допомога",
@@ -893,176 +1004,187 @@ window.DOCS_TRANSLATIONS = {
     pages: {
       home: {
         metaTitle: "Огляд",
-        metaDescription: "Багатомовний гід по боту Promoter.",
+        metaDescription: "Офіційна багатомовна документація для Promoter Bot і Promotion Bot.",
         hero: {
-          eyebrow: "Гід Promoter",
-          title: "Один охайний сайт для всіх сценаріїв росту.",
-          lead: "Тут зібрані зрозумілі пояснення про звичайне промо, промо в групи, Promo Join, реферали, premium-інструменти та функції для адміністраторів.",
-          pills: ["4 мови", "Окремі посилання", "Швидка допомога"],
+          eyebrow: "Офіційний гід",
+          title: "Один сайт для всіх режимів просування.",
+          lead: "Цей сайт краще збігається з реальним ботом: звичайне промо, групове промо, Promo Join, реферали, конкурс, premium-інструменти та адмінські функції.",
+          pills: ["4 мови", "Текст під реальний бот", "Швидкі help-сторінки"],
           actions: [
-            { href: "user-promotion.html", label: "Відкрити базове промо", primary: true },
-            { href: "help.html", label: "Відкрити допомогу", primary: false }
+            { href: "user-promotion.html", label: "Відкрити User Promotion", primary: true },
+            { href: "contest.html", label: "Дивитися конкурс", primary: false }
           ],
           sidePanels: [
-            { title: "Для користувачів", text: "Дізнайтеся, як зберегти повідомлення, запускати промо та використовувати premium або gems." },
-            { title: "Для адмінів", text: "Швидко розберіться, як працюють Force Join та пов'язані групові інструменти." }
+            { title: "Для промо-користувачів", text: "Розберіться з денними лімітами, saved content, premium, gems і просунутими кампаніями ще до старту." },
+            { title: "Для адмінів", text: "Подивіться, як Force Join і нагороди за додавання бота пов'язані з ростом каналу й модеруванням." }
           ]
         },
         sections: [
           {
             type: "stats",
             title: "Коротко про головне",
-            intro: "Бот поєднує просте щоденне просування і сильніші інструменти для тих, кому потрібне більше охоплення.",
+            intro: "Бот поєднує просте щоденне просування, premium-апгрейд, gems і реферальне зростання.",
             items: [
-              { value: "5+", title: "Щоденні звичайні промо", text: "Базовий ліміт можна збільшувати через реферальні бонуси." },
-              { value: "15 / 35", title: "Ціль по групах", text: "Звичайний режим іде до 15 груп, premium — до 35." },
-              { value: "350", title: "Охоплення Pic Broad", text: "Premium-розсилка із зображенням може охоплювати значно більшу аудиторію." }
+              { value: "5", title: "Базових промо на день", text: "Звичайне приватне промо стартує з 5 використань на день і може зростати через рефералів." },
+              { value: "2 / 10", title: "Групових запусків на день", text: "Звичайний користувач отримує 2 group-promo запуски на день, premium — 10." },
+              { value: "+65 / -70", title: "Баланс за add-bot", text: "За відповідну групу можна отримати 65 gems, але пізніше видалення бота дає штраф 70 gems." }
             ]
           },
           {
             type: "cards",
-            title: "Головні розділи",
-            intro: "Кожна тема винесена на окрему сторінку.",
-            columns: 2,
+            title: "Основні розділи",
+            intro: "Кожен важливий сценарій має окрему сторінку, щоб не відправляти людей у сирі команди бота.",
             items: [
-              { kicker: "База", title: "Промо користувачам", text: "Як особисте збережене повідомлення доставляється іншим користувачам." },
-              { kicker: "Охоплення", title: "Промо в групи", text: "Як бот розміщує ваш текст у доступних групах." },
-              { kicker: "Gems", title: "Promo Join", text: "Просунуті кампанії з gems і підтвердженими вступами." },
-              { kicker: "Медіа", title: "Pic Broad", text: "Premium-режим для просування через зображення і підпис." },
-              { kicker: "Ріст", title: "Реферали", text: "Як особисте посилання збільшує денний ліміт звичайного промо." },
-              { kicker: "Адмін", title: "Force Join", text: "Як вимагати вступ до каналу перед спілкуванням у групі." }
+              { kicker: "Core", title: "User Promotion", text: "Як збережене посилання або текст іде до 15 користувачів усередині мережі." },
+              { kicker: "Reach", title: "Group Promotion", text: "Як збережений контент надсилається в активні групи за standard або premium-лімітами." },
+              { kicker: "Gems", title: "Promo Join", text: "Просунутий режим, де gems витрачаються на join-and-verify кампанії." },
+              { kicker: "Media", title: "Pic Broad", text: "Premium-розсилка: одна картинка, один caption і до 350 відправок на день." },
+              { kicker: "Growth", title: "Referral", text: "Як особисте посилання додає більше звичайних промо у ваш денний ліміт." },
+              { kicker: "Event", title: "Contest", text: "Як спеціальний реферальний конкурс видає gems і веде таблицю лідерів." },
+              { kicker: "Admin", title: "Force Join", text: "Як змусити користувачів вступити в канал до продовження спілкування." }
             ]
           },
           {
             type: "callout",
-            title: "Зрозуміла документація зменшує хаос.",
-            text: "Коли користувач заздалегідь розуміє продукт, у вас менше повторюваних питань і чистіший сценарій використання."
+            title: "Точні тексти зменшують хаос.",
+            text: "Коли публічна документація збігається з реальною поведінкою бота, у користувачів менше хибних очікувань і повторюваних питань."
           }
         ]
       },
       userPromotion: {
         metaTitle: "Промо користувачам",
-        metaDescription: "Як працює стандартне просування між користувачами.",
+        metaDescription: "Як працює стандартне просування між користувачами в Promoter Bot і Promotion Bot.",
         hero: {
-          eyebrow: "Користувач → користувач",
-          title: "Як працює стандартне промо.",
-          lead: "Це найшвидший спосіб просунути повідомлення або посилання всередині мережі бота.",
-          pills: ["Особистий чат", "Безкоштовний денний доступ", "Реферальні бонуси"],
+          eyebrow: "Приватне охоплення",
+          title: "Як реально працює стандартне промо.",
+          lead: "User Promotion — базовий режим, де ваше збережене посилання або текст надсилається випадковим доступним користувачам у мережі.",
+          pills: ["5 базових промо", "До 15 користувачів за запуск", "Реферальні бонуси"],
           actions: [
-            { href: "referral.html", label: "Подивитися реферали", primary: true },
-            { href: "help.html", label: "Потрібна допомога?", primary: false }
+            { href: "referral.html", label: "Подивитися реферальні бонуси", primary: true },
+            { href: "help.html", label: "Відкрити допомогу", primary: false }
+          ],
+          sidePanels: [
+            { title: "Найкраще підходить для", text: "Швидких посилань, коротких оновлень, username і легкого щоденного просування без витрати gems." }
           ]
         },
         sections: [
           {
             type: "steps",
             title: "Базовий сценарій",
-            intro: "Більшості користувачів достатньо трьох кроків.",
+            intro: "Шлях по команді короткий, але бот однаково перевіряє saved content і тип контенту перед відправкою.",
             items: [
-              { kicker: "Крок 1", title: "Надішліть повідомлення в особистий чат", text: "Повідомлення повинно містити посилання, username або зрозумілий напрямок переходу." },
-              { kicker: "Крок 2", title: "Підтвердьте тип контенту", text: "Якщо бот питає про NSFW або normal, дайте правильну відповідь." },
-              { kicker: "Крок 3", title: "Запустіть /promote", text: "Після цього бот надсилає збережений контент і оновлює денний залишок." }
+              { kicker: "Крок 1", title: "Збережіть контент у приватному чаті", text: "Надішліть валідне посилання, username або текст, щоб у бота було що просувати." },
+              { kicker: "Крок 2", title: "Відповідайте на NSFW-питання, якщо воно з'явилось", text: "Деякий збережений контент лишається в очікуванні, поки ви правильно не вкажете normal або NSFW." },
+              { kicker: "Крок 3", title: "Запустіть /promote", text: "Бот відправить saved content максимум 15 користувачам і оновить денний залишок." }
             ]
           },
           {
             type: "cards",
-            title: "Чому це зручно",
-            intro: "Це найпростіший режим просування всередині продукту.",
+            title: "Що важливо знати",
+            intro: "Режим простий, але реальні ліміти конкретніші, ніж було написано раніше.",
             items: [
-              { kicker: "Швидко", title: "Без складного налаштування", text: "Не потрібні gems, tier-кампанії чи окремі цілі для запуску." },
-              { kicker: "Гнучко", title: "Підходить для коротких офферів", text: "Добре працює для invite-посилань, оновлень і простих call to action." },
-              { kicker: "Ріст", title: "Стає сильнішим з часом", text: "Реферали можуть розширювати денний ліміт без зміни сценарію." }
+              { kicker: "Base", title: "5 використань на день за замовчуванням", text: "Стандартний денний ліміт починається з 5 промо, поки не додаються реферальні бонуси." },
+              { kicker: "Bonus", title: "Реферали розширюють ліміт", text: "Кожні 3 реферали додають ще 3 звичайні промо на день." },
+              { kicker: "Reuse", title: "Використовується вже збережений контент", text: "Не потрібно збирати окрему кампанію: бот бере те, що ви вже зберегли в private chat." }
             ]
           }
         ]
       },
       groupPromotion: {
         metaTitle: "Промо в групи",
-        metaDescription: "Як працює просування через групи.",
+        metaDescription: "Як працює групове просування в Promoter Bot і Promotion Bot.",
         hero: {
           eyebrow: "Охоплення через спільноти",
-          title: "Просувайте контент у групах.",
-          lead: "Групове промо бере ваш збережений текст і розміщує його там, де груповий режим зараз доступний.",
-          pills: ["15 груп standard", "35 груп premium", "Денні ліміти"],
+          title: "Просувайте saved content у групах.",
+          lead: "Group Promotion відправляє ваше збережене повідомлення в групи, де просування зараз активне й доступне.",
+          pills: ["2 запуски standard", "10 запусків premium", "Ціль 15 або 35 груп"],
           actions: [
-            { href: "premium.html", label: "Порівняти premium", primary: true },
-            { href: "help.html", label: "Відкрити допомогу", primary: false }
+            { href: "premium.html", label: "Порівняти Premium", primary: true },
+            { href: "help.html", label: "Потрібна допомога?", primary: false }
           ]
         },
         sections: [
           {
             type: "steps",
             title: "Як проходить запуск",
-            intro: "Користувацький шлях короткий, а перевірки бот робить сам.",
+            intro: "Бот перевіряє не лише команду, а й бан-статус, денний usage, saved content і наявність доступних груп.",
             items: [
-              { kicker: "Крок 1", title: "Спочатку збережіть контент", text: "Якщо активного повідомлення немає, бот не зможе почати просування." },
-              { kicker: "Крок 2", title: "Запустіть /chatpromo", text: "Бот перевірить доступ, бан-статус, денний ліміт і наявність груп." },
-              { kicker: "Крок 3", title: "Дочекайтеся підсумків", text: "Після відправки бот покаже, скільки груп отримали повідомлення." }
+              { kicker: "Крок 1", title: "Тримайте saved content готовим", text: "Якщо збереженого контенту немає, групове промо не зможе стартувати." },
+              { kicker: "Крок 2", title: "Запустіть /chatpromo", text: "Бот перевіряє статус і починає фонову відправку в доступні групи." },
+              { kicker: "Крок 3", title: "Прочитайте підсумок", text: "Коли run завершується, бот показує, скільки груп реально отримали промо." }
             ]
           },
           {
             type: "cards",
-            title: "Чому цей режим важливий",
-            intro: "Він дає більш публічне охоплення, ніж звичайне особисте промо.",
+            title: "Реальні ліміти",
+            intro: "Тут є два обмеження: скільки запусків на день і скільки груп намагається досягти один запуск.",
             items: [
-              { kicker: "Видимість", title: "Повідомлення потрапляє в спільноти", text: "Його можуть помітити одразу кілька людей всередині обговорень." },
-              { kicker: "Зручність", title: "Використовує вже збережений текст", text: "Не потрібен окремий інтерфейс, щоб запустити груповий режим." },
-              { kicker: "Масштаб", title: "Premium іде далі", text: "Premium дає і більше запусків, і більшу ціль по групах." }
+              { kicker: "Standard", title: "2 запуски на день", text: "Звичайний користувач може запускати group promotion двічі на день, і кожен запуск намагається дійти до 15 успішних відправок." },
+              { kicker: "Premium", title: "10 запусків на день", text: "Premium дає 10 запусків на день, а кожна сесія може дійти до 35 успішних group sends." },
+              { kicker: "Availability", title: "Наявність груп усе одно вирішує", text: "Якщо активних promotable groups немає, команда зупиниться, навіть якщо денний usage ще не закінчився." }
             ]
           }
         ]
       },
       promoJoin: {
         metaTitle: "Promo Join",
-        metaDescription: "Як працюють кампанії Promo Join.",
+        metaDescription: "Як працюють кампанії Promo Join в Promoter Bot і Promotion Bot.",
         hero: {
           eyebrow: "Кампанії за gems",
-          title: "Отримуйте підтверджені вступи через Promo Join.",
-          lead: "Promo Join — просунутий режим, де ви витрачаєте gems заради реальних join + verify результатів.",
-          pills: ["Gem-based", "Verify flow", "Знижки для premium"],
+          title: "Купуйте підтверджені вступи за gems.",
+          lead: "Promo Join — просунутий режим, де ви витрачаєте gems, щоб відправити цільовий чат користувачам і нагородити їх після успішного join + verify.",
+          pills: ["Старт із gems", "Нагорода verifier", "Знижка по tier для premium"],
           actions: [
-            { href: "premium.html", label: "Подивитися premium", primary: true },
-            { href: "help.html", label: "FAQ", primary: false }
+            { href: "https://t.me/DealmanyBot?start=buygems", label: "Купити gems", primary: true },
+            { href: "premium.html", label: "Дивитися переваги premium", primary: false }
           ]
         },
         sections: [
           {
             type: "cards",
-            title: "Як це працює",
-            intro: "Promo Join потрібен тим, хто хоче не просто перегляди, а реальні вступи.",
+            title: "Як влаштована система",
+            intro: "Це не режим на перегляди. Тут є gem-баланс, active campaigns і схема join-and-verify.",
             items: [
-              { kicker: "Setup", title: "Потрібен цільовий чат", text: "Спочатку ви задаєте канал або групу, куди бот повинен вести користувачів." },
-              { kicker: "Cost", title: "Кампанії коштують gems", text: "Кожен tier має свою ціну, а premium може платити менше." },
-              { kicker: "Progress", title: "Verify завершує кампанію", text: "Кампанія рухається до мети лише через успішні вступи та підтвердження." }
+              { kicker: "Balance", title: "Користувач отримує gem-профіль", text: "Для Promo Join створюється окремий профіль із балансом gems, і саме він витрачається на кампанії." },
+              { kicker: "Setup", title: "Спочатку потрібно задати target chat", text: "Використайте /promojoin, щоб встановити канал або групу, а вже потім відкривайте /advance." },
+              { kicker: "Reward", title: "Verifier отримує 1 gem", text: "Користувач, який вступив і успішно підтвердив участь, отримує 1 gem за задачу." }
             ]
           },
           {
             type: "steps",
-            title: "Потік кампанії",
-            intro: "Після першого знайомства сценарій залишається доволі зрозумілим.",
+            title: "Шлях кампанії",
+            intro: "Меню просте, але є кілька важливих правил, про які краще знати заздалегідь.",
             items: [
-              { kicker: "Крок 1", title: "Використайте /promojoin", text: "Призначте цільовий чат перед відкриттям advanced-меню." },
-              { kicker: "Крок 2", title: "Відкрийте /advance", text: "Оберіть tier за бюджетом, розміром кампанії та verify-ціллю." },
-              { kicker: "Крок 3", title: "Слідкуйте за verify", text: "Користувачі вступають, підтверджують участь і рухають кампанію до завершення." }
+              { kicker: "Крок 1", title: "Налаштуйте призначення через /promojoin", text: "Бот теж має бути адміном у цьому target chat, щоб membership-check працював правильно." },
+              { kicker: "Крок 2", title: "Відкрийте /advance і виберіть tier", text: "Різні tiers змінюють ціну в gems, verify-ціль і обсяг відправки; premium платить менше." },
+              { kicker: "Крок 3", title: "Чекайте verify-прогрес", text: "Бот повідомляє промоутеру про verify та закриває кампанію після досягнення цілі." }
             ]
           },
           {
             type: "callout",
-            title: "Найкраще працює для серйозного просування.",
-            text: "Якщо сам канал або група не дають цінності після вступу, ефективність Promo Join швидко падає."
+            title: "Потрібно більше gems?",
+            text: "Якщо баланс закінчується, спочатку поповніть gems, а потім запускайте наступну Promo Join кампанію без затримки.",
+            actions: [
+              { href: "https://t.me/DealmanyBot?start=buygems", label: "Купити gems", primary: true }
+            ]
+          },
+          {
+            type: "callout",
+            title: "Залишатися в чаті теж важливо.",
+            text: "Якщо verifier вийшов занадто рано, бот може попросити повернутися і пізніше списати 2 gems, якщо користувач не повернеться у recovery window."
           }
         ]
       },
       picBroad: {
         metaTitle: "Pic Broad",
-        metaDescription: "Як працює premium-розсилка із зображенням.",
+        metaDescription: "Як працює Pic Broad у Promoter Bot і Promotion Bot.",
         hero: {
-          eyebrow: "Premium media",
-          title: "Надсилайте візуальну розсилку через Pic Broad.",
-          lead: "Pic Broad — premium-функція для відправки одного зображення з підписом по ширшій аудиторії.",
-          pills: ["Лише premium", "1 запуск на день", "Візуальне промо"],
+          eyebrow: "Premium Media",
+          title: "Запускайте premium image broadcast.",
+          lead: "Pic Broad — premium-only функція для відправки однієї фотографії з підписом на значно більшу аудиторію користувачів.",
+          pills: ["Лише premium", "1 запуск на день", "До 350 відправок"],
           actions: [
-            { href: "premium.html", label: "Відкрити premium", primary: true },
+            { href: "premium.html", label: "Дивитися Premium", primary: true },
             { href: "help.html", label: "Потрібна допомога?", primary: false }
           ]
         },
@@ -1070,35 +1192,35 @@ window.DOCS_TRANSLATIONS = {
           {
             type: "steps",
             title: "Як використовувати",
-            intro: "Функція проста, але формат важливий.",
+            intro: "Формат дуже простий, але broadcast стартує лише після отримання потрібного медіа.",
             items: [
-              { kicker: "Крок 1", title: "Запустіть /picbroad", text: "Бот перевірить premium-доступ і чи вільний денний слот." },
-              { kicker: "Крок 2", title: "Надішліть фото з підписом", text: "Підпис стає текстом усієї розсилки." },
-              { kicker: "Крок 3", title: "Отримайте підсумок", text: "Після завершення бот покаже кількість успішних і неуспішних відправок." }
+              { kicker: "Крок 1", title: "Стартуйте через /picbroad", text: "Спочатку бот перевіряє premium-доступ і чи вільний сьогоднішній слот." },
+              { kicker: "Крок 2", title: "Надішліть фото з підписом", text: "Підпис стає текстом broadcast-повідомлення, яке йде разом із зображенням." },
+              { kicker: "Крок 3", title: "Дочекайтесь завершення", text: "Бот обробляє розсилку у фоні й потім показує sent/failed статистику." }
             ]
           },
           {
             type: "cards",
-            title: "Коли режим особливо корисний",
-            intro: "Він потрібен там, де зображення продає ідею швидше, ніж простий текст.",
+            title: "Фактичні ліміти",
+            intro: "Функція сильніша за звичайне user promotion, але вона все одно жорстко обмежена.",
             items: [
-              { kicker: "Візуал", title: "Підходить для постерів і креативів", text: "Особливо корисно для запусків, афіш, банерів і брендованих промо." },
-              { kicker: "Охоплення", title: "Більша денна ємність", text: "Режим створений для ширшої доставки, ніж звичайне повідомлення." },
-              { kicker: "Контроль", title: "Premium обмежує спам", text: "Ексклюзивність допомагає зберігати якість мережевої доставки." }
+              { kicker: "Capacity", title: "До 350 користувачів", text: "Premium-користувач може відправити Pic Broad максимум 350 користувачам за день." },
+              { kicker: "Frequency", title: "Один раз на день", text: "Звичайний premium-користувач, який не є адміном, може запускати Pic Broad лише один раз на день." },
+              { kicker: "Use case", title: "Найкраще працює з сильним візуалом", text: "Картки запуску, постери, івенти та polished offers тут зазвичай працюють краще, ніж plain text." }
             ]
           }
         ]
       },
       referral: {
         metaTitle: "Реферали",
-        metaDescription: "Як реферальна система збільшує денний ліміт промо.",
+        metaDescription: "Як реферальна система підвищує денну промо-потужність у Promoter Bot і Promotion Bot.",
         hero: {
-          eyebrow: "Реферальний ріст",
-          title: "Перетворюйте запрошення на додаткові промо.",
-          lead: "Реферальна система дає персональне посилання бота й перетворює успішні запрошення на більше щоденних стандартних промо.",
-          pills: ["Особисте invite-link", "Bonus promos", "Видимий прогрес"],
+          eyebrow: "Реферальне зростання",
+          title: "Перетворюйте запрошення на більше щоденних промо.",
+          lead: "Referral видає користувачу особисте bot-посилання і перетворює успішні реєстрації на додаткову стандартну промо-ємність.",
+          pills: ["Особисте invite-посилання", "Бонус 3-за-3", "Зв'язок із contest"],
           actions: [
-            { href: "user-promotion.html", label: "Повернутися до user promo", primary: true },
+            { href: "contest.html", label: "Дивитися правила конкурсу", primary: true },
             { href: "help.html", label: "Відкрити допомогу", primary: false }
           ]
         },
@@ -1106,171 +1228,214 @@ window.DOCS_TRANSLATIONS = {
           {
             type: "cards",
             title: "Як допомагають реферали",
-            intro: "Реферали — один із найпростіших способів розширити денний reach без покупки premium.",
+            intro: "Звичайна реферальна система і contest-система пов'язані, але це не одна й та сама річ.",
             items: [
-              { kicker: "Link", title: "У вас є особистий URL", text: "Бот видає посилання, в якому вже зашитий ваш user ID." },
-              { kicker: "Bonus", title: "Реферали дають реальні промо", text: "Групи успішних запрошень додають extra standard promotions." },
-              { kicker: "Tracking", title: "Прогрес видно в акаунті", text: "Ви завжди можете побачити поточний рахунок і шлях до наступного бонусу." }
+              { kicker: "Link", title: "Кожен користувач отримує особистий URL", text: "Звичайне referral-посилання використовує ваш user ID, щоб бот міг прив'язати новий signup до вашого акаунта." },
+              { kicker: "Bonus", title: "Кожні 3 реферали дають 3 промо", text: "Для standard daily promotion кожен блок із 3 успішних referrals додає ще 3 промо на день." },
+              { kicker: "Tracking", title: "Прогрес видно в account", text: "На сторінці акаунта видно total referrals, bonus promotions і скільки ще рефералів треба до наступного бонусу." }
             ]
           },
           {
             type: "callout",
-            title: "Спочатку пояснюйте користь, а потім кидайте посилання.",
-            text: "Чим зрозуміліша людині цінність бота, тим краще працює реферальне посилання."
+            title: "Referral і contest — це різні шари.",
+            text: "Звичайний referral збільшує daily standard limit. Contest referral використовує спеціальне event-посилання і фокусується на gems та leaderboard."
+          }
+        ]
+      },
+      contest: {
+        metaTitle: "Конкурс",
+        metaDescription: "Як працює реферальний конкурс у Promoter Bot і Promotion Bot.",
+        hero: {
+          eyebrow: "Реферальний конкурс",
+          title: "Змагайтеся за gems і місце в лідерах.",
+          lead: "Коли contest активний, користувачі діляться спеціальним contest-посиланням, отримують gems за joins і борються за top-referrer rewards.",
+          pills: ["Нагороди top 3", "Вікно 7 днів", "Premium referrals можуть давати double reward"],
+          actions: [
+            { href: "referral.html", label: "Назад до Referral", primary: true },
+            { href: "help.html", label: "Відкрити допомогу", primary: false }
+          ]
+        },
+        sections: [
+          {
+            type: "steps",
+            title: "Як працює contest mode",
+            intro: "Функція важлива тільки тоді, коли contest active. Його вмикає і вимикає owner/admin сторона.",
+            items: [
+              { kicker: "Крок 1", title: "Дочекайтесь активного contest", text: "Сторінка contest і спеціальна кнопка з'являються, коли йде активний 7-денний contest." },
+              { kicker: "Крок 2", title: "Поділіться своєю contest referral link", text: "Для конкурсу використовується окремий start-параметр, а не звичайне реферальне посилання." },
+              { kicker: "Крок 3", title: "Слідкуйте за leaderboard і rules", text: "Користувач може відкрити leaderboard і contest rules прямо з contest menu, поки event триває." }
+            ]
+          },
+          {
+            type: "cards",
+            title: "Головні правила",
+            intro: "Це публічні правила, які зараз відображені в повідомленнях бота і contest-логіці.",
+            items: [
+              { kicker: "Rewards", title: "Вступи дають gems", text: "Валідний contest referral приносить inviter-у gems, а запрошені Telegram Premium users можуть давати подвійну нагороду." },
+              { kicker: "Eligibility", title: "50 referrals для top-reward eligibility", text: "Бот прямо пише, що для призів top 3 потрібно мати мінімум 50 eligible referrals." },
+              { kicker: "Timing", title: "Contest триває 7 днів", text: "Contest start-потік ставить 7-денне вікно, а видача rewards за повідомленням розподіляється впродовж 7 днів після завершення." }
+            ]
+          },
+          {
+            type: "callout",
+            title: "Звичайне referral-посилання все одно корисне.",
+            text: "Якщо contest inactive, користувачу все одно варто ділитися звичайною referral-link заради bonus promos. Contest rewards працюють тільки під час активного event."
           }
         ]
       },
       forceJoin: {
         metaTitle: "Force Join",
-        metaDescription: "Як працює Force Join для адміністраторів груп.",
+        metaDescription: "Як Force Join працює для адміністраторів груп у Promoter Bot і Promotion Bot.",
         hero: {
-          eyebrow: "Admin control",
-          title: "Вимагайте вступ перед спілкуванням.",
-          lead: "Force Join допомагає адміністраторам робити вступ до каналу обов'язковим до продовження спілкування в групі.",
-          pills: ["Лише для адмінів", "Перевірка membership", "Корисно для екосистем"],
+          eyebrow: "Admin Control",
+          title: "Вимагайте вступ до спілкування.",
+          lead: "Force Join дозволяє адмінам групи блокувати звичайні повідомлення, поки користувач не вступить в один або кілька обов'язкових каналів.",
+          pills: ["Налаштування лише в групі", "Перевірка membership", "Повідомлення можуть видалятися"],
           actions: [
             { href: "help.html", label: "Допомога для адмінів", primary: true },
-            { href: "group-promotion.html", label: "Дивитися group promo", primary: false }
+            { href: "group-promotion.html", label: "Дивитися Group Promotion", primary: false }
           ]
         },
         sections: [
           {
             type: "steps",
             title: "Порядок налаштування",
-            intro: "Команди короткі, але бот повинен мати потрібні права.",
+            intro: "Команди короткі, але і в групі, і в target channel бот повинен мати правильні права.",
             items: [
-              { kicker: "Крок 1", title: "Додайте бота в групу", text: "Бот повинен бути там, де перевірятимуться повідомлення користувачів." },
-              { kicker: "Крок 2", title: "Використайте /set", text: "Додайте канал або ID каналу до force-join списку поточної групи." },
-              { kicker: "Крок 3", title: "Якщо потрібно, використайте /unset", text: "Адміністратор завжди може прибрати вимогу пізніше." }
+              { kicker: "Крок 1", title: "Додайте бота в групу", text: "Бот має бути в групі, де перевірятимуться звичайні повідомлення користувачів." },
+              { kicker: "Крок 2", title: "Використайте /set прямо в групі", text: "Передайте channel ID або @username, щоб додати обов'язкову точку вступу для цієї групи." },
+              { kicker: "Крок 3", title: "Використайте /unset для видалення", text: "Пізніше адміни можуть прибрати потрібний канал зі force-join списку групи." }
             ]
           },
           {
             type: "cards",
-            title: "Чому це використовують",
-            intro: "Функція поєднує модерацію і ріст аудиторії.",
+            title: "Що бот реально робить",
+            intro: "Поточна логіка суворіша за простий reminder: вона реально може блокувати message flow для non-members.",
             items: [
-              { kicker: "Control", title: "Обмежує тих, хто не вступив", text: "Бот може видаляти повідомлення, поки required join не буде виконано." },
-              { kicker: "Flexibility", title: "Можна вимагати кілька каналів", text: "За потреби одна група може мати кілька обов'язкових join-points." },
-              { kicker: "Value", title: "Найкраще працює з корисними каналами", text: "Користувачі легше приймають правило, якщо required channel дійсно потрібний." }
+              { kicker: "Check", title: "Membership перевіряється вживу", text: "Для кожного повідомлення від не-адміна бот перевіряє, чи вступив користувач у всі required channels." },
+              { kicker: "Action", title: "Повідомлення можуть видалятися", text: "Якщо користувач не виконав required join, бот може видалити повідомлення і відправити join-кнопки назад у групу." },
+              { kicker: "Requirement", title: "Боту потрібен доступ до target channel", text: "Бот має бачити цільовий канал і часто мати там admin-доступ, щоб membership-check був коректним." }
             ]
           }
         ]
       },
       premium: {
         metaTitle: "Premium",
-        metaDescription: "Premium-доступ, плани та посилені можливості.",
+        metaDescription: "Premium-плани і доступ до функцій для Promoter Bot і Promotion Bot.",
         hero: {
-          eyebrow: "Upgrade access",
-          title: "Що відкриває premium.",
-          lead: "Premium розширює охоплення, відкриває потужніші інструменти й робить advanced-кампанії ефективнішими.",
-          pills: ["Pic Broad", "Сильніше group promo", "Знижки на Promo Join"],
+          eyebrow: "Upgrade Access",
+          title: "Premium дає пріоритет вашим промо.",
+          lead: "Premium допомагає завданням проходити швидше, підсилює видимість кампаній, відкриває сильніші інструменти просування і знижує gem cost усередині Promo Join tiers.",
+          pills: ["Пріоритет завдань", "10 group runs на день", "Дешевші tiers у Promo Join"],
           actions: [
-            { href: "pic-broad.html", label: "Відкрити Pic Broad", primary: true },
-            { href: "help.html", label: "Допомога", primary: false }
+            { href: "https://t.me/DealmanyBot?start=buypremium", label: "Get Premium", primary: true },
+            { href: "promo-join.html", label: "Дивитися Promo Join", primary: false }
           ]
         },
         sections: [
           {
             type: "cards",
             title: "Головні переваги",
-            intro: "Premium особливо цінний для активних користувачів.",
+            intro: "Premium потрібен для сильнішого розміщення, швидшої обробки і доступу до найбільших promo-інструментів бота.",
             items: [
-              { kicker: "Media", title: "Доступ до Pic Broad", text: "Дозволяє просуватися через зображення і підпис із більшою ємністю." },
-              { kicker: "Groups", title: "Більше сили в group promo", text: "Premium збільшує і денний usage, і цільове число груп." },
-              { kicker: "Campaigns", title: "Нижча вартість по gems", text: "Promo Join tiers стають економнішими для premium-акаунта." }
+              { kicker: "Broadcast", title: "Доступ до Pic Broad", text: "Premium відкриває image + caption broadcast до 350 користувачів на день." },
+              { kicker: "Groups", title: "10 group-promo запусків на день", text: "Premium піднімає group promotion з 2 запусків на день до 10 запусків на день." },
+              { kicker: "Priority", title: "Завдання показуються першими", text: "Premium-завдання ставляться попереду стандартних, тому користувачі бачать їх раніше, коли доступна відповідна кампанія." },
+              { kicker: "Speed", title: "Швидші дії та обробка", text: "Premium-режим розрахований на швидшу обробку і вищий пріоритет у підтримуваних promo-діях." },
+              { kicker: "Support", title: "Пріоритетна підтримка", text: "Premium-користувачі отримують швидшу увагу підтримки, коли потрібна допомога." },
+              { kicker: "Gems", title: "Менша ціна tier у Promo Join", text: "Для premium-користувача Promo Join tiers коштують менше gems, ніж для standard user." }
             ]
           },
           {
-            type: "cards",
-            title: "Поточні плани",
-            intro: "Це формати планів, відображені в поточному продукті.",
-            items: [
-              { kicker: "1 Week", title: "₹30 або 15 Stars", text: "Підходить для короткого доступу і тесту premium-функцій." },
-              { kicker: "3 Weeks", title: "₹75 або 38 Stars", text: "Збалансований варіант для довшого використання." },
-              { kicker: "1 Month", title: "₹89 або 45 Stars", text: "Найкраще підходить для регулярного промо і частих запусків." }
+            type: "callout",
+            title: "Обирайте premium, коли важлива максимальна видимість.",
+            text: "Якщо вам потрібно, щоб завдання показувалися першими, promo оброблялося швидше, а великі інструменти були відкриті, відкрийте premium прямо в Telegram.",
+            actions: [
+              { href: "https://t.me/DealmanyBot?start=buypremium", label: "Get Premium", primary: true }
             ]
           }
         ]
       },
       help: {
         metaTitle: "Допомога",
-        metaDescription: "Часті питання і швидкі відповіді по боту Promoter.",
+        metaDescription: "Швидкі відповіді для користувачів Promoter Bot і Promotion Bot.",
         hero: {
-          eyebrow: "Help center",
-          title: "Швидкі відповіді без плутанини.",
-          lead: "Ця сторінка покриває найчастіші питання про збереження контенту, ліміти, кампанії та premium-доступ.",
-          pills: ["Готові відповіді", "Теми для users і admins", "Швидка діагностика"],
+          eyebrow: "Help Center",
+          title: "Короткі відповіді на найчастіші проблеми.",
+          lead: "Ця сторінка покриває питання, які реально виникають під час збереження контенту, запуску промо, отримання gems, участі в contest і роботи з premium.",
+          pills: ["Питання користувачів", "Питання адмінів", "Contest теж включений"],
           actions: [
             { href: "terms.html", label: "Умови", primary: true },
-            { href: "privacy.html", label: "Privacy", primary: false }
+            { href: "privacy.html", label: "Конфіденційність", primary: false }
           ]
         },
         sections: [
           {
             type: "faq",
             title: "Часті питання",
-            intro: "Хороша сторінка для відправки користувачу ще до звернення в підтримку.",
+            intro: "Цю сторінку зручно відправляти користувачу ще до звернення в підтримку.",
             items: [
-              { q: "Чому бот каже, що немає збереженого повідомлення?", a: "Тому що активне джерело промо порожнє. Спочатку надішліть валідне повідомлення в особистий чат." },
-              { q: "Чому важлива NSFW-класифікація?", a: "Вона допомагає доставляти контент лише тій аудиторії, яка погодилася його отримувати." },
-              { q: "Чому звичайне промо закінчилося на сьогодні?", a: "Стандартне просування працює за денними лімітами. Реферальні бонуси можуть збільшувати цей ліміт." },
-              { q: "Чому Pic Broad недоступний?", a: "Pic Broad доступний лише premium-користувачам і має денне обмеження." },
-              { q: "Чому verify у Promo Join не пройшов?", a: "Зазвичай через неповний вступ, помилку перевірки membership або завершення кампанії." },
-              { q: "Чому Force Join не спрацював?", a: "Часта причина — нестача прав у бота в групі або цільовому каналі." }
+              { q: "Чому бот каже, що немає saved content?", a: "Тому що active saved content порожній. Спочатку надішліть валідне повідомлення, посилання або username в особистий чат." },
+              { q: "Скільки стандартних промо я маю на день?", a: "Базовий ліміт — 5 звичайних промо на день, а кожні 3 реферали додають ще 3." },
+              { q: "Скільки group-promo запусків я маю?", a: "Звичайний користувач отримує 2 group-promo run на день. Premium-користувач отримує 10." },
+              { q: "Чому Pic Broad недоступний?", a: "Pic Broad — premium-only функція, і для non-admin premium користувача її можна використовувати тільки один раз на день." },
+              { q: "Чому verify у Promo Join не пройшов?", a: "Зазвичай через те, що користувач не завершив join, бот не зміг перевірити membership або campaign уже закрилася." },
+              { q: "Чим contest відрізняється від звичайного referral?", a: "Звичайний referral підвищує daily standard limit. Contest referral використовує спеціальне event-посилання і видає gems тільки під час активного конкурсу." },
+              { q: "Чому Force Join не працює?", a: "У бота може не вистачати прав у групі, доступу в required channel або налаштування міг не завершити group admin." }
             ]
           }
         ]
       },
       terms: {
         metaTitle: "Умови",
-        metaDescription: "Умови використання бота Promoter.",
+        metaDescription: "Умови використання Promoter Bot і Promotion Bot.",
         hero: {
           eyebrow: "Legal",
           title: "Умови використання.",
-          lead: "Ця сторінка пояснює базові правила щодо використання бота, premium-доступу та інструментів просування.",
-          pills: ["Зрозумілий формат", "Відповідальність користувача", "Правила доступу"],
+          lead: "Ці короткі умови пояснюють базові правила використання promotion tools, premium access, gem-based функцій і moderation-сценаріїв.",
+          pills: ["Читабельні правила", "Відповідальність користувача", "Правила доступу"],
           actions: [
             { href: "privacy.html", label: "Відкрити privacy", primary: true },
-            { href: "help.html", label: "Назад до допомоги", primary: false }
+            { href: "help.html", label: "Назад до help", primary: false }
           ]
         },
         sections: [
           {
             type: "legal",
             title: "Основні правила",
-            intro: "Сторінка зроблена короткою і читабельною.",
+            intro: "Сторінка спеціально зроблена короткою й зрозумілою.",
             items: [
-              { title: "1. Відповідальність за контент", text: "Ви самі відповідаєте за матеріали, які надсилаєте або просуваєте через сервіс." },
-              { title: "2. Чесне використання", text: "Незаконне, шкідливе, оманливе або агресивне використання може призвести до обмежень і видалення доступу." },
-              { title: "3. Premium-доступ", text: "Premium відкриває додаткові можливості, але не гарантує однаковий результат для всіх користувачів." },
-              { title: "4. Зміни", text: "Функції, ліміти та moderation rules можуть змінюватися з часом." }
+              { title: "1. Відповідальність за контент", text: "Ви несете відповідальність за матеріали, які відправляєте або просуваєте через сервіс." },
+              { title: "2. Чесне використання", text: "Незаконне, шкідливе, оманливе або агресивне використання може призвести до обмежень, блокування або видалення доступу." },
+              { title: "3. Premium-доступ", text: "Premium відкриває додаткові інструменти, але не гарантує однаковий результат для кожного користувача або кампанії." },
+              { title: "4. Зміни", text: "Функції, ліміти, contest-правила і moderation-політики можуть змінюватися з часом." }
             ]
           }
         ]
       },
       privacy: {
         metaTitle: "Конфіденційність",
-        metaDescription: "Політика конфіденційності для бота Promoter.",
+        metaDescription: "Політика конфіденційності для Promoter Bot і Promotion Bot.",
         hero: {
           eyebrow: "Legal",
           title: "Політика конфіденційності.",
-          lead: "Тут пояснюється, які робочі дані можуть зберігатися для доставки промо, нагород і керування доступом.",
+          lead: "Ця політика пояснює, які робочі дані можуть зберігатися, щоб бот міг доставляти промо, відстежувати ліміти, керувати rewards і тримати account state.",
           pills: ["Операційні дані", "Дані акаунта", "Історія промо"],
           actions: [
-            { href: "terms.html", label: "Відкрити умови", primary: true },
-            { href: "help.html", label: "Назад до допомоги", primary: false }
+            { href: "terms.html", label: "Відкрити terms", primary: true },
+            { href: "help.html", label: "Назад до help", primary: false }
           ]
         },
         sections: [
           {
             type: "legal",
             title: "Які дані можуть зберігатися",
-            intro: "Зберігатися повинна лише та інформація, яка потрібна для роботи сервісу.",
+            intro: "Зберігатися мають лише дані, які реально потрібні для роботи сервісу і його promotion-функцій.",
             items: [
-              { title: "1. Дані акаунта", text: "Можуть зберігатися user ID, username, ім'я, часові мітки та службові статуси." },
-              { title: "2. Дані промо", text: "Можуть зберігатися saved message, link, тип контенту, цілі кампаній і related result data." },
-              { title: "3. Дані використання", text: "Можуть враховуватися daily limits, referrals, gem balances і progress campaign features." },
-              { title: "4. Призначення", text: "Ці дані підтримують delivery, anti-abuse, rewards, premium access і moderation logic." }
+              { title: "1. Дані акаунта", text: "Для звичайної роботи можуть зберігатися user ID, username, ім'я, timestamps і service-status markers." },
+              { title: "2. Дані промо", text: "Збережені links, text, content classification, targets і campaign-state записи можуть зберігатися для роботи функцій." },
+              { title: "3. Дані використання", text: "Можуть відстежуватися daily limits, referral totals, gem balances, group rewards і progress campaigns." },
+              { title: "4. Призначення", text: "Ці дані підтримують delivery, anti-abuse checks, rewards, premium access, contest tracking і moderation." }
             ]
           }
         ]
@@ -1279,22 +1444,23 @@ window.DOCS_TRANSLATIONS = {
   },
   hi: {
     common: {
-      siteName: "Promoter Docs",
-      siteTagline: "हर प्रमोशन मोड के लिए साफ़ गाइड",
-      logoAlt: "Promoter logo",
-      menuLabel: "मेनू खोलें",
-      closeLabel: "मेनू बंद करें",
+      siteName: "Promoter Bot Docs",
+      siteTagline: "हर promotion workflow के लिए साफ guide",
+      logoAlt: "Promoter Bot logo",
+      menuLabel: "नेविगेशन खोलें",
+      closeLabel: "नेविगेशन बंद करें",
       mobileMenuTitle: "नेविगेशन",
       mobileSections: {
-        guide: "Pages",
+        guide: "Guide",
         legal: "Legal"
       },
       navLabel: "मुख्य नेविगेशन",
       languageLabel: "भाषा चुनें",
-      defaultSideTitle: "साफ़ और आसान",
-      defaultSideText: "हर ज़रूरी feature की अपनी page link है और explanation भी simple है.",
-      footerTitle: "Promoter Documentation",
-      footerNote: "यह site end users के लिए feature flow को आसान भाषा में समझाती है. Real limits और access अभी भी bot owner और Telegram permissions पर depend करते हैं.",
+      defaultSideTitle: "Real users के लिए",
+      defaultSideText: "हर important feature की अपनी अलग page है ताकि user सीधे वही explanation खोल सके जो उसे चाहिए.",
+      footerTitle: "Promoter Bot Documentation",
+      footerNote: "यह site current Promoter Bot और Promotion Bot flow को end users के लिए आसान भाषा में समझाती है. Real limits और access अभी भी bot owner और Telegram permissions पर depend करते हैं.",
+      metaKeywords: "Promoter Bot, Promotion Bot, Telegram promotion bot, Telegram promoter bot",
       languages: {
         en: "English",
         ru: "Русский",
@@ -1308,6 +1474,7 @@ window.DOCS_TRANSLATIONS = {
         promoJoin: "Promo Join",
         picBroad: "Pic Broad",
         referral: "Referral",
+        contest: "Contest",
         forceJoin: "Force Join",
         premium: "Premium",
         help: "Help",
@@ -1318,313 +1485,366 @@ window.DOCS_TRANSLATIONS = {
     pages: {
       home: {
         metaTitle: "Overview",
-        metaDescription: "Promoter bot ke liye multilingual guide.",
+        metaDescription: "Promoter Bot और Promotion Bot के लिए official multilingual guide.",
         hero: {
-          eyebrow: "Promoter Guide",
-          title: "हर growth workflow के लिए एक साफ़ website guide.",
-          lead: "यहाँ standard promo, group promo, Promo Join, referral, premium tools और admin-side features सब कुछ आसान तरीके से समझाया गया है.",
-          pills: ["4 languages", "Direct links", "Quick help"],
+          eyebrow: "Official Guide",
+          title: "हर promotion mode के लिए एक ही site.",
+          lead: "यह site अब bot के actual behavior से ज़्यादा closely match करती है: standard promo, group promo, Promo Join, referral, contest, premium tools और admin features.",
+          pills: ["4 languages", "Bot-matched text", "Fast help pages"],
           actions: [
-            { href: "user-promotion.html", label: "User Promotion देखें", primary: true },
-            { href: "help.html", label: "Help खोलें", primary: false }
+            { href: "user-promotion.html", label: "User Promotion से शुरू करें", primary: true },
+            { href: "contest.html", label: "Contest देखें", primary: false }
           ],
           sidePanels: [
-            { title: "Users के लिए", text: "समझें कि message save कैसे होता है, promo कैसे चलता है और premium या gems कहाँ useful हैं." },
-            { title: "Admins के लिए", text: "Force Join और group-side control features का clear overview पाएं." }
+            { title: "Promoters के लिए", text: "Daily limits, saved content, premium, gems और advanced campaign tools को start करने से पहले समझें." },
+            { title: "Admins के लिए", text: "देखें कि Force Join और add-bot gem rewards moderation और channel growth से कैसे जुड़े हैं." }
           ]
         },
         sections: [
           {
             type: "stats",
             title: "एक नज़र में",
-            intro: "Bot simple daily promotion और deeper campaign tools दोनों को combine करता है.",
+            intro: "Bot simple daily promotion, premium upgrade, gems और referral-based growth को एक साथ जोड़ता है.",
             items: [
-              { value: "5+", title: "Daily standard promos", text: "Base limit referral bonuses से बढ़ सकता है." },
-              { value: "15 / 35", title: "Group targets", text: "Standard mode लगभग 15 groups तक और premium 35 तक जा सकता है." },
-              { value: "350", title: "Pic Broad reach", text: "Premium image broadcast बहुत बड़ी audience तक जा सकता है." }
+              { value: "5", title: "Base daily user promos", text: "Standard private promotion 5 daily uses से शुरू होता है और referrals से बढ़ सकता है." },
+              { value: "2 / 10", title: "Daily group promo runs", text: "Standard users को 2 group-promo runs मिलते हैं, जबकि premium users को 10." },
+              { value: "+65 / -70", title: "Add-bot gem swing", text: "Eligible group owner bot add करके 65 gems कमा सकता है, लेकिन बाद में हटाने पर 70 gems penalty लगती है." }
             ]
           },
           {
             type: "cards",
             title: "Main sections",
-            intro: "हर topic की अपनी page है ताकि direct sharing आसान रहे.",
-            columns: 2,
+            intro: "हर important workflow की अपनी page है ताकि users को raw commands में न भेजना पड़े.",
             items: [
-              { kicker: "Core", title: "User Promotion", text: "Private saved content users तक कैसे भेजा जाता है." },
-              { kicker: "Reach", title: "Group Promotion", text: "Bot आपका message available groups में कैसे भेजता है." },
-              { kicker: "Gems", title: "Promo Join", text: "Advanced campaigns जो gems और verification पर based हैं." },
-              { kicker: "Media", title: "Pic Broad", text: "Premium image + caption promotion mode." },
-              { kicker: "Growth", title: "Referral", text: "Personal invite link से daily promotion power कैसे बढ़ती है." },
-              { kicker: "Admin", title: "Force Join", text: "Group chat से पहले channel join कैसे required होता है." }
+              { kicker: "Core", title: "User Promotion", text: "Saved link या text network के अंदर 15 users तक कैसे भेजा जाता है." },
+              { kicker: "Reach", title: "Group Promotion", text: "Saved content active groups में standard या premium limits के साथ कैसे जाता है." },
+              { kicker: "Gems", title: "Promo Join", text: "Advanced mode जहाँ gems join-and-verify campaigns पर खर्च होते हैं." },
+              { kicker: "Media", title: "Pic Broad", text: "Premium image broadcast जिसमें एक photo, एक caption और up to 350 daily sends होते हैं." },
+              { kicker: "Growth", title: "Referral", text: "Personal link daily standard promo limit को कैसे बढ़ाती है." },
+              { kicker: "Event", title: "Contest", text: "Special referral contest gems और leaderboard tracking कैसे देता है." },
+              { kicker: "Admin", title: "Force Join", text: "Users को chat continue करने से पहले channel join कैसे कराना है." }
             ]
           },
           {
             type: "callout",
-            title: "Clear documentation support load कम करती है.",
-            text: "जब users पहले से flow समझ लेते हैं, तो repeated confusion काफी कम हो जाती है."
+            title: "Accurate text confusion कम करता है.",
+            text: "जब public documentation bot के real behavior से match करती है, तब users कम repeated questions पूछते हैं और expectations साफ रहती हैं."
           }
         ]
       },
       userPromotion: {
         metaTitle: "User Promotion",
-        metaDescription: "Standard user-to-user promotion ka guide.",
+        metaDescription: "Promoter Bot और Promotion Bot में standard user-to-user promotion कैसे काम करता है.",
         hero: {
-          eyebrow: "User to User",
-          title: "Standard promotion कैसे काम करता है.",
-          lead: "यह सबसे तेज़ mode है जहाँ bot आपके saved message या link को network के users तक पहुँचाता है.",
-          pills: ["Private chat flow", "Free daily access", "Referral boosts"],
+          eyebrow: "Private Reach",
+          title: "Standard promotion वास्तव में कैसे काम करता है.",
+          lead: "User Promotion वह base mode है जहाँ आपका saved link या text network के available users को भेजा जाता है.",
+          pills: ["5 base promos", "Up to 15 users per run", "Referral boosts"],
           actions: [
-            { href: "referral.html", label: "Referral bonus देखें", primary: true },
-            { href: "help.html", label: "Help", primary: false }
+            { href: "referral.html", label: "Referral bonuses देखें", primary: true },
+            { href: "help.html", label: "Help खोलें", primary: false }
+          ],
+          sidePanels: [
+            { title: "Best for", text: "Quick links, short updates, usernames और light daily promotion जहाँ gems spend नहीं करने पड़ते." }
           ]
         },
         sections: [
           {
             type: "steps",
             title: "Basic workflow",
-            intro: "ज़्यादातर users के लिए यह तीन steps में हो जाता है.",
+            intro: "Command path छोटा है, लेकिन bot भेजने से पहले saved content और content type check करता है.",
             items: [
-              { kicker: "Step 1", title: "Private chat में content भेजें", text: "Message में link, username या clear destination होना चाहिए." },
-              { kicker: "Step 2", title: "Content type confirm करें", text: "अगर bot NSFW या normal पूछे, तो सही option चुनें." },
-              { kicker: "Step 3", title: "/promote चलाएँ", text: "Bot आपका saved content भेजता है और daily remaining count update करता है." }
+              { kicker: "Step 1", title: "Private chat में content save करें", text: "Valid link, username या text भेजें ताकि bot के पास promote करने के लिए कुछ हो." },
+              { kicker: "Step 2", title: "अगर NSFW check आए तो सही जवाब दें", text: "कुछ saved content pending रहता है जब तक आप उसे normal या NSFW के रूप में classify नहीं करते." },
+              { kicker: "Step 3", title: "/promote चलाएँ", text: "Bot saved content को maximum 15 users तक भेजता है और फिर daily remaining count update करता है." }
             ]
           },
           {
             type: "cards",
-            title: "यह mode क्यों useful है",
-            intro: "यह product का सबसे आसान promotion mode है.",
+            title: "क्या जानना ज़रूरी है",
+            intro: "यह mode आसान है, लेकिन actual limits पहले वाली site copy से ज़्यादा clear और specific हैं.",
             items: [
-              { kicker: "Fast", title: "Extra setup नहीं चाहिए", text: "Gems, target chats या campaign tiers की ज़रूरत नहीं होती." },
-              { kicker: "Flexible", title: "Quick offers के लिए सही", text: "Invite links, updates और short calls to action के लिए अच्छा है." },
-              { kicker: "Scalable", title: "समय के साथ stronger होता है", text: "Referral bonuses आपकी daily reach बढ़ा सकते हैं." }
+              { kicker: "Base", title: "Default में 5 uses per day", text: "Standard daily limit 5 promotions से शुरू होती है, उसके बाद referrals इसे बढ़ाते हैं." },
+              { kicker: "Bonus", title: "Referrals limit बढ़ाते हैं", text: "हर 3 referrals पर 3 extra standard daily promos मिलते हैं." },
+              { kicker: "Reuse", title: "पहले से saved content reuse होता है", text: "अलग campaign build करने की ज़रूरत नहीं होती; bot वही content use करता है जो आपने private chat में save किया." }
             ]
           }
         ]
       },
       groupPromotion: {
         metaTitle: "Group Promotion",
-        metaDescription: "Group promotion system ka guide.",
+        metaDescription: "Promoter Bot और Promotion Bot में group promotion कैसे काम करता है.",
         hero: {
           eyebrow: "Group Reach",
-          title: "Content को groups में promote करें.",
-          lead: "Group Promotion आपके saved message को उन groups में भेजता है जहाँ यह mode अभी available है.",
-          pills: ["15 groups standard", "35 groups premium", "Daily limits"],
+          title: "Saved content को groups में promote करें.",
+          lead: "Group Promotion आपका saved message उन groups में भेजता है जहाँ promotion उस समय active और available है.",
+          pills: ["2 runs standard", "10 runs premium", "15 या 35 group target"],
           actions: [
             { href: "premium.html", label: "Premium compare करें", primary: true },
-            { href: "help.html", label: "Help", primary: false }
+            { href: "help.html", label: "Need Help?", primary: false }
           ]
         },
         sections: [
           {
             type: "steps",
             title: "Run कैसे होता है",
-            intro: "User side पर flow छोटा है, लेकिन checks bot खुद करता है.",
+            intro: "Bot सिर्फ command नहीं देखता. वह ban status, daily usage, saved content और available groups भी check करता है.",
             items: [
-              { kicker: "Step 1", title: "Content save होना चाहिए", text: "अगर active message नहीं है, तो group promotion शुरू नहीं होगा." },
-              { kicker: "Step 2", title: "/chatpromo चलाएँ", text: "Bot access, ban status, daily usage और group availability check करता है." },
-              { kicker: "Step 3", title: "Summary का इंतज़ार करें", text: "Run के बाद bot बताता है कि कितने groups तक message गया." }
+              { kicker: "Step 1", title: "Saved content ready रखें", text: "अगर saved content नहीं है, तो group promotion start नहीं होगा." },
+              { kicker: "Step 2", title: "/chatpromo चलाएँ", text: "Bot आपका status check करके background send शुरू करता है." },
+              { kicker: "Step 3", title: "Summary पढ़ें", text: "Run complete होने पर bot बताता है कि promotion कितने groups तक पहुँचा." }
             ]
           },
           {
             type: "cards",
-            title: "यह mode क्यों important है",
-            intro: "यह private delivery से ज़्यादा public visibility देता है.",
+            title: "Actual limits",
+            intro: "यहाँ दो तरह के limits हैं: प्रति दिन कितने runs और हर run कितने groups तक पहुँचने की कोशिश करता है.",
             items: [
-              { kicker: "Visibility", title: "Communities तक पहुँच", text: "एक ही बार में कई लोग आपका message देख सकते हैं." },
-              { kicker: "Reuse", title: "Saved content फिर use होता है", text: "अलग editor की ज़रूरत नहीं होती." },
-              { kicker: "Scale", title: "Premium और आगे जाता है", text: "Premium users को ज़्यादा runs और higher group target मिलता है." }
+              { kicker: "Standard", title: "2 runs per day", text: "Standard user दिन में 2 बार group promotion चला सकता है, और हर run maximum 15 successful group sends तक जाता है." },
+              { kicker: "Premium", title: "10 runs per day", text: "Premium users को 10 daily group-promo runs मिलते हैं और हर run 35 successful group sends तक जा सकता है." },
+              { kicker: "Availability", title: "Available groups फिर भी matter करते हैं", text: "अगर active promotable groups नहीं हैं, तो command रुक जाएगी चाहे आपका daily usage बचा हुआ हो." }
             ]
           }
         ]
       },
       promoJoin: {
         metaTitle: "Promo Join",
-        metaDescription: "Promo Join campaigns ka guide.",
+        metaDescription: "Promoter Bot और Promotion Bot में Promo Join campaigns कैसे काम करती हैं.",
         hero: {
           eyebrow: "Gem Campaigns",
-          title: "Promo Join से verified joins लें.",
-          lead: "Promo Join advanced mode है जहाँ gems खर्च करके real join + verify results लाए जाते हैं.",
-          pills: ["Gem-based", "Verify flow", "Premium savings"],
+          title: "Gems से verified joins खरीदें.",
+          lead: "Promo Join वह advanced mode है जहाँ आप gems spend करके target chat users को भेजते हैं और successful join + verify के बाद उन्हें reward मिलता है.",
+          pills: ["Gems से start", "Verifier reward", "Premium tier discount"],
           actions: [
-            { href: "premium.html", label: "Premium देखें", primary: true },
-            { href: "help.html", label: "FAQ", primary: false }
+            { href: "https://t.me/DealmanyBot?start=buygems", label: "Buy Gems", primary: true },
+            { href: "premium.html", label: "Premium benefits देखें", primary: false }
           ]
         },
         sections: [
           {
             type: "cards",
-            title: "यह mode कैसे काम करता है",
-            intro: "यह उन users के लिए है जिन्हें सिर्फ views नहीं, बल्कि real joins चाहिए.",
+            title: "System कैसे बना है",
+            intro: "यह view-based promo नहीं है. यहाँ gem balance, active campaigns और join-and-verify flow होता है.",
             items: [
-              { kicker: "Setup", title: "Target chat चाहिए", text: "पहले channel या group set किया जाता है जहाँ users को join कराना है." },
-              { kicker: "Cost", title: "Campaign gems use करता है", text: "हर tier की cost होती है, और premium users कम pay कर सकते हैं." },
-              { kicker: "Progress", title: "Verify campaign पूरा करता है", text: "Successful joins और confirmations campaign को goal तक ले जाते हैं." }
+              { kicker: "Balance", title: "User को gem profile मिलता है", text: "Promo Join के लिए अलग profile बनता है जिसमें gem balance होता है, और वही campaigns पर खर्च होता है." },
+              { kicker: "Setup", title: "पहले target chat set करना पड़ता है", text: "Use /promojoin करके channel या group set करें, फिर /advance खोलें." },
+              { kicker: "Reward", title: "Verifier को 1 gem मिलता है", text: "जो user join करके successfully verify करता है, उसे task के लिए 1 gem मिलता है." }
             ]
           },
           {
             type: "steps",
             title: "Campaign flow",
-            intro: "पहली बार के बाद यह sequence काफ़ी clear हो जाता है.",
+            intro: "Menu simple है, लेकिन कुछ important rules हैं जिनका पहले से पता होना अच्छा है.",
             items: [
-              { kicker: "Step 1", title: "/promojoin use करें", text: "Advanced menu खोलने से पहले destination chat set करें." },
-              { kicker: "Step 2", title: "/advance खोलें", text: "Budget, size और verify target के हिसाब से tier चुनें." },
-              { kicker: "Step 3", title: "Verify progress देखें", text: "Users join करते हैं, confirm करते हैं, और campaign target की तरफ बढ़ता है." }
+              { kicker: "Step 1", title: "/promojoin से destination set करें", text: "Bot को उस target chat में admin भी होना चाहिए ताकि membership check सही हो सके." },
+              { kicker: "Step 2", title: "/advance खोलें और tier चुनें", text: "Different tiers gems cost, verify target और send volume बदलते हैं; premium users कम pay करते हैं." },
+              { kicker: "Step 3", title: "Verify progress का wait करें", text: "Bot promoter को verification updates भेजता है और goal पूरा होने पर campaign close कर देता है." }
             ]
           },
           {
             type: "callout",
-            title: "यह serious promotion के लिए best है.",
-            text: "अगर target channel खुद valuable नहीं है, तो Promo Join की long-term value जल्दी कम हो जाती है."
+            title: "More gems चाहिए?",
+            text: "अगर balance कम है, तो पहले gems खरीदें और फिर अगला Promo Join campaign बिना delay शुरू करें.",
+            actions: [
+              { href: "https://t.me/DealmanyBot?start=buygems", label: "Buy Gems", primary: true }
+            ]
+          },
+          {
+            type: "callout",
+            title: "Joined रहना भी ज़रूरी है.",
+            text: "अगर verifier जल्दी leave कर देता है, तो bot उसे rejoin warning दे सकता है और recovery window miss होने पर 2 gems काट सकता है."
           }
         ]
       },
       picBroad: {
         metaTitle: "Pic Broad",
-        metaDescription: "Premium image broadcast feature ka guide.",
+        metaDescription: "Promoter Bot और Promotion Bot में Pic Broad कैसे काम करता है.",
         hero: {
           eyebrow: "Premium Media",
-          title: "Pic Broad से visual broadcast भेजें.",
-          lead: "Pic Broad premium-only feature है जो एक image और caption को बड़ी audience तक पहुँचाने के लिए बनाया गया है.",
-          pills: ["Premium only", "1 run per day", "Visual promotion"],
+          title: "Premium image broadcast चलाएँ.",
+          lead: "Pic Broad एक premium-only feature है जो एक photo और caption को बहुत बड़ी user audience तक भेजता है.",
+          pills: ["Premium only", "1 run per day", "Up to 350 sends"],
           actions: [
-            { href: "premium.html", label: "Premium plans देखें", primary: true },
-            { href: "help.html", label: "Help", primary: false }
+            { href: "premium.html", label: "Premium देखें", primary: true },
+            { href: "help.html", label: "Need Help?", primary: false }
           ]
         },
         sections: [
           {
             type: "steps",
             title: "कैसे use करें",
-            intro: "Feature simple है, लेकिन input सही होना चाहिए.",
+            intro: "Format simple है, लेकिन bot को exact media मिलने के बाद ही broadcast start होता है.",
             items: [
-              { kicker: "Step 1", title: "/picbroad चलाएँ", text: "Bot premium access और free daily slot check करता है." },
-              { kicker: "Step 2", title: "Photo with caption भेजें", text: "Caption ही broadcast text बनता है." },
-              { kicker: "Step 3", title: "Result देखें", text: "Run खत्म होने के बाद bot successful और failed sends दिखाता है." }
+              { kicker: "Step 1", title: "/picbroad से शुरू करें", text: "Bot पहले premium access और आज का slot free है या नहीं, यह check करता है." },
+              { kicker: "Step 2", title: "Photo with caption भेजें", text: "Caption वही text बनता है जो image के साथ broadcast होगा." },
+              { kicker: "Step 3", title: "Completion का wait करें", text: "Bot background में broadcast चलाकर बाद में sent और failed counts बताता है." }
             ]
           },
           {
             type: "cards",
-            title: "कब सबसे useful है",
-            intro: "जब visual plain text से ज्यादा अच्छा काम करे.",
+            title: "Actual limits",
+            intro: "यह feature normal user promotion से stronger है, लेकिन इसकी hard caps फिर भी हैं.",
             items: [
-              { kicker: "Visual", title: "Posters और creatives के लिए सही", text: "Launches, banners और branded promotional posts के लिए अच्छा है." },
-              { kicker: "Reach", title: "Higher daily capacity", text: "यह mode सामान्य private messaging से बड़ी delivery के लिए बनाया गया है." },
-              { kicker: "Control", title: "Premium access spam कम रखता है", text: "Exclusive access quality को better बनाए रखने में मदद करता है." }
+              { kicker: "Capacity", title: "Up to 350 users", text: "Premium user Pic Broad को एक दिन में maximum 350 users तक भेज सकता है." },
+              { kicker: "Frequency", title: "दिन में एक बार", text: "Non-admin premium user Pic Broad सिर्फ एक बार per day चला सकता है." },
+              { kicker: "Use case", title: "Strong visuals के लिए best", text: "Launch cards, posters, event banners और polished offers यहाँ plain text से better perform करते हैं." }
             ]
           }
         ]
       },
       referral: {
         metaTitle: "Referral",
-        metaDescription: "Referral system se daily promotion power kaise badhti hai.",
+        metaDescription: "Promoter Bot और Promotion Bot में referral system daily promotion power कैसे बढ़ाता है.",
         hero: {
           eyebrow: "Referral Growth",
-          title: "Invites को extra promotions में बदलें.",
-          lead: "Referral system आपकी personal bot link को ज्यादा daily standard promotion capacity में बदल देता है.",
-          pills: ["Personal invite link", "Bonus promos", "Visible progress"],
+          title: "Invites को ज़्यादा daily promos में बदलें.",
+          lead: "Referral हर user को personal bot link देता है और successful signups को extra standard promotion capacity में बदलता है.",
+          pills: ["Personal invite link", "3-for-3 bonus", "Contest connection"],
           actions: [
-            { href: "user-promotion.html", label: "User promo पर जाएँ", primary: true },
-            { href: "help.html", label: "Help", primary: false }
+            { href: "contest.html", label: "Contest rules देखें", primary: true },
+            { href: "help.html", label: "Help खोलें", primary: false }
           ]
         },
         sections: [
           {
             type: "cards",
             title: "Referral कैसे मदद करता है",
-            intro: "यह premium खरीदे बिना daily reach बढ़ाने का आसान तरीका है.",
+            intro: "Normal referral system और contest system connected हैं, लेकिन दोनों same चीज़ नहीं हैं.",
             items: [
-              { kicker: "Link", title: "आपको personal URL मिलता है", text: "Bot ऐसी link देता है जिसमें आपका user ID पहले से शामिल होता है." },
-              { kicker: "Bonus", title: "Referrals real promos देते हैं", text: "Successful invites extra standard promotions जोड़ सकते हैं." },
-              { kicker: "Tracking", title: "Progress account में दिखता है", text: "आप current count और next bonus की दूरी देख सकते हैं." }
+              { kicker: "Link", title: "हर user को personal URL मिलता है", text: "Normal referral link आपके user ID को use करती है ताकि bot new signup को आपके account से जोड़ सके." },
+              { kicker: "Bonus", title: "हर 3 referrals पर 3 promos", text: "Standard daily promotion के लिए हर 3 successful referrals पर 3 extra daily promos मिलते हैं." },
+              { kicker: "Tracking", title: "Progress account में दिखता है", text: "Account page पर total referrals, bonus promotions और अगले bonus तक की distance दिखाई देती है." }
             ]
           },
           {
             type: "callout",
-            title: "सिर्फ link नहीं, benefit भी share करें.",
-            text: "जब सामने वाले को bot की value समझ आती है, तब referral conversion बेहतर होता है."
+            title: "Referral और contest अलग layers हैं.",
+            text: "Normal referral daily standard limit बढ़ाता है. Contest referral special event link use करता है और gems + leaderboard पर focus करता है."
+          }
+        ]
+      },
+      contest: {
+        metaTitle: "Contest",
+        metaDescription: "Promoter Bot और Promotion Bot में referral contest कैसे काम करता है.",
+        hero: {
+          eyebrow: "Referral Contest",
+          title: "Gems और leaderboard rank के लिए compete करें.",
+          lead: "जब contest active होता है, users special contest referral link share करते हैं, joins पर gems कमाते हैं और top-referrer rewards के लिए compete करते हैं.",
+          pills: ["Top 3 rewards", "7 day window", "Premium referrals double reward दे सकते हैं"],
+          actions: [
+            { href: "referral.html", label: "Referral पर वापस जाएँ", primary: true },
+            { href: "help.html", label: "Help खोलें", primary: false }
+          ]
+        },
+        sections: [
+          {
+            type: "steps",
+            title: "Contest mode कैसे काम करता है",
+            intro: "यह feature सिर्फ तब relevant है जब contest active हो. इसे owner/admin side से start और stop किया जाता है.",
+            items: [
+              { kicker: "Step 1", title: "Active contest का wait करें", text: "Contest page और special contest button तभी useful होते हैं जब 7-day contest active हो." },
+              { kicker: "Step 2", title: "अपनी contest referral link share करें", text: "Contest के लिए अलग start parameter use होता है, normal referral link वाला नहीं." },
+              { kicker: "Step 3", title: "Leaderboard और rules देखें", text: "User contest menu के अंदर ही leaderboard और contest rules दोनों खोल सकता है." }
+            ]
+          },
+          {
+            type: "cards",
+            title: "Important rules",
+            intro: "ये public-facing rules हैं जो current bot messages और contest logic में दिखते हैं.",
+            items: [
+              { kicker: "Rewards", title: "Joins gems देते हैं", text: "Valid contest referral inviter को gems देता है, और invited Telegram Premium users double reward भी दे सकते हैं." },
+              { kicker: "Eligibility", title: "Top-reward eligibility के लिए 50 referrals", text: "Bot साफ कहता है कि top 3 reward eligibility के लिए कम से कम 50 eligible referrals चाहिए." },
+              { kicker: "Timing", title: "Contest 7 days चलता है", text: "Contest start flow 7-day window set करता है, और reward distribution messaging कहती है कि counts contest end के 7 दिन के भीतर handle होते हैं." }
+            ]
+          },
+          {
+            type: "callout",
+            title: "Normal referral link फिर भी useful है.",
+            text: "अगर contest inactive है, तो users को normal referral link ही share करनी चाहिए ताकि daily bonus promos मिलते रहें. Contest rewards सिर्फ active event में काम करते हैं."
           }
         ]
       },
       forceJoin: {
         metaTitle: "Force Join",
-        metaDescription: "Group admins के लिए Force Join guide.",
+        metaDescription: "Promoter Bot और Promotion Bot में group admins के लिए Force Join कैसे काम करता है.",
         hero: {
           eyebrow: "Admin Control",
           title: "Chat से पहले join required करें.",
-          lead: "Force Join admins को यह control देता है कि user selected channel join किए बिना group में freely chat न कर सके.",
-          pills: ["Admin only", "Membership checks", "Community linking"],
+          lead: "Force Join group admins को यह control देता है कि ordinary messages तब तक block रहें जब तक user required channel(s) join न कर ले.",
+          pills: ["Group-only setup", "Membership checks", "Messages delete हो सकते हैं"],
           actions: [
-            { href: "help.html", label: "Admin help", primary: true },
-            { href: "group-promotion.html", label: "Group promo देखें", primary: false }
+            { href: "help.html", label: "Admin Help", primary: true },
+            { href: "group-promotion.html", label: "Group Promotion देखें", primary: false }
           ]
         },
         sections: [
           {
             type: "steps",
             title: "Setup flow",
-            intro: "Commands छोटे हैं, लेकिन bot permissions सही होनी चाहिए.",
+            intro: "Commands छोटी हैं, लेकिन group और target channel दोनों में bot की सही permissions होनी चाहिए.",
             items: [
-              { kicker: "Step 1", title: "Bot को group में add करें", text: "Bot वहीं होना चाहिए जहाँ message checks होने हैं." },
-              { kicker: "Step 2", title: "/set use करें", text: "Current group के लिए channel या ID को force-join list में जोड़ें." },
-              { kicker: "Step 3", title: "ज़रूरत पर /unset use करें", text: "Admin बाद में requirement को हटा सकता है." }
+              { kicker: "Step 1", title: "Bot को group में add करें", text: "Bot को उसी group में होना चाहिए जहाँ normal user messages check होंगे." },
+              { kicker: "Step 2", title: "Group में /set चलाएँ", text: "Channel ID या @username भेजकर उस group के लिए required join destination add करें." },
+              { kicker: "Step 3", title: "Remove करने के लिए /unset use करें", text: "बाद में admin उस required channel को force-join list से हटा सकता है." }
             ]
           },
           {
             type: "cards",
-            title: "Admins इसे क्यों use करते हैं",
-            intro: "यह moderation और audience growth को एक feature में जोड़ता है.",
+            title: "Bot actual में क्या करता है",
+            intro: "Current logic simple reminder से ज़्यादा strict है: यह non-members के लिए message flow block कर सकता है.",
             items: [
-              { kicker: "Control", title: "Non-members को रोकता है", text: "Required join होने तक bot messages हटा सकता है." },
-              { kicker: "Flexibility", title: "Multiple channels required हो सकते हैं", text: "एक group के लिए एक से ज्यादा join points set किए जा सकते हैं." },
-              { kicker: "Value", title: "Useful channels पर best काम करता है", text: "अगर required channel valuable है, तो users rule को ज्यादा आसानी से accept करते हैं." }
+              { kicker: "Check", title: "Membership live check होती है", text: "हर non-admin message पर bot check करता है कि user required channels join कर चुका है या नहीं." },
+              { kicker: "Action", title: "Messages delete हो सकते हैं", text: "अगर required join पूरा नहीं है, तो bot message delete करके group में join buttons भेज सकता है." },
+              { kicker: "Requirement", title: "Bot को target channel तक access चाहिए", text: "Membership verify करने के लिए bot को target channel दिखना चाहिए, और अक्सर वहाँ admin access भी चाहिए." }
             ]
           }
         ]
       },
       premium: {
         metaTitle: "Premium",
-        metaDescription: "Premium plans aur advanced access ka guide.",
+        metaDescription: "Promoter Bot और Promotion Bot के लिए premium plans और feature access.",
         hero: {
           eyebrow: "Upgrade Access",
-          title: "Premium क्या unlock करता है.",
-          lead: "Premium reach बढ़ाता है, richer tools देता है और advanced campaigns को ज्यादा efficient बनाता है.",
-          pills: ["Pic Broad", "Stronger group promo", "Promo Join savings"],
+          title: "Premium आपके promotions को priority देता है.",
+          lead: "Premium tasks को तेज़ी से आगे बढ़ाता है, campaigns की visibility बेहतर करता है, बड़े promo tools unlock करता है और Promo Join tiers में gem cost कम करता है.",
+          pills: ["Priority task placement", "10 group runs per day", "Lower Promo Join cost"],
           actions: [
-            { href: "pic-broad.html", label: "Pic Broad देखें", primary: true },
-            { href: "help.html", label: "Help", primary: false }
+            { href: "https://t.me/DealmanyBot?start=buypremium", label: "Get Premium", primary: true },
+            { href: "promo-join.html", label: "Promo Join देखें", primary: false }
           ]
         },
         sections: [
           {
             type: "cards",
             title: "Main benefits",
-            intro: "Premium active users के लिए सबसे useful होता है.",
+            intro: "Premium का मतलब है better placement, faster handling और bot के बड़े promotion tools तक access.",
             items: [
-              { kicker: "Media", title: "Pic Broad access", text: "Image + caption promotion higher capacity के साथ possible हो जाता है." },
-              { kicker: "Groups", title: "Stronger group promo", text: "Premium users को ज्यादा daily usage और bigger group target मिलता है." },
-              { kicker: "Campaigns", title: "Lower gem cost", text: "Promo Join tiers premium account के लिए ज्यादा efficient हो जाते हैं." }
+              { kicker: "Broadcast", title: "Pic Broad access", text: "Premium image + caption broadcast को up to 350 users per day तक unlock करता है." },
+              { kicker: "Groups", title: "10 daily group-promo runs", text: "Premium group promotion को 2 runs per day से 10 runs per day तक बढ़ा देता है." },
+              { kicker: "Priority", title: "Tasks पहले दिखते हैं", text: "Premium tasks standard tasks से पहले रखे जाते हैं, इसलिए matching campaign मिलने पर users उन्हें पहले देखते हैं." },
+              { kicker: "Speed", title: "Faster actions and processing", text: "Premium flow supported promo actions में faster handling और higher priority के लिए बनाया गया है." },
+              { kicker: "Support", title: "Priority support", text: "जब मदद चाहिए होती है, premium users को support में तेज़ attention मिलती है." },
+              { kicker: "Gems", title: "Promo Join tiers की कम cost", text: "Premium users के लिए Promo Join tiers standard users से कम gems charge करते हैं." }
             ]
           },
           {
-            type: "cards",
-            title: "Current plans",
-            intro: "ये वही plan shapes हैं जो current product messaging में दिखते हैं.",
-            items: [
-              { kicker: "1 Week", title: "₹30 या 15 Stars", text: "Short-term access और premium feature testing के लिए ठीक." },
-              { kicker: "3 Weeks", title: "₹75 या 38 Stars", text: "Longer usage के लिए balanced option." },
-              { kicker: "1 Month", title: "₹89 या 45 Stars", text: "Regular promotion और repeated campaigns के लिए best fit." }
+            type: "callout",
+            title: "जब maximum visibility चाहिए, तब premium चुनें.",
+            text: "अगर आप चाहते हैं कि tasks पहले दिखें, promo तेज़ चले और bigger tools unlock हों, तो premium सीधे Telegram में खोलें.",
+            actions: [
+              { href: "https://t.me/DealmanyBot?start=buypremium", label: "Get Premium", primary: true }
             ]
           }
         ]
       },
       help: {
         metaTitle: "Help",
-        metaDescription: "Promoter bot ke common questions aur quick answers.",
+        metaDescription: "Promoter Bot और Promotion Bot users के लिए quick answers.",
         hero: {
           eyebrow: "Help Center",
-          title: "Quick answers without confusion.",
-          lead: "यह page content saving, limits, campaigns और premium access से जुड़े common सवालों का जवाब देता है.",
-          pills: ["Predefined answers", "User + admin topics", "Fast troubleshooting"],
+          title: "सबसे common problems के लिए short answers.",
+          lead: "यह page उन सवालों पर focus करती है जो users को content save करते समय, promo चलाते समय, gems कमाते समय, contest join करते समय और premium use करते समय आते हैं.",
+          pills: ["User questions", "Admin questions", "Contest included"],
           actions: [
             { href: "terms.html", label: "Terms", primary: true },
             { href: "privacy.html", label: "Privacy", primary: false }
@@ -1634,29 +1854,30 @@ window.DOCS_TRANSLATIONS = {
           {
             type: "faq",
             title: "Frequently asked questions",
-            intro: "Support से पहले यह page share करना सबसे आसान तरीका है.",
+            intro: "Support से पहले user को यही page भेजना सबसे आसान होता है.",
             items: [
-              { q: "Bot क्यों कहता है कि saved message नहीं है?", a: "क्योंकि active promotion source empty है. पहले private chat में valid message भेजें." },
-              { q: "NSFW classification क्यों ज़रूरी है?", a: "ताकि content सिर्फ वही audience receive करे जिसने ऐसा material accept किया है." },
-              { q: "Standard promotion आज के लिए क्यों खत्म हो गया?", a: "इस mode में daily limits होती हैं. Referral bonuses से ये limit बढ़ सकती है." },
-              { q: "Pic Broad unavailable क्यों है?", a: "यह premium-only feature है और daily usage rule follow करता है." },
-              { q: "Promo Join verify fail क्यों हुआ?", a: "हो सकता है user ने पूरा join नहीं किया, bot verify न कर पाया, या campaign expire हो गया." },
-              { q: "Force Join काम क्यों नहीं कर रहा?", a: "अक्सर reason missing permissions या incorrect admin setup होता है." }
+              { q: "Bot क्यों कहता है कि saved content नहीं है?", a: "क्योंकि active saved content empty है. पहले private chat में valid message, link या username भेजें." },
+              { q: "मुझे standard promotions कितनी मिलती हैं?", a: "Base limit 5 normal promos per day है, और हर 3 referrals पर 3 और जुड़ते हैं." },
+              { q: "मुझे group-promo runs कितनी मिलती हैं?", a: "Standard user को 2 group-promo runs per day मिलते हैं. Premium user को 10." },
+              { q: "Pic Broad unavailable क्यों है?", a: "Pic Broad premium-only feature है और non-admin premium user इसे दिन में सिर्फ एक बार चला सकता है." },
+              { q: "Promo Join verify fail क्यों हुआ?", a: "अक्सर इसलिए क्योंकि user ने join पूरा नहीं किया, bot membership verify नहीं कर पाया, या campaign बंद हो चुकी थी." },
+              { q: "Contest और normal referral में क्या फर्क है?", a: "Normal referral daily standard limit बढ़ाता है. Contest referral special event link use करता है और active contest के दौरान gems देता है." },
+              { q: "Force Join काम क्यों नहीं कर रहा?", a: "Bot के पास group में permissions कम हो सकती हैं, required channel में access कम हो सकता है, या setup group admin ने पूरा नहीं किया होगा." }
             ]
           }
         ]
       },
       terms: {
         metaTitle: "Terms",
-        metaDescription: "Promoter bot ke terms and conditions.",
+        metaDescription: "Promoter Bot और Promotion Bot के terms.",
         hero: {
           eyebrow: "Legal",
           title: "Terms and conditions.",
-          lead: "यह page bot use, premium access और promotion tools के basic rules को simple language में समझाती है.",
+          lead: "ये short terms promotion tools, premium access, gem-based features और moderation systems के basic rules समझाती हैं.",
           pills: ["Readable terms", "User responsibility", "Access rules"],
           actions: [
             { href: "privacy.html", label: "Privacy पढ़ें", primary: true },
-            { href: "help.html", label: "Help पर जाएँ", primary: false }
+            { href: "help.html", label: "Help पर वापस जाएँ", primary: false }
           ]
         },
         sections: [
@@ -1665,37 +1886,37 @@ window.DOCS_TRANSLATIONS = {
             title: "Main rules",
             intro: "यह page जानबूझकर short और readable रखी गई है.",
             items: [
-              { title: "1. Content responsibility", text: "जो material आप submit या promote करते हैं, उसकी ज़िम्मेदारी आपकी है." },
-              { title: "2. Fair use", text: "Illegal, harmful, deceptive या abusive use access restriction या removal तक ले जा सकता है." },
-              { title: "3. Premium access", text: "Premium extra tools unlock करता है, लेकिन हर user के लिए identical result guarantee नहीं करता." },
-              { title: "4. Changes", text: "Features, limits और moderation rules समय के साथ बदल सकते हैं." }
+              { title: "1. Content responsibility", text: "जो material आप submit या promote करते हैं, उसकी ज़िम्मेदारी आपकी होती है." },
+              { title: "2. Fair use", text: "Illegal, harmful, deceptive या abusive use restrictions, suspension या permanent removal तक ले जा सकती है." },
+              { title: "3. Premium access", text: "Premium extra tools unlock करता है, लेकिन हर user या campaign के लिए identical result guarantee नहीं करता." },
+              { title: "4. Changes", text: "Features, limits, contest rules और moderation policies समय के साथ बदल सकती हैं." }
             ]
           }
         ]
       },
       privacy: {
         metaTitle: "Privacy",
-        metaDescription: "Promoter bot ke liye privacy policy.",
+        metaDescription: "Promoter Bot और Promotion Bot के लिए privacy policy.",
         hero: {
           eyebrow: "Legal",
           title: "Privacy policy.",
-          lead: "यह page बताती है कि कौन-सा operating data store हो सकता है ताकि bot promotions, rewards और account access को manage कर सके.",
+          lead: "यह policy बताती है कि bot promotions deliver करने, limits track करने, rewards manage करने और account state बनाए रखने के लिए कौन-सा data store कर सकता है.",
           pills: ["Operational data", "Account records", "Promotion history"],
           actions: [
             { href: "terms.html", label: "Terms पढ़ें", primary: true },
-            { href: "help.html", label: "Help पर जाएँ", primary: false }
+            { href: "help.html", label: "Help पर वापस जाएँ", primary: false }
           ]
         },
         sections: [
           {
             type: "legal",
-            title: "What may be stored",
-            intro: "सिर्फ वही data रखा जाना चाहिए जो service को चलाने के लिए ज़रूरी हो.",
+            title: "क्या store किया जा सकता है",
+            intro: "सिर्फ वही data रखी जानी चाहिए जो service और उसके promotion features चलाने के लिए वास्तव में ज़रूरी हो.",
             items: [
-              { title: "1. Account data", text: "User ID, username, name, timestamps और service status markers store किए जा सकते हैं." },
-              { title: "2. Promotion data", text: "Saved messages, links, content type और campaign targets जैसी जानकारी record हो सकती है." },
-              { title: "3. Usage data", text: "Daily limits, referrals, gem balances और campaign progress जैसे counters track हो सकते हैं." },
-              { title: "4. Purpose", text: "यह data delivery, anti-abuse, rewards, premium access और moderation के लिए use होता है." }
+              { title: "1. Account data", text: "Normal operation के लिए user ID, username, name, timestamps और service-status markers store हो सकते हैं." },
+              { title: "2. Promotion data", text: "Saved links, text, content classification, targets और campaign-state records features चलाने के लिए store हो सकते हैं." },
+              { title: "3. Usage data", text: "Daily limits, referral totals, gem balances, group rewards और campaign progress track की जा सकती है." },
+              { title: "4. Purpose", text: "यह data delivery, anti-abuse checks, rewards, premium access, contest tracking और moderation के लिए use होती है." }
             ]
           }
         ]
