@@ -30,6 +30,7 @@ window.DOCS_TRANSLATIONS = {
         groupPromotion: "Group Promotion",
         promoJoin: "Promo Join",
         picBroad: "Pic Broad",
+        nsfwGuide: "NSFW",
         referral: "Referral",
         addMeGems: "Bot + Gems",
         contest: "Contest",
@@ -247,6 +248,58 @@ window.DOCS_TRANSLATIONS = {
               { kicker: "Frequency", title: "Once per day", text: "A non-admin premium user can only run Pic Broad once each day." },
               { kicker: "Use case", title: "Best for strong visuals", text: "Launch cards, posters, event banners, and polished offers usually perform better here than plain text." }
             ]
+          }
+        ]
+      },
+      nsfwGuide: {
+        metaTitle: "NSFW Guide",
+        metaDescription: "What NSFW means in the Promoter Bot, why the bot asks, and what content is not allowed.",
+        hero: {
+          eyebrow: "Content Classification",
+          title: "What NSFW means and why the bot asks.",
+          lead: "When the bot finds a link in your message, it may ask whether the content is NSFW or Normal. This does not block your promotion. It helps the bot send content to the appropriate audience, so reach stays more meaningful and relevant.",
+          pills: ["Not a restriction", "Audience matching", "Wrong labels can ban"],
+          actions: [
+            { href: "terms.html", label: "Read Terms", primary: true },
+            { href: "help.html", label: "Back to Help", primary: false }
+          ]
+        },
+        sections: [
+          {
+            type: "cards",
+            title: "What the label means",
+            intro: "The NSFW question is a content-classification step, not an automatic punishment.",
+            items: [
+              { kicker: "Normal", title: "Ordinary content", text: "Normal content is standard public-safe material that does not need adult or sensitive-audience handling." },
+              { kicker: "NSFW", title: "Sensitive or adult content", text: "NSFW usually means adult, sexual, explicit, or otherwise sensitive content that should only be promoted to users who are okay receiving it." },
+              { kicker: "Result", title: "Correct NSFW marking can still promote", text: "If your content is allowed, marking it as NSFW does not stop promotion. It simply helps the bot target a more suitable audience." }
+            ]
+          },
+          {
+            type: "steps",
+            title: "Why the bot asks",
+            intro: "This is the same logic reflected in the current bot warning shown after a link is detected.",
+            items: [
+              { kicker: "Step 1", title: "The bot finds a link", text: "If a message includes a link, the bot may ask whether that content is NSFW or Normal before saving or promoting it." },
+              { kicker: "Step 2", title: "You choose the correct label", text: "Your answer helps the system understand what type of audience should receive the content." },
+              { kicker: "Step 3", title: "Promotion stays audience-matched", text: "Allowed NSFW content can still be promoted, but the goal is to reach users who are more likely to accept that type of content." }
+            ]
+          },
+          {
+            type: "legal",
+            title: "Important warnings",
+            intro: "These rules matter even if your content is otherwise promotable.",
+            items: [
+              { title: "1. Marking NSFW as Normal can ban you", text: "If you label NSFW content as Normal, the account may receive a permanent ban." },
+              { title: "2. Illegal or too explicit content is not allowed", text: "Promoting illegal, prohibited, or excessively explicit content may lead to a permanent ban no matter how it is labeled." },
+              { title: "3. Repeated misleading classification can ban you", text: "If you repeatedly provide false or misleading content labels, the account may be permanently banned." },
+              { title: "4. You are responsible for what you promote", text: "The bot is not responsible for your promotions, links, offers, media, or legal exposure. The user who submits and promotes the content remains responsible." }
+            ]
+          },
+          {
+            type: "callout",
+            title: "NSFW is not the same as unrestricted.",
+            text: "Allowed NSFW content may still be promoted to a suitable audience, but illegal content, prohibited material, and excessively explicit content can still be blocked and banned."
           }
         ]
       },
@@ -560,6 +613,7 @@ window.DOCS_TRANSLATIONS = {
         groupPromotion: "Промо в группы",
         promoJoin: "Promo Join",
         picBroad: "Pic Broad",
+        nsfwGuide: "NSFW",
         referral: "Рефералы",
         addMeGems: "Бот + gems",
         contest: "Конкурс",
@@ -777,6 +831,58 @@ window.DOCS_TRANSLATIONS = {
               { kicker: "Frequency", title: "Один раз в день", text: "Обычный premium-пользователь, не админ, может запускать Pic Broad только один раз в день." },
               { kicker: "Use case", title: "Лучше всего работает с сильным визуалом", text: "Карточки запуска, постеры, ивенты и polished offers обычно чувствуют себя здесь лучше plain text." }
             ]
+          }
+        ]
+      },
+      nsfwGuide: {
+        metaTitle: "NSFW Guide",
+        metaDescription: "Что означает NSFW в Promoter Bot, зачем бот спрашивает об этом и какой контент запрещён.",
+        hero: {
+          eyebrow: "Классификация контента",
+          title: "Что значит NSFW и зачем бот спрашивает.",
+          lead: "Когда бот находит ссылку в вашем сообщении, он может спросить, является ли контент NSFW или Normal. Это не блокирует продвижение. Это помогает отправлять контент подходящей аудитории, чтобы охват был более осмысленным и релевантным.",
+          pills: ["Это не ограничение", "Подбор аудитории", "Неверная метка может забанить"],
+          actions: [
+            { href: "terms.html", label: "Читать условия", primary: true },
+            { href: "help.html", label: "Назад к help", primary: false }
+          ]
+        },
+        sections: [
+          {
+            type: "cards",
+            title: "Что означает эта метка",
+            intro: "Вопрос про NSFW — это шаг классификации контента, а не автоматическое наказание.",
+            items: [
+              { kicker: "Normal", title: "Обычный контент", text: "Normal-контент — это стандартный материал, безопасный для широкой аудитории и не требующий adult или sensitive-обработки." },
+              { kicker: "NSFW", title: "Чувствительный или adult-контент", text: "NSFW обычно означает adult, sexual, explicit или иной чувствительный контент, который нужно показывать только тем пользователям, кто готов его получать." },
+              { kicker: "Result", title: "Правильная NSFW-метка всё ещё позволяет промо", text: "Если ваш контент разрешён, метка NSFW не останавливает продвижение. Она просто помогает подобрать более подходящую аудиторию." }
+            ]
+          },
+          {
+            type: "steps",
+            title: "Почему бот спрашивает",
+            intro: "Это та же логика, которая отражена в текущем предупреждении бота после обнаружения ссылки.",
+            items: [
+              { kicker: "Шаг 1", title: "Бот находит ссылку", text: "Если в сообщении есть ссылка, бот может спросить, является ли этот контент NSFW или Normal, до сохранения или продвижения." },
+              { kicker: "Шаг 2", title: "Вы выбираете правильную метку", text: "Ваш ответ помогает системе понять, какой аудитории стоит показывать такой контент." },
+              { kicker: "Шаг 3", title: "Промо остаётся аудиторно-точным", text: "Разрешённый NSFW-контент всё ещё может продвигаться, но цель — дойти до пользователей, которые с большей вероятностью готовы его получать." }
+            ]
+          },
+          {
+            type: "legal",
+            title: "Важные предупреждения",
+            intro: "Эти правила важны даже тогда, когда контент сам по себе мог бы продвигаться.",
+            items: [
+              { title: "1. NSFW, отмеченный как Normal, может забанить", text: "Если вы помечаете NSFW-контент как Normal, аккаунт может получить permanent ban." },
+              { title: "2. Нелегальный или слишком explicit-контент запрещён", text: "Продвижение illegal, prohibited или excessively explicit контента может привести к permanent ban независимо от метки." },
+              { title: "3. Повторяющаяся ложная классификация может забанить", text: "Если вы многократно даёте ложные или вводящие в заблуждение метки, аккаунт может быть permanently banned." },
+              { title: "4. Ответственность за промо остаётся на вас", text: "Бот не несёт ответственности за ваши promotions, links, offers, media или юридические последствия. Ответственность остаётся на пользователе, который отправляет и продвигает контент." }
+            ]
+          },
+          {
+            type: "callout",
+            title: "NSFW не означает безусловное разрешение.",
+            text: "Разрешённый NSFW-контент может продвигаться для подходящей аудитории, но illegal content, prohibited material и excessively explicit контент всё равно могут быть заблокированы и привести к бану."
           }
         ]
       },
@@ -1090,6 +1196,7 @@ window.DOCS_TRANSLATIONS = {
         groupPromotion: "Промо в групи",
         promoJoin: "Promo Join",
         picBroad: "Pic Broad",
+        nsfwGuide: "NSFW",
         referral: "Реферали",
         addMeGems: "Бот + gems",
         contest: "Конкурс",
@@ -1307,6 +1414,58 @@ window.DOCS_TRANSLATIONS = {
               { kicker: "Frequency", title: "Один раз на день", text: "Звичайний premium-користувач, який не є адміном, може запускати Pic Broad лише один раз на день." },
               { kicker: "Use case", title: "Найкраще працює з сильним візуалом", text: "Картки запуску, постери, івенти та polished offers тут зазвичай працюють краще, ніж plain text." }
             ]
+          }
+        ]
+      },
+      nsfwGuide: {
+        metaTitle: "NSFW Guide",
+        metaDescription: "Що означає NSFW у Promoter Bot, навіщо бот питає про це і який контент заборонений.",
+        hero: {
+          eyebrow: "Класифікація контенту",
+          title: "Що означає NSFW і навіщо бот питає.",
+          lead: "Коли бот знаходить посилання у вашому повідомленні, він може спитати, чи є контент NSFW або Normal. Це не блокує просування. Це допомагає надсилати контент відповідній аудиторії, щоб охоплення було більш змістовним і релевантним.",
+          pills: ["Це не обмеження", "Підбір аудиторії", "Неправильна мітка може забанити"],
+          actions: [
+            { href: "terms.html", label: "Читати умови", primary: true },
+            { href: "help.html", label: "Назад до help", primary: false }
+          ]
+        },
+        sections: [
+          {
+            type: "cards",
+            title: "Що означає ця мітка",
+            intro: "Питання про NSFW — це крок класифікації контенту, а не автоматичне покарання.",
+            items: [
+              { kicker: "Normal", title: "Звичайний контент", text: "Normal-контент — це стандартний матеріал, безпечний для широкої аудиторії і без потреби в adult або sensitive-обробці." },
+              { kicker: "NSFW", title: "Чутливий або adult-контент", text: "NSFW зазвичай означає adult, sexual, explicit або інший чутливий контент, який варто показувати лише користувачам, готовим його отримувати." },
+              { kicker: "Result", title: "Правильна NSFW-мітка все одно дозволяє промо", text: "Якщо ваш контент дозволений, мітка NSFW не зупиняє просування. Вона лише допомагає підібрати більш доречну аудиторію." }
+            ]
+          },
+          {
+            type: "steps",
+            title: "Чому бот питає",
+            intro: "Це та сама логіка, яка відображена в поточному попередженні бота після виявлення посилання.",
+            items: [
+              { kicker: "Крок 1", title: "Бот знаходить посилання", text: "Якщо в повідомленні є посилання, бот може спитати, чи є цей контент NSFW або Normal, до збереження чи просування." },
+              { kicker: "Крок 2", title: "Ви обираєте правильну мітку", text: "Ваша відповідь допомагає системі зрозуміти, якій аудиторії варто показувати такий контент." },
+              { kicker: "Крок 3", title: "Промо залишається аудиторно-точним", text: "Дозволений NSFW-контент усе ще може просуватися, але мета — дійти до користувачів, які з більшою ймовірністю готові його отримувати." }
+            ]
+          },
+          {
+            type: "legal",
+            title: "Важливі попередження",
+            intro: "Ці правила важливі навіть тоді, коли сам контент міг би просуватися.",
+            items: [
+              { title: "1. NSFW, позначений як Normal, може забанити", text: "Якщо ви позначаєте NSFW-контент як Normal, акаунт може отримати permanent ban." },
+              { title: "2. Нелегальний або занадто explicit-контент заборонений", text: "Просування illegal, prohibited або excessively explicit контенту може призвести до permanent ban незалежно від мітки." },
+              { title: "3. Повторювана хибна класифікація може забанити", text: "Якщо ви неодноразово даєте хибні або оманливі мітки, акаунт може бути permanently banned." },
+              { title: "4. Відповідальність за промо залишається на вас", text: "Бот не несе відповідальності за ваші promotions, links, offers, media або юридичні наслідки. Відповідальність залишається на користувачі, який надсилає і просуває контент." }
+            ]
+          },
+          {
+            type: "callout",
+            title: "NSFW не означає безумовний дозвіл.",
+            text: "Дозволений NSFW-контент може просуватися для відповідної аудиторії, але illegal content, prohibited material і excessively explicit контент усе одно можуть бути заблоковані та призвести до бану."
           }
         ]
       },
@@ -1620,6 +1779,7 @@ window.DOCS_TRANSLATIONS = {
         groupPromotion: "Group Promotion",
         promoJoin: "Promo Join",
         picBroad: "Pic Broad",
+        nsfwGuide: "NSFW",
         referral: "Referral",
         addMeGems: "Bot + Gems",
         contest: "Contest",
@@ -1837,6 +1997,58 @@ window.DOCS_TRANSLATIONS = {
               { kicker: "Frequency", title: "दिन में एक बार", text: "Non-admin premium user Pic Broad सिर्फ एक बार per day चला सकता है." },
               { kicker: "Use case", title: "Strong visuals के लिए best", text: "Launch cards, posters, event banners और polished offers यहाँ plain text से better perform करते हैं." }
             ]
+          }
+        ]
+      },
+      nsfwGuide: {
+        metaTitle: "NSFW Guide",
+        metaDescription: "Promoter Bot में NSFW का क्या मतलब है, bot यह क्यों पूछता है, और कौन-सा content allowed नहीं है.",
+        hero: {
+          eyebrow: "Content Classification",
+          title: "NSFW क्या है और bot यह क्यों पूछता है.",
+          lead: "जब bot आपके message में कोई link पाता है, तो वह पूछ सकता है कि content NSFW है या Normal. यह आपकी promotion को block नहीं करता. यह bot को सही audience तक content पहुँचाने में मदद करता है, ताकि reach ज़्यादा meaningful और relevant रहे.",
+          pills: ["यह restriction नहीं है", "Audience matching", "गलत label पर ban हो सकता है"],
+          actions: [
+            { href: "terms.html", label: "Terms पढ़ें", primary: true },
+            { href: "help.html", label: "Help पर वापस जाएँ", primary: false }
+          ]
+        },
+        sections: [
+          {
+            type: "cards",
+            title: "Label का मतलब क्या है",
+            intro: "NSFW वाला सवाल content-classification step है, automatic punishment नहीं.",
+            items: [
+              { kicker: "Normal", title: "सामान्य content", text: "Normal content वह standard public-safe material है जिसे adult या sensitive handling की ज़रूरत नहीं होती." },
+              { kicker: "NSFW", title: "Sensitive या adult content", text: "NSFW आमतौर पर adult, sexual, explicit या दूसरे sensitive content के लिए होता है, जिसे सिर्फ उन users तक promote किया जाना चाहिए जो उसे receive करने के लिए okay हों." },
+              { kicker: "Result", title: "सही NSFW label promotion को नहीं रोकता", text: "अगर आपका content allowed है, तो NSFW mark करने से promotion बंद नहीं होती. यह सिर्फ ज़्यादा suitable audience तक पहुँचने में मदद करता है." }
+            ]
+          },
+          {
+            type: "steps",
+            title: "Bot यह क्यों पूछता है",
+            intro: "यह वही logic है जो current bot warning में दिखती है जब link detect होता है.",
+            items: [
+              { kicker: "Step 1", title: "Bot link detect करता है", text: "अगर message में link है, तो bot content save या promote करने से पहले पूछ सकता है कि वह NSFW है या Normal." },
+              { kicker: "Step 2", title: "आप सही label चुनते हैं", text: "आपका जवाब system को समझने में मदद करता है कि यह content किस तरह की audience तक जाना चाहिए." },
+              { kicker: "Step 3", title: "Promotion audience-matched रहती है", text: "Allowed NSFW content फिर भी promote हो सकता है, लेकिन लक्ष्य उन users तक पहुँचना है जो उस तरह का content receive करने के लिए अधिक likely हों." }
+            ]
+          },
+          {
+            type: "legal",
+            title: "Important warnings",
+            intro: "ये rules तब भी लागू होते हैं जब आपका content otherwise promotable हो.",
+            items: [
+              { title: "1. NSFW को Normal mark करना ban दिला सकता है", text: "अगर आप NSFW content को Normal mark करते हैं, तो account को permanent ban मिल सकता है." },
+              { title: "2. Illegal या बहुत explicit content allowed नहीं है", text: "Illegal, prohibited या excessively explicit content को promote करने पर permanent ban हो सकता है, चाहे आपने कोई भी label चुना हो." },
+              { title: "3. बार-बार misleading classification ban करा सकती है", text: "अगर आप repeatedly false या misleading labels देते हैं, तो account permanently banned हो सकता है." },
+              { title: "4. Promotion की responsibility आपकी है", text: "Bot आपके promotions, links, offers, media या legal consequences के लिए responsible नहीं है. Content submit और promote करने वाला user ही responsible रहता है." }
+            ]
+          },
+          {
+            type: "callout",
+            title: "NSFW का मतलब unrestricted नहीं होता.",
+            text: "Allowed NSFW content suitable audience तक promote हो सकता है, लेकिन illegal content, prohibited material और excessively explicit content फिर भी block और ban हो सकता है."
           }
         ]
       },

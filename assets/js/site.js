@@ -5,6 +5,7 @@
     { key: "groupPromotion", file: "group-promotion.html", desktop: true, mobile: true },
     { key: "promoJoin", file: "promo-join.html", desktop: true, mobile: true },
     { key: "picBroad", file: "pic-broad.html", desktop: false, mobile: true },
+    { key: "nsfwGuide", file: "nsfw.html", desktop: true, mobile: true },
     { key: "referral", file: "referral.html", desktop: false, mobile: true },
     { key: "addMeGems", file: "add-bot-gems.html", desktop: true, mobile: true },
     { key: "contest", file: "contest.html", desktop: true, mobile: true },
