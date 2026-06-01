@@ -6,6 +6,7 @@
     { key: "promoJoin", file: "promo-join.html", desktop: true, mobile: true },
     { key: "picBroad", file: "pic-broad.html", desktop: false, mobile: true },
     { key: "referral", file: "referral.html", desktop: false, mobile: true },
+    { key: "addMeGems", file: "add-bot-gems.html", desktop: true, mobile: true },
     { key: "contest", file: "contest.html", desktop: true, mobile: true },
     { key: "forceJoin", file: "force-join.html", desktop: false, mobile: true },
     { key: "premium", file: "premium.html", desktop: true, mobile: true },

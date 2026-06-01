@@ -31,6 +31,7 @@ window.DOCS_TRANSLATIONS = {
         promoJoin: "Promo Join",
         picBroad: "Pic Broad",
         referral: "Referral",
+        addMeGems: "Bot + Gems",
         contest: "Contest",
         forceJoin: "Force Join",
         premium: "Premium",
@@ -280,6 +281,52 @@ window.DOCS_TRANSLATIONS = {
           }
         ]
       },
+      addMeGems: {
+        metaTitle: "Add Bot & Gems",
+        metaDescription: "How to add the Promoter Bot to groups for gem rewards, including broadcast consent and anti-abuse rules.",
+        hero: {
+          eyebrow: "Group Rewards",
+          title: "Add the bot and earn gems.",
+          lead: "If you add the bot to an eligible group and keep it there, the system can reward you with gems. Because this feature supports promotion delivery, the bot may occasionally send broadcasts to that group.",
+          pills: ["Eligible groups can earn gems", "Broadcast consent required", "Removal can cost gems"],
+          actions: [
+            { href: "terms.html", label: "Read Terms", primary: true },
+            { href: "help.html", label: "Need Help?", primary: false }
+          ]
+        },
+        sections: [
+          {
+            type: "callout",
+            title: "Consent comes first.",
+            text: "By using this feature, you agree that a group added for gem rewards may occasionally receive bot broadcasts or promotion messages."
+          },
+          {
+            type: "cards",
+            title: "How rewards work",
+            intro: "The current bot logic rewards qualifying adds, but it also protects the system against quick removals and low-quality abuse.",
+            items: [
+              { kicker: "Reward", title: "Eligible adds can earn +65 gems", text: "When a valid group add passes the system checks, the account can receive a 65-gem reward." },
+              { kicker: "Penalty", title: "Removal can trigger -70 gems", text: "If the bot is removed after the reward flow, the system can deduct 70 gems from the linked account." },
+              { kicker: "Quality", title: "Abuse checks still apply", text: "Fake groups, disposable setups, or suspicious reward farming can be rejected, reviewed, or blocked." }
+            ]
+          },
+          {
+            type: "steps",
+            title: "Best way to use it",
+            intro: "This feature is meant for real groups where admins understand what they are agreeing to.",
+            items: [
+              { kicker: "Step 1", title: "Add the bot only to a real group", text: "Only use groups where occasional bot broadcasts are acceptable to the admins and members." },
+              { kicker: "Step 2", title: "Keep the bot active in the group", text: "The bot needs to stay added so the system can verify placement and keep the reward valid." },
+              { kicker: "Step 3", title: "Avoid farming with throwaway setups", text: "Do not rotate many accounts or temporary groups just to multiply gem rewards." }
+            ]
+          },
+          {
+            type: "callout",
+            title: "This is not a loophole for mass-account farming.",
+            text: "Trying to multiply benefits through many Telegram accounts or low-quality groups can lead to temporary or permanent moderation."
+          }
+        ]
+      },
       contest: {
         metaTitle: "Contest",
         metaDescription: "How the referral contest works in the Promoter Bot and Promotion Bot.",
@@ -445,8 +492,10 @@ window.DOCS_TRANSLATIONS = {
             items: [
               { title: "1. Content responsibility", text: "You are responsible for the material you submit or promote through the service." },
               { title: "2. Fair use", text: "Illegal, deceptive, harmful, or abusive use can lead to restrictions, suspension, or permanent removal." },
-              { title: "3. Premium access", text: "Premium unlocks extra tools, but it does not guarantee identical results for every user or campaign." },
-              { title: "4. Changes", text: "Features, limits, contest rules, and moderation policies may change over time." }
+              { title: "3. Standard-user account limit", text: "A normal user may keep only 2 bot accounts active at the same time. Using many Telegram accounts to gain extra limits, rewards, or promotion advantages is not allowed." },
+              { title: "4. Enforcement on extra accounts", text: "If more than 2 standard accounts are detected, the system may temporarily or permanently ban the account with the lowest referral credit first. Earned rewards are usually kept safe, but access can still be restricted." },
+              { title: "5. Premium multi-account exception", text: "Premium users may operate multiple accounts, but anti-spam, abuse, and moderation rules still apply to every premium account." },
+              { title: "6. Changes", text: "Features, limits, contest rules, account policies, and moderation decisions may change over time." }
             ]
           }
         ]
@@ -512,6 +561,7 @@ window.DOCS_TRANSLATIONS = {
         promoJoin: "Promo Join",
         picBroad: "Pic Broad",
         referral: "Рефералы",
+        addMeGems: "Бот + gems",
         contest: "Конкурс",
         forceJoin: "Force Join",
         premium: "Premium",
@@ -761,6 +811,52 @@ window.DOCS_TRANSLATIONS = {
           }
         ]
       },
+      addMeGems: {
+        metaTitle: "Бот + gems",
+        metaDescription: "Как добавлять Promoter Bot в группы ради gem-наград, включая согласие на broadcast и anti-abuse правила.",
+        hero: {
+          eyebrow: "Награды за группы",
+          title: "Добавьте бота и получайте gems.",
+          lead: "Если вы добавите бота в подходящую группу и оставите его там, система может выдать вам gems. Поскольку эта функция поддерживает доставку промо, бот может время от времени отправлять broadcast в эту группу.",
+          pills: ["Подходящие группы дают gems", "Нужно согласие на broadcast", "Удаление может стоить gems"],
+          actions: [
+            { href: "terms.html", label: "Читать условия", primary: true },
+            { href: "help.html", label: "Нужна помощь?", primary: false }
+          ]
+        },
+        sections: [
+          {
+            type: "callout",
+            title: "Сначала согласие.",
+            text: "Используя эту функцию, вы соглашаетесь, что группа, добавленная ради gem-наград, может иногда получать broadcast или promo-сообщения от бота."
+          },
+          {
+            type: "cards",
+            title: "Как работают награды",
+            intro: "Текущая логика бота награждает подходящие добавления, но одновременно защищает систему от быстрых удалений и низкокачественного abuse.",
+            items: [
+              { kicker: "Reward", title: "Подходящее добавление может дать +65 gems", text: "Если валидное добавление группы проходит системные проверки, аккаунт может получить награду в 65 gems." },
+              { kicker: "Penalty", title: "Удаление может дать -70 gems", text: "Если бот удаляется после reward-flow, система может списать 70 gems со связанного аккаунта." },
+              { kicker: "Quality", title: "Проверки на abuse всё равно работают", text: "Фейковые группы, одноразовые схемы и подозрительный reward-farming могут быть отклонены, отправлены на проверку или заблокированы." }
+            ]
+          },
+          {
+            type: "steps",
+            title: "Как использовать правильно",
+            intro: "Эта функция предназначена для реальных групп, где админы понимают, на что они соглашаются.",
+            items: [
+              { kicker: "Шаг 1", title: "Добавляйте бота только в реальную группу", text: "Используйте только те группы, где occasional bot broadcasts приемлемы для админов и участников." },
+              { kicker: "Шаг 2", title: "Держите бота активным в группе", text: "Бот должен оставаться добавленным, чтобы система могла подтвердить placement и сохранить награду валидной." },
+              { kicker: "Шаг 3", title: "Не фармите на одноразовых схемах", text: "Не крутите много аккаунтов или временных групп только ради умножения gem-наград." }
+            ]
+          },
+          {
+            type: "callout",
+            title: "Это не лазейка для массового фарма аккаунтами.",
+            text: "Попытки умножать выгоду через множество Telegram-аккаунтов или низкокачественные группы могут привести к временной или постоянной модерации."
+          }
+        ]
+      },
       contest: {
         metaTitle: "Конкурс",
         metaDescription: "Как работает реферальный конкурс в Promoter Bot и Promotion Bot.",
@@ -926,8 +1022,10 @@ window.DOCS_TRANSLATIONS = {
             items: [
               { title: "1. Ответственность за контент", text: "Вы несёте ответственность за материалы, которые отправляете или продвигаете через сервис." },
               { title: "2. Честное использование", text: "Незаконное, вредное, обманное или агрессивное использование может привести к ограничениям, блокировке или удалению доступа." },
-              { title: "3. Premium-доступ", text: "Premium открывает дополнительные инструменты, но не гарантирует одинаковый результат для каждого пользователя или кампании." },
-              { title: "4. Изменения", text: "Функции, лимиты, contest-правила и moderation-политики могут меняться со временем." }
+              { title: "3. Лимит аккаунтов для обычного пользователя", text: "Обычный пользователь может держать активными только 2 аккаунта в боте одновременно. Использовать много Telegram-аккаунтов ради дополнительных лимитов, rewards или promo-преимуществ нельзя." },
+              { title: "4. Что будет при лишних аккаунтах", text: "Если система найдёт более 2 стандартных аккаунтов, она может временно или навсегда забанить в первую очередь аккаунт с наименьшим referral credit. Уже заработанные rewards обычно остаются в безопасности, но доступ всё равно может быть ограничен." },
+              { title: "5. Исключение для premium", text: "Premium-пользователи могут работать с несколькими аккаунтами, но anti-spam, abuse и moderation-правила всё равно действуют для каждого premium-аккаунта." },
+              { title: "6. Изменения", text: "Функции, лимиты, contest-правила, account-политики и moderation-решения могут меняться со временем." }
             ]
           }
         ]
@@ -993,6 +1091,7 @@ window.DOCS_TRANSLATIONS = {
         promoJoin: "Promo Join",
         picBroad: "Pic Broad",
         referral: "Реферали",
+        addMeGems: "Бот + gems",
         contest: "Конкурс",
         forceJoin: "Force Join",
         premium: "Premium",
@@ -1242,6 +1341,52 @@ window.DOCS_TRANSLATIONS = {
           }
         ]
       },
+      addMeGems: {
+        metaTitle: "Бот + gems",
+        metaDescription: "Як додавати Promoter Bot у групи заради gem-нагород, включно зі згодою на broadcast і anti-abuse правилами.",
+        hero: {
+          eyebrow: "Нагороди за групи",
+          title: "Додайте бота і отримуйте gems.",
+          lead: "Якщо ви додаєте бота в придатну групу і залишаєте його там, система може нарахувати вам gems. Оскільки ця функція підтримує доставку промо, бот може час від часу надсилати broadcast у цю групу.",
+          pills: ["Придатні групи дають gems", "Потрібна згода на broadcast", "Видалення може коштувати gems"],
+          actions: [
+            { href: "terms.html", label: "Читати умови", primary: true },
+            { href: "help.html", label: "Потрібна допомога?", primary: false }
+          ]
+        },
+        sections: [
+          {
+            type: "callout",
+            title: "Спочатку згода.",
+            text: "Користуючись цією функцією, ви погоджуєтесь, що група, додана заради gem-нагород, може інколи отримувати broadcast або promo-повідомлення від бота."
+          },
+          {
+            type: "cards",
+            title: "Як працюють нагороди",
+            intro: "Поточна логіка бота винагороджує придатні додавання, але водночас захищає систему від швидких видалень і низькоякісного abuse.",
+            items: [
+              { kicker: "Reward", title: "Придатне додавання може дати +65 gems", text: "Якщо валідне додавання групи проходить системні перевірки, акаунт може отримати нагороду в 65 gems." },
+              { kicker: "Penalty", title: "Видалення може дати -70 gems", text: "Якщо бота видаляють після reward-flow, система може списати 70 gems із пов'язаного акаунта." },
+              { kicker: "Quality", title: "Перевірки на abuse все одно діють", text: "Фейкові групи, одноразові схеми або підозрілий reward-farming можуть бути відхилені, перевірені вручну або заблоковані." }
+            ]
+          },
+          {
+            type: "steps",
+            title: "Як використовувати правильно",
+            intro: "Ця функція створена для реальних груп, де адміни розуміють, на що погоджуються.",
+            items: [
+              { kicker: "Крок 1", title: "Додавайте бота тільки в реальну групу", text: "Використовуйте лише ті групи, де occasional bot broadcasts прийнятні для адміністраторів та учасників." },
+              { kicker: "Крок 2", title: "Тримайте бота активним у групі", text: "Бот має залишатися доданим, щоб система могла підтвердити placement і зберегти нагороду валідною." },
+              { kicker: "Крок 3", title: "Не фарміть на одноразових схемах", text: "Не прокручуйте багато акаунтів або тимчасових груп тільки для множення gem-нагород." }
+            ]
+          },
+          {
+            type: "callout",
+            title: "Це не лазівка для масового фарму акаунтами.",
+            text: "Спроби множити вигоду через багато Telegram-акаунтів або низькоякісні групи можуть призвести до тимчасової або постійної модерації."
+          }
+        ]
+      },
       contest: {
         metaTitle: "Конкурс",
         metaDescription: "Як працює реферальний конкурс у Promoter Bot і Promotion Bot.",
@@ -1407,8 +1552,10 @@ window.DOCS_TRANSLATIONS = {
             items: [
               { title: "1. Відповідальність за контент", text: "Ви несете відповідальність за матеріали, які відправляєте або просуваєте через сервіс." },
               { title: "2. Чесне використання", text: "Незаконне, шкідливе, оманливе або агресивне використання може призвести до обмежень, блокування або видалення доступу." },
-              { title: "3. Premium-доступ", text: "Premium відкриває додаткові інструменти, але не гарантує однаковий результат для кожного користувача або кампанії." },
-              { title: "4. Зміни", text: "Функції, ліміти, contest-правила і moderation-політики можуть змінюватися з часом." }
+              { title: "3. Ліміт акаунтів для звичайного користувача", text: "Звичайний користувач може тримати активними лише 2 акаунти в боті одночасно. Використовувати багато Telegram-акаунтів заради додаткових лімітів, rewards або promo-переваг не можна." },
+              { title: "4. Що буде при зайвих акаунтах", text: "Якщо система знайде більше 2 стандартних акаунтів, вона може тимчасово або назавжди забанити насамперед акаунт із найменшим referral credit. Уже зароблені rewards зазвичай залишаються в безпеці, але доступ усе одно може бути обмежений." },
+              { title: "5. Виняток для premium", text: "Premium-користувачі можуть працювати з кількома акаунтами, але anti-spam, abuse і moderation-правила все одно діють для кожного premium-акаунта." },
+              { title: "6. Зміни", text: "Функції, ліміти, contest-правила, account-політики та moderation-рішення можуть змінюватися з часом." }
             ]
           }
         ]
@@ -1474,6 +1621,7 @@ window.DOCS_TRANSLATIONS = {
         promoJoin: "Promo Join",
         picBroad: "Pic Broad",
         referral: "Referral",
+        addMeGems: "Bot + Gems",
         contest: "Contest",
         forceJoin: "Force Join",
         premium: "Premium",
@@ -1723,6 +1871,52 @@ window.DOCS_TRANSLATIONS = {
           }
         ]
       },
+      addMeGems: {
+        metaTitle: "Bot + Gems",
+        metaDescription: "Promoter Bot को groups में add करके gem rewards लेने, broadcast consent और anti-abuse rules की guide.",
+        hero: {
+          eyebrow: "Group Rewards",
+          title: "Bot add करें और gems कमाएँ.",
+          lead: "अगर आप bot को eligible group में add करके वहाँ बनाए रखते हैं, तो system आपको gems दे सकता है. क्योंकि यह feature promotion delivery को support करता है, bot कभी-कभी उस group में broadcasts भेज सकता है.",
+          pills: ["Eligible groups gems कमा सकते हैं", "Broadcast consent ज़रूरी है", "Removal पर gems कट सकते हैं"],
+          actions: [
+            { href: "terms.html", label: "Terms पढ़ें", primary: true },
+            { href: "help.html", label: "Need Help?", primary: false }
+          ]
+        },
+        sections: [
+          {
+            type: "callout",
+            title: "पहले consent.",
+            text: "इस feature को use करके आप मानते हैं कि gem rewards के लिए add किया गया group कभी-कभी bot broadcasts या promo messages receive कर सकता है."
+          },
+          {
+            type: "cards",
+            title: "Rewards कैसे काम करते हैं",
+            intro: "Current bot logic valid adds को reward करती है, लेकिन quick removals और low-quality abuse से system को protect भी करती है.",
+            items: [
+              { kicker: "Reward", title: "Eligible add पर +65 gems मिल सकते हैं", text: "जब valid group add system checks pass करता है, linked account को 65 gems reward मिल सकता है." },
+              { kicker: "Penalty", title: "Removal पर -70 gems कट सकते हैं", text: "अगर reward flow के बाद bot को remove किया जाता है, तो system linked account से 70 gems deduct कर सकता है." },
+              { kicker: "Quality", title: "Abuse checks फिर भी लागू रहते हैं", text: "Fake groups, disposable setups या suspicious reward farming reject, review या block की जा सकती है." }
+            ]
+          },
+          {
+            type: "steps",
+            title: "इसे सही तरीके से use करें",
+            intro: "यह feature real groups के लिए है जहाँ admins जानते हों कि वे किस बात के लिए agree कर रहे हैं.",
+            items: [
+              { kicker: "Step 1", title: "Bot को सिर्फ real group में add करें", text: "सिर्फ उन्हीं groups का use करें जहाँ occasional bot broadcasts admins और members के लिए acceptable हों." },
+              { kicker: "Step 2", title: "Bot को group में active रखें", text: "Bot को group में बना रहना चाहिए ताकि system placement verify कर सके और reward valid रहे." },
+              { kicker: "Step 3", title: "Throwaway setups से farming न करें", text: "सिर्फ gem rewards multiply करने के लिए बहुत सारे accounts या temporary groups rotate न करें." }
+            ]
+          },
+          {
+            type: "callout",
+            title: "यह mass-account farming का loophole नहीं है.",
+            text: "बहुत सारे Telegram accounts या low-quality groups से benefits multiply करने की कोशिश temporary या permanent moderation तक ले जा सकती है."
+          }
+        ]
+      },
       contest: {
         metaTitle: "Contest",
         metaDescription: "Promoter Bot और Promotion Bot में referral contest कैसे काम करता है.",
@@ -1888,8 +2082,10 @@ window.DOCS_TRANSLATIONS = {
             items: [
               { title: "1. Content responsibility", text: "जो material आप submit या promote करते हैं, उसकी ज़िम्मेदारी आपकी होती है." },
               { title: "2. Fair use", text: "Illegal, harmful, deceptive या abusive use restrictions, suspension या permanent removal तक ले जा सकती है." },
-              { title: "3. Premium access", text: "Premium extra tools unlock करता है, लेकिन हर user या campaign के लिए identical result guarantee नहीं करता." },
-              { title: "4. Changes", text: "Features, limits, contest rules और moderation policies समय के साथ बदल सकती हैं." }
+              { title: "3. Standard user account limit", text: "एक normal user एक समय में सिर्फ 2 bot accounts active रख सकता है. Extra limits, rewards या promotion benefits पाने के लिए बहुत सारे Telegram accounts use करना allowed नहीं है." },
+              { title: "4. Extra accounts पर action", text: "अगर system को 2 से ज़्यादा standard accounts मिलते हैं, तो वह सबसे कम referral credit वाले account को पहले temporary या permanent ban कर सकता है. Earned rewards आमतौर पर safe रहती हैं, लेकिन access फिर भी restrict हो सकता है." },
+              { title: "5. Premium multi-account exception", text: "Premium users multiple accounts use कर सकते हैं, लेकिन anti-spam, abuse और moderation rules हर premium account पर फिर भी लागू होते हैं." },
+              { title: "6. Changes", text: "Features, limits, contest rules, account policies और moderation decisions समय के साथ बदल सकते हैं." }
             ]
           }
         ]
